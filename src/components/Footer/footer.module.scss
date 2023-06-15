@@ -1,0 +1,18 @@
+@import "styles/variables.scss";
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 55px 0px 63px;
+  color: #ffffff;
+  height: 359px;
+}

@@ -1,0 +1,45 @@
+$bg: #151515;
+$text: rgba(255, 255, 255, 0.6);
+$text6: rgba(255, 255, 255, 0.6);
+$text2: rgba(255, 255, 255, 0.2);
+$text3: rgba(255, 255, 255, 0.3);
+$text4: rgba(255, 255, 255, 0.4);
+$red: #e30613;
+
+@mixin jb4 {
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin jb5 {
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin link-hover {
+  color: $text;
+  transition: color 0.3s;
+  &:hover {
+    color: $text4;
+  }
+  &:active {
+    color: $text2;
+  }
+}
+
+// --- BREAKPOINTS ---
+
+$desktop-width: 1260px;
+$mobile-width: 770px;
+
+@mixin laptop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}

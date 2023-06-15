@@ -1,0 +1,74 @@
+@import "./variables.scss";
+@import "./reset.min.scss";
+@import "~normalize.css";
+
+.active-link {
+  opacity: 1 !important;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: $bg;
+  color: $text6;
+}
+
+html {
+  scroll-padding-top: 50px;
+  scroll-behavior: smooth;
+  position: relative;
+  // overflow-x: hidden;
+}
+
+body {
+  @include jb4;
+  letter-spacing: 0.015em;
+  padding: 0px 0 842px;
+  padding-right: 0 !important;
+  overflow-x: hidden;
+  @include laptop {
+    border: 3px solid blue;
+  }
+  @include mobile {
+    border: 3px solid yellow;
+    padding: 70px 0 1195px;
+  }
+}
+
+button {
+  &:disabled {
+    cursor: auto;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+*:not(body, html) {
+  &::selection {
+    background-color: $text3;
+    color: $bg;
+  }
+  scrollbar-color: $bg transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: $bg;
+  }
+}
