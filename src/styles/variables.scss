@@ -1,11 +1,24 @@
 $bg: #151515;
-$text: rgba(255, 255, 255, 0.6);
 $text6: rgba(255, 255, 255, 0.6);
 $text2: rgba(255, 255, 255, 0.2);
 $text3: rgba(255, 255, 255, 0.3);
 $text4: rgba(255, 255, 255, 0.4);
+$text5: rgba(255, 255, 255, 0.5);
+$text1: rgba(255, 255, 255, 0.1);
 $red: #e30613;
 
+@font-face {
+  font-family: "Polonium Bold";
+  src: local("Polonium Bold"), url("/assets/Polonium-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin polonium {
+  font-family: "Polonium Bold", monospace;
+  font-style: normal;
+  font-weight: 700;
+}
 @mixin jb4 {
   font-family: "JetBrains Mono", monospace;
   font-style: normal;
@@ -17,7 +30,7 @@ $red: #e30613;
   font-weight: 500;
 }
 @mixin link-hover {
-  color: $text;
+  color: $text6;
   transition: color 0.3s;
   &:hover {
     color: $text4;
@@ -27,6 +40,15 @@ $red: #e30613;
   }
 }
 
+@mixin text {
+  @include jb5;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.015em;
+  @include laptop {
+    font-size: 1.11vw;
+  }
+}
 // --- BREAKPOINTS ---
 
 $desktop-width: 1260px;

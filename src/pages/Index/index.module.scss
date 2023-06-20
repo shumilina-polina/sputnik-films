@@ -1,1 +1,231 @@
 @import "styles/variables.scss";
+
+.wr {
+  padding-top: 64px;
+  & h1 {
+    margin-bottom: 64px;
+    @include laptop {
+      padding-bottom: 1%;
+    }
+    & > img {
+      user-select: none;
+      object-fit: contain;
+    }
+  }
+  & .showreel {
+    & label {
+      transform: translateY(0%);
+    }
+    margin-bottom: 108px;
+    @include laptop {
+      margin-bottom: 6vw;
+    }
+  }
+}
+
+.projects {
+  margin-bottom: 180px;
+  @include laptop {
+    margin-bottom: 11vw;
+  }
+  & > header {
+    margin-bottom: 102px;
+    width: 33%;
+    @include laptop {
+      margin-bottom: 6vw;
+    }
+  }
+  & > main {
+    & video:first-child {
+      mask-image: url("/assets/masks/mask-more.svg");
+      -webkit-mask-image: url("/assets/masks/mask-more.svg");
+    }
+  }
+}
+.videos {
+  margin-bottom: 154px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+  @include laptop {
+    column-gap: 3vw;
+    margin-bottom: 11vw;
+  }
+  & video:first-child {
+    mask-image: url("/assets/masks/mask-more.svg");
+    -webkit-mask-image: url("/assets/masks/mask-more.svg");
+  }
+}
+
+.video_number {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  & figure > div {
+    width: 25%;
+  }
+  & > div:last-child {
+    justify-self: flex-end;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+    padding: 0 15%;
+
+    & > span {
+      text-align: right;
+      @include text;
+    }
+  }
+}
+
+.polemica {
+  & > div:last-child {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 105%;
+      border: 1px solid $text1;
+      border-left: none;
+    }
+  }
+}
+
+.process {
+  margin-bottom: 180px;
+  @include laptop {
+    margin-bottom: 11vw;
+  }
+}
+
+.gayane {
+  margin-bottom: 180px;
+  @include laptop {
+    margin-bottom: 11vw;
+  }
+  border-left: 1px solid $text1;
+  grid-template-columns: 2fr 5fr;
+  & video:first-child {
+    mask-image: url("/assets/masks/mask-gayane.svg");
+    -webkit-mask-image: url("/assets/masks/mask-gayane.svg");
+  }
+  & > div:first-child {
+    order: 1;
+    & figure {
+      justify-content: flex-start;
+      gap: 10%;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        gap: 20%;
+      }
+    }
+  }
+  & > div:last-child {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: start;
+    justify-self: start;
+    position: relative;
+    padding-right: 0;
+    padding-left: 7%;
+    width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: $text1;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 60%;
+    }
+    & > li {
+      height: 100%;
+    }
+    & p {
+      width: 75%;
+      @include text;
+    }
+  }
+}
+
+.dom {
+  margin-bottom: 186px;
+  grid-template-columns: 2fr 5fr;
+  @include laptop{
+    margin-bottom: 20vw;
+  }
+  & video:first-child {
+    mask-image: url("/assets/masks/mask-gayane.svg");
+    -webkit-mask-image: url("/assets/masks/mask-gayane.svg");
+  }
+
+  & > div:first-child {
+    order: 1;
+    & figure {
+      justify-content: flex-start;
+      gap: 5%;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        gap: 5%;
+        & > p {
+          width: 45%;
+        }
+      }
+    }
+  }
+  & > div:last-child {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 45%;
+      height: 105%;
+      border: 1px solid $text1;
+      border-right: none;
+    }
+    justify-self: flex-start;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 0 10%;
+
+    & > span {
+      text-align: left;
+      @include text;
+    }
+  }
+}
+
+.videos_last {
+  & > div {
+    &:first-child {
+      & figure {
+        & ul {
+          order: -1;
+        }
+      }
+    }
+    &:last-child {
+      & figure {
+        & div {
+          width: 25%;
+        }
+      }
+    }
+  }
+}

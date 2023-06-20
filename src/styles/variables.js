@@ -16,6 +16,8 @@ export const colors = {
   text2: "rgba(255, 255, 255, 0.2)",
   text3: "rgba(255, 255, 255, 0.3)",
   text4: "rgba(255, 255, 255, 0.4)",
+  text5: "rgba(255, 255, 255, 0.5)",
+  text1: "rgba(255, 255, 255, 0.1)",
   red: "#e30613",
 };
 
@@ -38,6 +40,17 @@ export const mixins = {
     }
     &:active {
       color: ${colors.text2};
+    }
+  `,
+  text: css`
+    font-family: "JetBrains Mono", monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.015em;
+    @media ${breakpoints.laptop} {
+      font-size: 1.11vw;
     }
   `,
 };

@@ -9,10 +9,148 @@
 }
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 55px 0px 63px;
-  color: #ffffff;
-  height: 359px;
+  & .head {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    border-top: 1px solid $text1;
+    margin-bottom: 5%;
+    & > div {
+      padding-top: 29px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      @include laptop {
+        padding-top: 2vw;
+      }
+      &:nth-child(2) {
+        border-right: 1px solid $text1;
+        border-left: 1px solid $text1;
+      }
+      &:first-child {
+        justify-content: flex-start;
+      }
+    }
+    & h3 {
+      @include jb4;
+      font-size: 44px;
+      line-height: 125%;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      @include laptop {
+        font-size: 2.78vw;
+      }
+    }
+    & a {
+      @include link-hover;
+      @include text;
+      & > span {
+        color: $text4;
+        margin-right: 8px;
+      }
+    }
+  }
+  & .content {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    margin-bottom: 5%;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:first-child {
+        justify-content: flex-start;
+      }
+    }
+    & .authors {
+      align-items: flex-start;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10% 5%;
+      gap: 10%;
+      & > article {
+        & > div {
+          margin-bottom: 24px;
+          max-width: 72px;
+          // max-height: 72px;
+          aspect-ratio: 1/1;
+          & > img {
+            object-fit: contain;
+          }
+          @include laptop {
+            max-width: 5vw;
+            margin-bottom: 2vw;
+          }
+        }
+        & p {
+          @include text;
+          margin-bottom: 65px;
+          @include laptop {
+            margin-bottom: 5vw;
+          }
+        }
+        & a {
+          @include text;
+          @include link-hover;
+          text-decoration-line: underline;
+          color: $text3;
+        }
+      }
+    }
+    & .policy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 75%;
+
+      & > a {
+        display: block;
+        width: 75%;
+        @include link-hover;
+        @include text;
+        text-decoration-line: underline;
+        color: $text3;
+      }
+      & > .social {
+        align-self: flex-end;
+      }
+    }
+  }
+  & .foot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    & img {
+      @include laptop {
+        width: 10vw;
+      }
+    }
+    & > div {
+      padding: 35px 0;
+      & > span {
+        color: $text3;
+        @include text;
+      }
+    }
+    & .designed {
+      width: 40%;
+      text-align: center;
+      background-image: url("/assets/footer-background.png");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      @include laptop {
+        background-size: contain;
+      }
+      & > a {
+        @include text;
+        @include link-hover;
+        font-size: 12px;
+        line-height: 167%;
+        color: $text1;
+        text-transform: uppercase;
+        @include laptop {
+          font-size: 0.83vw;
+        }
+      }
+    }
+  }
 }

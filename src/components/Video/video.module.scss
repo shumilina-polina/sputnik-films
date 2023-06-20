@@ -1,0 +1,117 @@
+@import "styles/variables.scss";
+
+.wr {
+  position: relative;
+  &:hover {
+    .rec {
+      animation: size 0.8s ease-in-out alternate infinite;
+    }
+  }
+  & > .video_wrapper {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(1 1fr);
+    grid-row: 1;
+    grid-column: 1;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  & video {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    mask-image: url("/assets/masks/mask.svg");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    -webkit-mask-image: url("/assets/masks/mask.svg");
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .blured {
+    z-index: 0;
+    filter: blur(75px);
+    -webkit-filter: blur(75px);
+    -moz-filter: blur(75px);
+    -o-filter: blur(75px);
+    -ms-filter: blur(75px);
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+.label {
+  position: absolute;
+  border: 1px solid $text1;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  padding: 6px 12px 6px 15px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-100%);
+  @include laptop {
+    padding: 1%;
+  }
+  & > div {
+    margin-right: 11px;
+    width: 10px;
+    height: 10px;
+    background-color: $red;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+    -moz-filter: blur(2.5px);
+    -o-filter: blur(2.5px);
+    -ms-filter: blur(2.5px);
+    @include laptop {
+      width: 5px;
+      height: 5px;
+      margin-right: 2px;
+    }
+  }
+  & > span {
+    @include text;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+.caption {
+  display: flex;
+  gap: 36px;
+  @include laptop {
+    gap: 3vw;
+  }
+  &_text {
+    width: 35%;
+    @include text;
+    & > p {
+      @include text;
+    }
+  }
+  &_tag {
+    @include text;
+    color: $text3;
+    & > li:last-child {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+@keyframes size {
+  from {
+    transform: scale(100%);
+  }
+
+  to {
+    transform: scale(40%);
+  }
+}
