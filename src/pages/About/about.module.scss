@@ -1,1 +1,170 @@
 @import "styles/variables.scss";
+
+.wr {
+  padding-top: 58px;
+  @include laptop {
+    padding-top: 5vw;
+  }
+  & header {
+    margin-bottom: 155px;
+    @include laptop {
+      margin-bottom: 10vw;
+    }
+    & > h1 {
+      margin: 0 auto 32px;
+      width: 35%;
+      @include laptop {
+        margin-bottom: 4vw;
+      }
+    }
+    & > p {
+      margin: 0 auto 8px;
+      width: 80%;
+      @include jb4;
+      font-size: 44px;
+      line-height: 125%;
+      text-align: center;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: $text6;
+      @include laptop {
+        font-size: 2.78vw;
+      }
+    }
+    & > .links {
+      height: 80px;
+      border: 1px solid $text1;
+      border-top: none;
+      @include laptop {
+        height: 10vw;
+      }
+      & > ul {
+        transform: translateY(50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin: 0 auto;
+        background-color: $bg;
+        gap: 8px;
+        @include laptop {
+          transform: translateY(150%);
+        }
+      }
+    }
+    & > .authors {
+      padding: 266px 0 31px;
+      border-left: 1px solid $text1;
+      border-right: 1px solid $text1;
+      @include laptop {
+        padding: 20vw 0 4vw;
+      }
+      & > ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        @include laptop {
+          gap: 3vw;
+        }
+        & > figure {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          @include laptop {
+            gap: 2vw;
+          }
+        }
+        & figcaption {
+          max-width: 219px;
+          @include text;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          @include laptop {
+            max-width: 15vw;
+          }
+
+          & > span:first-child {
+            margin-bottom: 4px;
+          }
+          & > span:last-child {
+            color: $text3;
+          }
+        }
+      }
+    }
+  }
+  & main {
+    & h2 {
+      @include text;
+      margin-bottom: 42px;
+      text-transform: uppercase;
+      color: $text2;
+
+      @include laptop {
+        margin-bottom: 5vw;
+      }
+    }
+    & .nagrady {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      height: 56px;
+      margin-bottom: 42px;
+      @include laptop {
+        height: 5vw;
+        margin-bottom: 5vw;
+      }
+    }
+    & .nominacyy {
+      border-top: 1px solid $text1;
+
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 174px;
+      @include laptop {
+        margin-bottom: 20vw;
+      }
+      & li {
+        padding: 15px 4px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $text1;
+        @include laptop {
+          padding: 1vw 1px;
+        }
+        & > div {
+          height: 34px;
+          width: auto;
+          aspect-ratio: 16/9;
+          @include laptop {
+            height: 5vw;
+          }
+          & img {
+            object-fit: contain;
+          }
+        }
+        & a {
+          margin-right: 32px;
+          @include text;
+          @include link-hover;
+          color: $text4;
+          @include laptop {
+            margin-right: 3vw;
+          }
+        }
+        & p {
+          margin-right: 24px;
+          @include text;
+          color: $text2;
+          @include laptop {
+            margin-right: 2vw;
+          }
+        }
+      }
+    }
+  }
+}
