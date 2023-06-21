@@ -5,8 +5,11 @@ import SocialLink from "components/SocialLink";
 import { styled } from "styled-components";
 import { breakpoints } from "styles/variables";
 import { nominations } from "constants/nominations";
+import { useState } from "react";
+import BackSlider from "components/BackSlider/BackSlider";
 
 const About = () => {
+  const [nomList, setNomList] = useState(nominations.slice(0, 6));
   return (
     <section className={s.wr}>
       <Wrapper>
@@ -14,7 +17,7 @@ const About = () => {
           <h1>
             <img src={comanda} alt="творчество" />
           </h1>
-          <p>
+          <p data-aos="fade-up">
             Победители и&nbsp;участники международных кинофестивалей, Фильмы
             представлены на&nbsp;крупнейших онлайн-платформах
           </p>
@@ -41,7 +44,7 @@ const About = () => {
           <h2>публикации и награды:</h2>
           <ul className={s.nagrady}>
             {[1, 2, 3, 4, 5].map((elem) => (
-              <li key={elem}>
+              <li key={elem} data-aos="fade-left" data-aos-delay={elem * 100}>
                 <img
                   src={require(`assets/nomination-${elem}.png`)}
                   alt="Номинация"
@@ -50,30 +53,44 @@ const About = () => {
             ))}
           </ul>
           <ul className={s.nominacyy}>
-            {nominations.map((elem, i) => (
-              <li key={i}>
-                <a href={elem.url} target="_blank" rel="noopener noreferrer">
-                  {elem.slug}
-                </a>
-                <p>{elem.text}</p>
-                <ImageBox>
-                  <div>
-                    <img
-                      src={require(`assets/${elem.imageSrc}`)}
-                      alt="Номинация"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src={require(`assets/${elem.imageSrc}`)}
-                      alt="Номинация"
-                    />
-                  </div>
-                </ImageBox>
-              </li>
+            {nomList.map((elem, i) => (
+              <div key={i} data-aos="fade-up" data-aos-delay={i * 50}>
+                <li>
+                  <a href={elem.url} target="_blank" rel="noopener noreferrer">
+                    {elem.slug}
+                  </a>
+                  <p>{elem.text}</p>
+                  <ImageBox>
+                    <div>
+                      <img
+                        src={require(`assets/${elem.imageSrc}`)}
+                        alt="Номинация"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src={require(`assets/${elem.imageSrc}`)}
+                        alt="Номинация"
+                      />
+                    </div>
+                  </ImageBox>
+                </li>
+              </div>
             ))}
           </ul>
+          <button
+            onClick={(e) => {
+              setNomList(nominations);
+              console.log((e.target.disabled = true));
+            }}
+          >
+            показать еще
+          </button>
         </main>
+        <footer>
+          <h2>Бэкстейдж:</h2>
+          <BackSlider />
+        </footer>
       </Wrapper>
     </section>
   );
@@ -83,7 +100,7 @@ export default About;
 
 const Author = ({ src, name, children }) => {
   return (
-    <figure>
+    <figure data-aos="flip-right">
       <ImageBox>
         <div>
           <img src={require(`assets/${src}`)} alt={name} />
@@ -100,7 +117,7 @@ const Author = ({ src, name, children }) => {
   );
 };
 
-const ImageBox = styled.div`
+export const ImageBox = styled.div`
     width: 124px;
     aspect-ratio: 1/1;
     position: relative;

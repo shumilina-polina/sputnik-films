@@ -97,6 +97,10 @@
     }
   }
   & main {
+    margin-bottom: 174px;
+    @include laptop {
+      margin-bottom: 20vw;
+    }
     & h2 {
       @include text;
       margin-bottom: 42px;
@@ -124,15 +128,20 @@
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-      margin-bottom: 174px;
-      @include laptop {
-        margin-bottom: 20vw;
-      }
+
       & li {
         padding: 15px 4px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid $text1;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.03);
+        }
+        &:active,
+        &:focus {
+          background-color: $text1;
+        }
         @include laptop {
           padding: 1vw 1px;
         }
@@ -165,6 +174,30 @@
           }
         }
       }
+    }
+    & button {
+      padding: 20px 0;
+      width: 100%;
+      @include text;
+      @include link-hover;
+      color: $text2;
+      text-transform: uppercase;
+      border-bottom: 1px solid $text1;
+      &:disabled {
+        color: $text1;
+        cursor: auto;
+      }
+    }
+  }
+  & footer {
+    border-left: 1px solid $text1;
+    border-right: 1px solid $text1;
+    padding-left: 23px;
+    padding-bottom: 23px;
+    & > h2 {
+      @include text;
+      color: $text2;
+      text-transform: uppercase;
     }
   }
 }

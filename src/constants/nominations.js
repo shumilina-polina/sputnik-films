@@ -17,4 +17,40 @@ export const nominations = [
     text: "Для нас питчинг стал поворотным событием в жизни",
     imageSrc: "nomination-img-1.jpg",
   },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
+  {
+    slug: "moviestart.ru",
+    url: "https://moviestart.ru",
+    text: "Для нас питчинг стал поворотным событием в жизни",
+    imageSrc: "nomination-img-1.jpg",
+  },
 ];
