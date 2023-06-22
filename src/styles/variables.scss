@@ -27,7 +27,7 @@ $red: #e30613;
 @mixin jb5 {
   font-family: "JetBrains Mono", monospace;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 @mixin link-hover {
   color: $text6;
@@ -41,7 +41,7 @@ $red: #e30613;
 }
 
 @mixin text {
-  @include jb5;
+  @include jb4;
   font-size: 16px;
   line-height: 125%;
   letter-spacing: 0.015em;

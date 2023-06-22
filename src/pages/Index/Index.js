@@ -58,7 +58,7 @@ const Index = () => {
                   Помогли запустить широкую промо-компанию с&nbsp;помощью видео.
                 </Caption>
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-duration="1000">
                 <div>
                   <img src={n72} alt="72" />
                 </div>
@@ -92,7 +92,7 @@ const Index = () => {
               </div>
               <figcaption>
                 <span>Дмитрий Квашнин</span>
-                <span>Режиссер • Cценарист • Продюсер</span>
+                <span>Основатель студии</span>
               </figcaption>
             </figure>
           </Process>
@@ -159,7 +159,7 @@ const Index = () => {
               <p>Кинотеатральный прокат в&nbsp;54 городах СНГ.</p>
             </Caption>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <div>
               <img src={n84} alt="8.4" />
             </div>

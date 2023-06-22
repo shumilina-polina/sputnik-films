@@ -14,7 +14,7 @@ export const CopyEmail = () => {
         onCopy={() => setCopied(true)}
         text={"hello@sputnikfilms.ru"}
       >
-        {copied ? <a>[ скопировано ]</a> : <a>hello@sputnikfilms.ru</a>}
+        {copied ? <a>[ скопировано ]</a> : <a>[ hello@sputnikfilms.ru ]</a>}
       </CopyToClipboard>
     </button>
   );

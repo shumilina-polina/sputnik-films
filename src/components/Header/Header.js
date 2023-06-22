@@ -10,13 +10,19 @@ const Header = () => {
       <Wrapper>
         <div className={s.wrapper}>
           <div className={s.links}>
-            <CopyEmail />
-            <Link to="/">
-              <img src={logo} alt="логотип" />
-            </Link>
-            <a href="#project">
-              <span>&#129138;</span>Обсудить проект
-            </a>
+            <div data-aos="fade-right">
+              <CopyEmail />
+            </div>
+            <div data-aos="fade-down">
+              <Link to="/">
+                <img src={logo} alt="логотип" />
+              </Link>
+            </div>
+            <div data-aos="fade-left">
+              <a href="#project">
+                <span>&#129138;</span>Обсудить проект
+              </a>
+            </div>
           </div>
           <nav className={s.navigation}>
             <Link to="/">Главная</Link>

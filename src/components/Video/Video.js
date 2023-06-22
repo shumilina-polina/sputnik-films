@@ -5,7 +5,7 @@ const Video = ({ videoSrc, poster = "", label = "" }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className={s.wr} data-aos="flip-left">
+    <div className={s.wr} data-aos="fade-left" data-aos-duration="1000">
       <div className={s.video_wrapper}>
         <video
           loop={true}
