@@ -87,13 +87,14 @@
             border: 1px solid $text2;
             border-radius: 51px;
             color: $text2;
-            transition: color 0.3s, background-color 0.3s;
+            transition: color 0.3s, background-color 0.3s, border-color 0.3s;
             @include laptop {
               padding: 2px;
             }
             &:hover {
               color: #1c1c1c;
               background-color: $text4;
+              border-color: transparent;
             }
             &:first-child {
               display: none;
@@ -109,7 +110,7 @@ button[type="submit"] {
   padding: 26px 0;
   text-transform: uppercase;
   width: 100%;
-  @include laptop{
+  @include laptop {
     padding: 5% 0;
   }
 }

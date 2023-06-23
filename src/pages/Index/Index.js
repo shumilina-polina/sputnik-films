@@ -10,16 +10,17 @@ import { CATEGORIES, TAGS } from "constants/filters";
 import Process from "components/Process";
 import cn from "classnames";
 import SocialLink from "components/SocialLink";
+import TypeIt from "typeit-react";
 
 const Index = () => {
   return (
     <section className={s.wr}>
       <Wrapper>
-        <h1 data-aos="fade-right">
+        <h1>
           <img src={title} alt="творчество" />
         </h1>
         <div className={s.showreel}>
-          <Video videoSrc={"showreel.mp4"} label={"Шоурил 2023"} />
+          <Video fade="up" videoSrc={"showreel.mp4"} label={"Шоурил 2023"} />
         </div>
         {/* TABS */}
         <section className={s.projects}>
@@ -31,10 +32,11 @@ const Index = () => {
           <main>
             <div className={s.videos}>
               <div>
-                <Video videoSrc={"moretv.mp4"} label={"More.tv"} />
+                <Video fade="right" videoSrc={"moretv.mp4"} label={"More.tv"} />
                 <Caption
                   tags={[TAGS.olv, TAGS.digital]}
                   category={CATEGORIES.reclama}
+                  fade="right"
                 >
                   Ролик для&nbsp;промо-компании к&nbsp;выходу сериала "Регби"
                   на&nbsp;онлайн-платформе.
@@ -70,10 +72,22 @@ const Index = () => {
         <div className={s.process}>
           <Process>
             <span>(процесс)</span>
-            <p data-aos="fade-up">
+            {/* <p>
               Выстраиваем прозрачный и&nbsp;понятный процесс работы. Придумываем
               креатив и&nbsp;защищаем идеи, обосновываем траты, соблюдаем сметы
               и&nbsp;сроки.
+            </p> */}
+            <p>
+              <TypeIt
+                options={{
+                  speed: 50,
+                  waitUntilVisible: true,
+                }}
+              >
+                Выстраиваем прозрачный и&nbsp;понятный процесс работы.
+                Придумываем креатив и&nbsp;защищаем идеи, обосновываем траты,
+                соблюдаем сметы и&nbsp;сроки.
+              </TypeIt>
             </p>
             <figure>
               <div>
@@ -99,8 +113,13 @@ const Index = () => {
         </div>
         <div className={cn(s.gayane, s.video_number)}>
           <div>
-            <Video videoSrc={"gayane.mp4"} label={"yandex/gayane"} />
+            <Video
+              fade="right"
+              videoSrc={"gayane.mp4"}
+              label={"yandex/gayane"}
+            />
             <Caption
+              fade="right"
               tags={["branded", "content"]}
               category={CATEGORIES.reclama}
             >
@@ -119,9 +138,16 @@ const Index = () => {
         <div className={s.process}>
           <Process>
             <span>(контроль)</span>
-            <p data-aos="fade-up">
-              гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
-              утверждаем каждый этап проекта, ведём ежедневные отчёты.
+            <p>
+              <TypeIt
+                options={{
+                  speed: 50,
+                  waitUntilVisible: true,
+                }}
+              >
+                гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
+                утверждаем каждый этап проекта, ведём ежедневные отчёты.
+              </TypeIt>
             </p>
             <figure>
               <div>
@@ -139,6 +165,7 @@ const Index = () => {
                 </div>
               </div>
               <figcaption>
+                =09876543
                 <span>Сергей Клейн</span>
                 <span>Исполнительный продюсер</span>
               </figcaption>
@@ -147,8 +174,13 @@ const Index = () => {
         </div>
         <div className={cn(s.dom, s.video_number)}>
           <div>
-            <Video videoSrc={"dom.mp4"} label={"там, где наш дом"} />
+            <Video
+              fade="right"
+              videoSrc={"dom.mp4"}
+              label={"там, где наш дом"}
+            />
             <Caption
+              fade="right"
               tags={[TAGS.almanah, "кино"]}
               category={CATEGORIES.docKino}
             >
@@ -168,8 +200,13 @@ const Index = () => {
         </div>
         <div className={cn(s.videos, s.videos_last)}>
           <div>
-            <Video videoSrc={"ctrl.mp4"} label={"Ctrl + A / add"} />
+            <Video
+              fade="right"
+              videoSrc={"ctrl.mp4"}
+              label={"Ctrl + A / add"}
+            />
             <Caption
+              fade="right"
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
               category={"Музыкальный клип"}
             ></Caption>

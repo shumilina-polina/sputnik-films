@@ -1,25 +1,25 @@
 import { useState } from "react";
 import s from "./video.module.scss";
 
-const Video = ({ videoSrc, poster = "", label = "" }) => {
+const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={s.wr} data-aos="fade-left" data-aos-duration="1000">
+    <div className={s.wr} data-aos={`fade-${fade}`} data-aos-duration="1000">
       <div className={s.video_wrapper}>
         <video
           loop={true}
           muted={true}
           preload="metadata"
           playsInline
+          onLoadedData={() => setLoaded(true)}
           poster={poster ? require(`assets/video/${poster}`) : undefined}
           onClick={() => setOpenModal(true)}
           onMouseOver={(e) => e.target.play()}
-          onMouseOut={(e) =>
-            setTimeout(() => {
-              if (e.target.played) e.target.pause();
-            }, 100)
-          }
+          onMouseOut={(e) => {
+            if (loaded) e.target.pause();
+          }}
         >
           <source src={require(`assets/video/${videoSrc}`)} type="video/mp4" />
           Тег video не поддерживается вашим браузером.

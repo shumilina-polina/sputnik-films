@@ -21,6 +21,7 @@
     "sass": "^1.63.4",
     "styled-components": "^6.0.0-rc.3",
     "swiper": "^9.4.1",
+    "typeit-react": "^2.6.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -6,6 +6,7 @@ import SocialLink from "components/SocialLink";
 import logo from "assets/logo.svg";
 import { Link } from "react-router-dom";
 import { LogoBox } from "components/LogoBox/LogoBox";
+import SvgSelector from "components/SvgSelector";
 
 const Footer = () => {
   return (
@@ -25,7 +26,10 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span>&#129138;</span>Телеграм
+                <span>
+                  <SvgSelector svg={"arrow"} />
+                </span>
+                Телеграм
               </a>
             </div>
           </nav>

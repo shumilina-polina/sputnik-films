@@ -1,15 +1,13 @@
 import s from "./video.module.scss";
 
-const Caption = ({ children, tags = [], category = "" }) => {
+const Caption = ({ children, tags = [], category = "", fade = "left" }) => {
   return (
-    <figure className={s.caption}>
-      <div
-        className={s.caption_text}
-        data-aos="fade-right"
-        data-aos-duration="500"
-      >
-        {children}
-      </div>
+    <figure
+      className={s.caption}
+      data-aos={`fade-${fade}`}
+      data-aos-duration="500"
+    >
+      <div className={s.caption_text}>{children}</div>
       <ul className={s.caption_tag}>
         <li>{category}</li>
         <li>

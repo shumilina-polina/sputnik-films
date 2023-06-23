@@ -3,6 +3,7 @@ import s from "./header.module.scss";
 import { Link } from "react-router-dom";
 import logo from "assets/logo.svg";
 import { CopyEmail } from "components/CopyEmail";
+import SvgSelector from "components/SvgSelector";
 
 const Header = () => {
   return (
@@ -20,7 +21,10 @@ const Header = () => {
             </div>
             <div data-aos="fade-left">
               <a href="#project">
-                <span>&#129138;</span>Обсудить проект
+                <span>
+                  <SvgSelector svg={"arrow"} />
+                </span>
+                Обсудить проект
               </a>
             </div>
           </div>

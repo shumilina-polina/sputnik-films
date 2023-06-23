@@ -8,6 +8,14 @@ import { nominations } from "constants/nominations";
 import { useState } from "react";
 import BackSlider from "components/BackSlider/BackSlider";
 
+const nagrady = [
+  "https://vk.com/unknownfilmfestival?w=wall-133062901_946",
+  "https://vk.com/tamgdenashdom?w=wall-211402154_176",
+  "https://moscowshorts.com/ru/programma-pokaza-filmov-pobediteley-moscow-shorts-sentyabr-2022/",
+  "https://shortshotfest.com/",
+  "https://lampa.film/fest/perm2022/schedule/festivalnyy-pokaz-tam-gde-nash-dom/",
+];
+
 const About = () => {
   const [nomList, setNomList] = useState(nominations.slice(0, 6));
   return (
@@ -43,12 +51,14 @@ const About = () => {
         <main>
           <h2>публикации и награды:</h2>
           <ul className={s.nagrady}>
-            {[1, 2, 3, 4, 5].map((elem) => (
-              <li key={elem} data-aos="fade-left" data-aos-delay={elem * 100}>
-                <img
-                  src={require(`assets/nomination-${elem}.png`)}
-                  alt="Номинация"
-                />
+            {nagrady.map((elem, i) => (
+              <li key={i} data-aos="fade-left" data-aos-delay={(i + 1) * 100}>
+                <a href={elem} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={require(`assets/nomination-${i + 1}.png`)}
+                    alt="Номинация"
+                  />
+                </a>
               </li>
             ))}
           </ul>
@@ -100,7 +110,7 @@ export default About;
 
 const Author = ({ src, name, children }) => {
   return (
-    <figure data-aos="flip-right">
+    <figure data-aos="fade-up">
       <ImageBox>
         <div>
           <img src={require(`assets/${src}`)} alt={name} />
