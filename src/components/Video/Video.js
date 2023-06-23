@@ -6,7 +6,12 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={s.wr} data-aos={`fade-${fade}`} data-aos-duration="1000">
+    <div
+      className={s.wr}
+      data-aos={`fade-${fade}`}
+      data-aos-duration="1000"
+      data-aos-offset="500"
+    >
       <div className={s.video_wrapper}>
         <video
           width="100%"

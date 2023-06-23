@@ -37,7 +37,11 @@ const Footer = () => {
             <div>
               <Form />
             </div>
-            <div className={s.authors}>
+            <div
+              data-aos="fade-left"
+              data-aos-offset="500"
+              className={s.authors}
+            >
               <article>
                 <div>
                   <img
@@ -82,7 +86,11 @@ const Footer = () => {
                 </a>
               </article>
             </div>
-            <div className={s.policy}>
+            <div
+              data-aos="fade-left"
+              data-aos-offset="500"
+              className={s.policy}
+            >
               <a href="http://" target="_blank" rel="noopener noreferrer">
                 Политика обработки персональных данных
               </a>

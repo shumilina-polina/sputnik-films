@@ -32,7 +32,7 @@ const Form = () => {
   };
 
   return (
-    <div className={s.wr}>
+    <div className={s.wr} data-aos="fade-right" data-aos-offset="500">
       <form
         className={s.form}
         id="contactForm"
