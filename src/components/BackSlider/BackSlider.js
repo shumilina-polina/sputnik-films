@@ -21,10 +21,16 @@ const BackSlider = () => {
         <SwiperSlide className={s.slide}>
           <ImageBox>
             <div>
-              <img src={require("assets/slider/backstage__item01.png")} />
+              <img
+                src={require("assets/slider/backstage__item01.png")}
+                alt=""
+              />
             </div>
             <div>
-              <img src={require("assets/slider/backstage__item01.png")} />
+              <img
+                src={require("assets/slider/backstage__item01.png")}
+                alt=""
+              />
             </div>
           </ImageBox>
         </SwiperSlide>
@@ -32,18 +38,30 @@ const BackSlider = () => {
           <div className={s.slide_flex}>
             <ImageBox>
               <div>
-                <img src={require("assets/slider/backstage__item02.png")} />
+                <img
+                  src={require("assets/slider/backstage__item02.png")}
+                  alt=""
+                />
               </div>
               <div>
-                <img src={require("assets/slider/backstage__item02.png")} />
+                <img
+                  src={require("assets/slider/backstage__item02.png")}
+                  alt=""
+                />
               </div>
             </ImageBox>
             <ImageBox>
               <div>
-                <img src={require("assets/slider/backstage__item03.png")} />
+                <img
+                  src={require("assets/slider/backstage__item03.png")}
+                  alt=""
+                />
               </div>
               <div>
-                <img src={require("assets/slider/backstage__item03.png")} />
+                <img
+                  src={require("assets/slider/backstage__item03.png")}
+                  alt=""
+                />
               </div>
             </ImageBox>
           </div>
@@ -51,10 +69,16 @@ const BackSlider = () => {
         <SwiperSlide className={s.slide}>
           <ImageBox>
             <div>
-              <img src={require("assets/slider/backstage__item04.png")} />
+              <img
+                src={require("assets/slider/backstage__item04.png")}
+                alt=""
+              />
             </div>
             <div>
-              <img src={require("assets/slider/backstage__item04.png")} />
+              <img
+                src={require("assets/slider/backstage__item04.png")}
+                alt=""
+              />
             </div>
           </ImageBox>
         </SwiperSlide>

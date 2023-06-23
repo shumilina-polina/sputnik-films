@@ -44,7 +44,10 @@
           }
         }
       }
-      & > a > span {
+      & > div {
+        @include link-hover;
+      }
+      & > div > span {
         display: inline-block;
         transition: transform 0.3s;
         &:first-child {

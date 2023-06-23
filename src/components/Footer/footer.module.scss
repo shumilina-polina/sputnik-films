@@ -53,6 +53,18 @@
       }
     }
     & button {
+      & div {
+        @include link-hover;
+        @include text;
+        display: flex;
+        align-items: center;
+        & > span {
+          color: $text4;
+          margin-right: 8px;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
       &:hover {
         & span {
           &:first-child {
@@ -63,7 +75,7 @@
           }
         }
       }
-      & > a > span {
+      & > div > span {
         display: inline-block;
         transition: transform 0.3s;
         &:first-child {

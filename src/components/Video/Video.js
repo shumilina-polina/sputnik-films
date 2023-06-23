@@ -1,12 +1,7 @@
 import { useState } from "react";
 import s from "./video.module.scss";
 
-const Video = ({
-  videoSrc,
-  poster = "",
-  label = "",
-  fade = "left",
-}) => {
+const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
 

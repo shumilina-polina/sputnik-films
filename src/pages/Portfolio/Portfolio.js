@@ -1,5 +1,5 @@
 import Wrapper from "components/Wrapper";
-import s from "./portfolio.module.scss";
+// import s from "./portfolio.module.scss";
 
 const Portfolio = () => {
   return <Wrapper>Portfolio</Wrapper>;
