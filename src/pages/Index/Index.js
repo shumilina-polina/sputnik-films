@@ -78,15 +78,15 @@ const Index = () => {
               и&nbsp;сроки.
             </p> */}
             <p>
+              Выстраиваем прозрачный и&nbsp;понятный процесс работы. Придумываем
+              креатив и&nbsp;защищаем идеи,
               <TypeIt
                 options={{
                   speed: 50,
                   waitUntilVisible: true,
                 }}
               >
-                Выстраиваем прозрачный и&nbsp;понятный процесс работы.
-                Придумываем креатив и&nbsp;защищаем идеи, обосновываем траты,
-                соблюдаем сметы и&nbsp;сроки.
+                обосновываем траты, соблюдаем сметы и&nbsp;сроки.
               </TypeIt>
             </p>
             <figure>
@@ -113,11 +113,7 @@ const Index = () => {
         </div>
         <div className={cn(s.gayane, s.video_number)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"gayane"}
-              label={"yandex/gayane"}
-            />
+            <Video fade="right" videoSrc={"gayane"} label={"yandex/gayane"} />
             <Caption
               fade="right"
               tags={["branded", "content"]}
@@ -139,14 +135,15 @@ const Index = () => {
           <Process>
             <span>(контроль)</span>
             <p>
+              гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
+              утверждаем{" "}
               <TypeIt
                 options={{
                   speed: 50,
                   waitUntilVisible: true,
                 }}
               >
-                гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
-                утверждаем каждый этап проекта, ведём ежедневные отчёты.
+                каждый этап проекта, ведём ежедневные отчёты.
               </TypeIt>
             </p>
             <figure>
@@ -174,11 +171,7 @@ const Index = () => {
         </div>
         <div className={cn(s.dom, s.video_number)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"dom"}
-              label={"там, где наш дом"}
-            />
+            <Video fade="right" videoSrc={"dom"} label={"там, где наш дом"} />
             <Caption
               fade="right"
               tags={[TAGS.almanah, "кино"]}
@@ -200,11 +193,7 @@ const Index = () => {
         </div>
         <div className={cn(s.videos, s.videos_last)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"ctrl"}
-              label={"Ctrl + A / add"}
-            />
+            <Video fade="right" videoSrc={"ctrl"} label={"Ctrl + A / add"} />
             <Caption
               fade="right"
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
