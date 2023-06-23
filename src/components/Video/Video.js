@@ -3,7 +3,7 @@ import s from "./video.module.scss";
 
 const Video = ({
   videoSrc,
-  poster = "nomination-img-1.jpg",
+  poster = "",
   label = "",
   fade = "left",
 }) => {
@@ -22,8 +22,7 @@ const Video = ({
           controls={false}
           playsInline
           onLoadedData={() => setLoaded(true)}
-          poster={require(`assets/${poster}`)}
-          // poster={poster ? require(`assets/video/${poster}`) : ""}
+          poster={poster ? require(`assets/video/${poster}`) : undefined}
           onClick={() => setOpenModal(true)}
           onMouseOver={(e) => e.target.play()}
           onMouseOut={(e) => {
