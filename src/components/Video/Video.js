@@ -15,14 +15,21 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
           controls={false}
           playsInline
           onLoadedData={() => setLoaded(true)}
-          poster={poster ? require(`assets/video/${poster}`) : undefined}
+          poster={poster ? require(`assets/video/${poster}`) : ""}
           onClick={() => setOpenModal(true)}
           onMouseOver={(e) => e.target.play()}
           onMouseOut={(e) => {
             if (loaded) e.target.pause();
           }}
         >
-          <source src={require(`assets/video/${videoSrc}`)} type="video/mp4" />
+          <source
+            src={require(`assets/video/${videoSrc}.webm`)}
+            type="video/webm"
+          />
+          <source
+            src={require(`assets/video/${videoSrc}.mp4`)}
+            type="video/mp4"
+          />
           Тег video не поддерживается вашим браузером.
         </video>
         {/* <video

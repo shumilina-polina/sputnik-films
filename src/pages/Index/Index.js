@@ -20,7 +20,7 @@ const Index = () => {
           <img src={title} alt="творчество" />
         </h1>
         <div className={s.showreel}>
-          <Video fade="up" videoSrc={"showreel.mp4"} label={"Шоурил 2023"} />
+          <Video fade="up" videoSrc={"showreel"} label={"Шоурил 2023"} />
         </div>
         {/* TABS */}
         <section className={s.projects}>
@@ -32,7 +32,7 @@ const Index = () => {
           <main>
             <div className={s.videos}>
               <div>
-                <Video fade="right" videoSrc={"moretv.mp4"} label={"More.tv"} />
+                <Video fade="right" videoSrc={"moretv"} label={"More.tv"} />
                 <Caption
                   tags={[TAGS.olv, TAGS.digital]}
                   category={CATEGORIES.reclama}
@@ -43,7 +43,7 @@ const Index = () => {
                 </Caption>
               </div>
               <div>
-                <Video videoSrc={"ulibka.mp4"} label={"Улыбка"} />
+                <Video videoSrc={"ulibka"} label={"Улыбка"} />
                 <Caption>
                   Серия из&nbsp;трёх роликов для&nbsp;проведения рекламной
                   кампании.
@@ -52,7 +52,7 @@ const Index = () => {
             </div>
             <div className={cn(s.polemica, s.video_number)}>
               <div>
-                <Video videoSrc={"polemica.mp4"} label={"polemica"} />
+                <Video videoSrc={"polemica"} label={"polemica"} />
                 <Caption
                   tags={[TAGS.olv, TAGS.digital]}
                   category={CATEGORIES.reclama}
@@ -115,7 +115,7 @@ const Index = () => {
           <div>
             <Video
               fade="right"
-              videoSrc={"gayane.mp4"}
+              videoSrc={"gayane"}
               label={"yandex/gayane"}
             />
             <Caption
@@ -176,7 +176,7 @@ const Index = () => {
           <div>
             <Video
               fade="right"
-              videoSrc={"dom.mp4"}
+              videoSrc={"dom"}
               label={"там, где наш дом"}
             />
             <Caption
@@ -202,7 +202,7 @@ const Index = () => {
           <div>
             <Video
               fade="right"
-              videoSrc={"ctrl.mp4"}
+              videoSrc={"ctrl"}
               label={"Ctrl + A / add"}
             />
             <Caption
@@ -212,7 +212,7 @@ const Index = () => {
             ></Caption>
           </div>
           <div>
-            <Video videoSrc={"cg.mp4"} label={"шоурил cg"} />
+            <Video videoSrc={"cg"} label={"шоурил cg"} />
             <Caption
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
               category={"Графика и постпродакшн"}
