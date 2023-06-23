@@ -10,7 +10,7 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
       className={s.wr}
       data-aos={`fade-${fade}`}
       data-aos-duration="1000"
-      data-aos-offset="500"
+      data-aos-offset={videoSrc === "showreel" ? 0 : 500}
     >
       <div className={s.video_wrapper}>
         <video

@@ -140,7 +140,7 @@
       justify-content: space-between;
       padding-top: 75%;
 
-      & > a {
+      & a {
         display: block;
         width: 75%;
         @include link-hover;
@@ -148,7 +148,7 @@
         text-decoration-line: underline;
         color: $text3;
       }
-      & > .social {
+      & .social {
         align-self: flex-end;
       }
     }

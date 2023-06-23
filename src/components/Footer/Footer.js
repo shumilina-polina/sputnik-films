@@ -39,7 +39,8 @@ const Footer = () => {
             </div>
             <div
               data-aos="fade-left"
-              data-aos-offset="500"
+              data-aos-anchor-placement="center-bottom"
+              data-aos-duration="1000"
               className={s.authors}
             >
               <article>
@@ -86,14 +87,12 @@ const Footer = () => {
                 </a>
               </article>
             </div>
-            <div
-              data-aos="fade-left"
-              data-aos-offset="500"
-              className={s.policy}
-            >
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                Политика обработки персональных данных
-              </a>
+            <div className={s.policy}>
+              <div data-aos="fade-left" data-aos-duration="700">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  Политика обработки персональных данных
+                </a>
+              </div>
               <div className={s.social}>
                 <LogoBox>
                   <SocialLink svg={"yandex"}>https://hello</SocialLink>
