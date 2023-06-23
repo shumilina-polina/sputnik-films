@@ -9,9 +9,10 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
     <div className={s.wr} data-aos={`fade-${fade}`} data-aos-duration="1000">
       <div className={s.video_wrapper}>
         <video
-          loop={true}
-          muted={true}
-          preload="metadata"
+          loop
+          muted="muted"
+          preload="auto"
+          controls={false}
           playsInline
           onLoadedData={() => setLoaded(true)}
           poster={poster ? require(`assets/video/${poster}`) : undefined}
@@ -24,7 +25,7 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
           <source src={require(`assets/video/${videoSrc}`)} type="video/mp4" />
           Тег video не поддерживается вашим браузером.
         </video>
-        <video
+        {/* <video
           muted={true}
           preload="metadata"
           autoPlay={false}
@@ -33,7 +34,7 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
         >
           <source src={require(`assets/video/${videoSrc}`)} type="video/mp4" />
           Тег video не поддерживается вашим браузером.
-        </video>
+        </video> */}
       </div>
       <Label>{label}</Label>
     </div>

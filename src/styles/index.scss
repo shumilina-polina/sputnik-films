@@ -11,13 +11,13 @@ body {
   min-height: 100vh;
   background-color: $bg;
   color: $text6;
+  overflow-x: hidden;
 }
 
 html {
   scroll-padding-top: 50px;
   scroll-behavior: smooth;
   position: relative;
-  // overflow-x: hidden;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
   letter-spacing: 0.015em;
   padding: 0px 0 1000px;
   padding-right: 0 !important;
-  overflow-x: hidden;
   @include laptop {
     padding-bottom: 90vw;
   }
