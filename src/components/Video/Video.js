@@ -1,7 +1,12 @@
 import { useState } from "react";
 import s from "./video.module.scss";
 
-const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
+const Video = ({
+  videoSrc,
+  poster = "nomination-img-1.jpg",
+  label = "",
+  fade = "left",
+}) => {
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
@@ -9,13 +14,16 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
     <div className={s.wr} data-aos={`fade-${fade}`} data-aos-duration="1000">
       <div className={s.video_wrapper}>
         <video
+          width="100%"
+          height="100%"
           loop
           muted="muted"
           preload="auto"
           controls={false}
           playsInline
           onLoadedData={() => setLoaded(true)}
-          poster={poster ? require(`assets/video/${poster}`) : ""}
+          poster={require(`assets/${poster}`)}
+          // poster={poster ? require(`assets/video/${poster}`) : ""}
           onClick={() => setOpenModal(true)}
           onMouseOver={(e) => e.target.play()}
           onMouseOut={(e) => {
