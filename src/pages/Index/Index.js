@@ -20,7 +20,12 @@ const Index = () => {
           <img src={title} alt="творчество" />
         </h1>
         <div className={s.showreel}>
-          <Video fade="up" videoSrc={"showreel"} label={"Шоурил 2023"} />
+          <Video
+            fade="up"
+            videoSrc={"showreel"}
+            label={"Шоурил 2023"}
+            poster={"showreel-poster.png"}
+          />
         </div>
         {/* TABS */}
         <section className={s.projects}>
@@ -32,7 +37,12 @@ const Index = () => {
           <main>
             <div className={s.videos}>
               <div>
-                <Video fade="right" videoSrc={"moretv"} label={"More.tv"} />
+                <Video
+                  fade="right"
+                  videoSrc={"moretv"}
+                  label={"More.tv"}
+                  poster={"moretv-poster.png"}
+                />
                 <Caption
                   tags={[TAGS.olv, TAGS.digital]}
                   category={CATEGORIES.reclama}
@@ -43,7 +53,11 @@ const Index = () => {
                 </Caption>
               </div>
               <div>
-                <Video videoSrc={"ulibka"} label={"Улыбка"} />
+                <Video
+                  videoSrc={"ulibka"}
+                  label={"Улыбка"}
+                  poster={"ulibka-poster.png"}
+                />
                 <Caption>
                   Серия из&nbsp;трёх роликов для&nbsp;проведения рекламной
                   кампании.
@@ -52,7 +66,11 @@ const Index = () => {
             </div>
             <div className={cn(s.polemica, s.video_number)}>
               <div>
-                <Video videoSrc={"polemica"} label={"polemica"} />
+                <Video
+                  videoSrc={"polemica"}
+                  label={"polemica"}
+                  poster={"polemica-poster.png"}
+                />
                 <Caption
                   tags={[TAGS.olv, TAGS.digital]}
                   category={CATEGORIES.reclama}
@@ -108,7 +126,12 @@ const Index = () => {
         </div>
         <div className={cn(s.gayane, s.video_number)}>
           <div>
-            <Video fade="right" videoSrc={"gayane"} label={"yandex/gayane"} />
+            <Video
+              fade="right"
+              videoSrc={"gayane"}
+              label={"yandex/gayane"}
+              poster={"gayane-poster.png"}
+            />
             <Caption
               fade="right"
               tags={["branded", "content"]}
@@ -165,7 +188,12 @@ const Index = () => {
         </div>
         <div className={cn(s.dom, s.video_number)}>
           <div>
-            <Video fade="right" videoSrc={"dom"} label={"там, где наш дом"} />
+            <Video
+              fade="right"
+              videoSrc={"dom"}
+              label={"там, где наш дом"}
+              poster={"dom-poster.png"}
+            />
             <Caption
               fade="right"
               tags={[TAGS.almanah, "кино"]}
@@ -187,7 +215,12 @@ const Index = () => {
         </div>
         <div className={cn(s.videos, s.videos_last)}>
           <div>
-            <Video fade="right" videoSrc={"ctrl"} label={"Ctrl + A / add"} />
+            <Video
+              fade="right"
+              videoSrc={"ctrl"}
+              label={"Ctrl + A / add"}
+              poster={"ctrl-poster.png"}
+            />
             <Caption
               fade="right"
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
@@ -195,7 +228,11 @@ const Index = () => {
             ></Caption>
           </div>
           <div>
-            <Video videoSrc={"cg"} label={"шоурил cg"} />
+            <Video
+              videoSrc={"cg"}
+              label={"шоурил cg"}
+              poster={"cg-poster.png"}
+            />
             <Caption
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
               category={"Графика и постпродакшн"}

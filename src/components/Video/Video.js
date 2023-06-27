@@ -30,12 +30,12 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
           }}
         >
           <source
-            src={require(`assets/video/${videoSrc}.webm`)}
-            type="video/webm"
-          />
-          <source
             src={require(`assets/video/${videoSrc}.mp4`)}
             type="video/mp4"
+          />
+          <source
+            src={require(`assets/video/${videoSrc}.webm`)}
+            type="video/webm"
           />
           Тег video не поддерживается вашим браузером.
         </video>
