@@ -30,6 +30,10 @@
   padding-top: 36px;
   display: grid;
   grid-template-columns: 3fr 2fr;
+  min-height: 372px;
+  @include laptop{
+    min-height: auto;
+  }
   & > .left {
     border-right: 1px solid $text1;
     padding-right: 26px;
