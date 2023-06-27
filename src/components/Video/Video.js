@@ -39,16 +39,7 @@ const Video = ({ videoSrc, poster = "", label = "", fade = "left" }) => {
           />
           Тег video не поддерживается вашим браузером.
         </video>
-        {/* <video
-          muted={true}
-          preload="metadata"
-          autoPlay={false}
-          poster={poster ? require(`assets/video/${poster}`) : undefined}
-          className={s.blured}
-        >
-          <source src={require(`assets/video/${videoSrc}`)} type="video/mp4" />
-          Тег video не поддерживается вашим браузером.
-        </video> */}
+        <img src={require(`assets/video/${poster}`)} alt=" " />
       </div>
       <Label>{label}</Label>
     </div>

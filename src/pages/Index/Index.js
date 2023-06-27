@@ -135,7 +135,7 @@ const Index = () => {
             <Caption
               fade="right"
               tags={["branded", "content"]}
-              category={CATEGORIES.reclama}
+              category={CATEGORIES.docReclama}
             >
               <p>Съёмки проходили в&nbsp;2-х городах.</p>
               <p>1&nbsp;месяц ушёл на&nbsp;производство.</p>

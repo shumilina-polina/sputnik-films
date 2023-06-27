@@ -12,7 +12,7 @@
   &:hover {
     @for $i from 1 to 10 {
       & > li:nth-last-child(#{$i}) {
-        transform: translateX(calc((-35%) * #{$i}));
+        transform: translateX(calc((-25%) * #{$i}));
       }
     }
   }

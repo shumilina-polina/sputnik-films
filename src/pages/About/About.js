@@ -7,6 +7,7 @@ import { breakpoints } from "styles/variables";
 import { nominations } from "constants/nominations";
 import { useState } from "react";
 import BackSlider from "components/BackSlider/BackSlider";
+import { LogoBox } from "components/LogoBox/LogoBox";
 
 const nagrady = [
   "https://vk.com/unknownfilmfestival?w=wall-133062901_946",
@@ -17,7 +18,7 @@ const nagrady = [
 ];
 
 const About = () => {
-  const [nomList, setNomList] = useState(nominations.slice(0, 6));
+  const [nomList, setNomList] = useState(nominations.slice(0, 5));
   return (
     <section className={s.wr}>
       <Wrapper>
@@ -30,12 +31,20 @@ const About = () => {
             представлены на&nbsp;крупнейших онлайн-платформах
           </p>
           <div className={s.links}>
-            <ul>
-              <SocialLink svg={"yandex"}>https://</SocialLink>
-              <SocialLink svg={"yandex"}>https://</SocialLink>
-              <SocialLink svg={"yandex"}>https://</SocialLink>
-              <SocialLink svg={"yandex"}>https://</SocialLink>
-            </ul>
+            <LogoBox>
+              <SocialLink svg={"kinopoisk"}>
+                https://www.kinopoisk.ru/film/5232612/
+              </SocialLink>
+              <SocialLink svg={"okko"}>
+                https://okko.tv/serial/vy-iz-budushchego/season/2
+              </SocialLink>
+              <SocialLink svg={"wink"}>
+                https://wink.ru/movies/tam-gde-nash-dom--year-2022
+              </SocialLink>
+              <SocialLink svg={"tvigle"}>
+                https://www.tvigle.ru/video/tam-gde-nash-dom/
+              </SocialLink>
+            </LogoBox>
           </div>
           <div className={s.authors}>
             <ul>
@@ -44,6 +53,9 @@ const About = () => {
               </Author>
               <Author src={"author-2.png"} name={"Сергей Клейн"}>
                 Сооснователь и&nbsp;исполнительный продюсер
+              </Author>
+              <Author src={"author-3.png"} name={"Сергей Клейн"}>
+                Аккаунт <br /> менеджер
               </Author>
             </ul>
           </div>
@@ -64,34 +76,39 @@ const About = () => {
           </ul>
           <ul className={s.nominacyy}>
             {nomList.map((elem, i) => (
-              <div key={i} data-aos="fade-up" data-aos-delay={i * 50}>
-                <li>
-                  <a href={elem.url} target="_blank" rel="noopener noreferrer">
-                    {elem.slug}
-                  </a>
-                  <p>{elem.text}</p>
-                  <ImageBox>
-                    <div>
-                      <img
-                        src={require(`assets/${elem.imageSrc}`)}
-                        alt="Номинация"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src={require(`assets/${elem.imageSrc}`)}
-                        alt="Номинация"
-                      />
-                    </div>
-                  </ImageBox>
-                </li>
-              </div>
+              <a
+                key={i}
+                href={elem.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div data-aos="fade-up" data-aos-delay={i * 50}>
+                  <li>
+                    <span>{elem.slug}</span>
+                    <p>{elem.text}</p>
+                    <ImageBox>
+                      <div>
+                        <img
+                          src={require(`assets/${elem.imageSrc}`)}
+                          alt="Номинация"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src={require(`assets/${elem.imageSrc}`)}
+                          alt="Номинация"
+                        />
+                      </div>
+                    </ImageBox>
+                  </li>
+                </div>
+              </a>
             ))}
           </ul>
           <button
             onClick={(e) => {
               setNomList(nominations);
-              console.log((e.target.disabled = true));
+              e.target.disabled = true;
             }}
           >
             показать еще
@@ -138,7 +155,7 @@ export const ImageBox = styled.div`
       position: relative;
       &:first-child {
         position: absolute;
-        filter: blur(38px);
+        filter: blur(20px);
         left: 0;
         top: 0;
         bottom: 0;

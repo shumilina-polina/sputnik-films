@@ -40,15 +40,31 @@
       }
       & > ul {
         transform: translateY(50%);
-        display: flex;
         align-items: center;
         justify-content: center;
         width: 50%;
         margin: 0 auto;
         background-color: $bg;
-        gap: 8px;
+        gap: 3px;
         @include laptop {
           transform: translateY(150%);
+        }
+        & > li {
+          margin-right: 0;
+          &:first-child {
+            transform: translateX(30%);
+          }
+          &:nth-child(3) {
+            transform: translateX(-30%);
+          }
+          &:last-child {
+            transform: translateX(-60%);
+          }
+        }
+        &:hover {
+          & > li {
+            transform: translateX(0);
+          }
         }
       }
     }
@@ -137,7 +153,6 @@
     }
     & .nominacyy {
       border-top: 1px solid $text1;
-
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -169,7 +184,7 @@
             object-fit: contain;
           }
         }
-        & a {
+        & span {
           margin-right: 32px;
           @include text;
           @include link-hover;

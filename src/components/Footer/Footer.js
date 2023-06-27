@@ -34,16 +34,19 @@ const Footer = () => {
             </div>
           </nav>
           <div className={s.content}>
-            <div>
-              <Form />
-            </div>
             <div
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-anchor-placement="center-bottom"
               data-aos-duration="1000"
-              className={s.authors}
             >
-              <article>
+              <Form />
+            </div>
+            <div className={s.authors}>
+              <article
+                data-aos="fade-left"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="1000"
+              >
                 <div>
                   <img
                     src={require("assets/author-1.png")}
@@ -64,7 +67,11 @@ const Footer = () => {
                   Телеграм
                 </a>
               </article>
-              <article>
+              <article
+                data-aos="fade-left"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="1000"
+              >
                 <div>
                   <img
                     src={require("assets/author-2.png")}
@@ -95,8 +102,12 @@ const Footer = () => {
               </div>
               <div className={s.social}>
                 <LogoBox>
-                  <SocialLink svg={"yandex"}>https://hello</SocialLink>
-                  <SocialLink svg={"yandex"}>https://hello</SocialLink>
+                  <SocialLink svg={"vimeo"}>
+                    https://vimeo.com/sputnikfilmspro
+                  </SocialLink>
+                  <SocialLink svg={"vk"}>
+                    https://vk.com/sputnikfilms
+                  </SocialLink>
                 </LogoBox>
               </div>
             </div>
