@@ -16,3 +16,9 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: white !important;
   @include text;
 }
+
+.tabs {
+  & .Mui-selected {
+    color: $text6 !important;
+  }
+}

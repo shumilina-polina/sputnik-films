@@ -1,0 +1,76 @@
+@import "styles/variables.scss";
+
+.tab_box {
+  margin-bottom: 196px;
+  @include laptop {
+    margin-bottom: 20vw;
+  }
+}
+
+.tabs {
+  & > div > div {
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1px solid $text1;
+  }
+  & span {
+    display: none;
+  }
+  & .tab {
+    padding: 0;
+    min-width: auto;
+    @include text;
+    @include link-hover;
+    @include jb5;
+    color: $text3;
+  }
+}
+
+.content {
+  padding-top: 36px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  & > .left {
+    border-right: 1px solid $text1;
+    padding-right: 26px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 96px;
+    flex-direction: column;
+    & > p {
+      @include jb5;
+      font-size: 44px;
+      line-height: 125%;
+      letter-spacing: -0.44px;
+      text-transform: uppercase;
+      @include laptop {
+        font-size: 2.78vw;
+      }
+    }
+    & > ul {
+      display: flex;
+      gap: 16px;
+      letter-spacing: 0.24px;
+      @include text;
+      @include jb5;
+      color: $text3;
+    }
+  }
+  & > .right {
+    padding-left: 36px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    & p {
+      @include text;
+      @include jb5;
+      max-width: 50%;
+      letter-spacing: 0.24px;
+    }
+    & ul {
+      align-self: flex-end;
+    }
+  }
+}

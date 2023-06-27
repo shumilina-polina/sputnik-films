@@ -4,7 +4,7 @@ export const CATEGORIES = {
   docReclama: "Документальная_реклама",
   korpVideo: "Корпоративное_видео",
   FPV: "FPV-съемка",
-  graph: "Грфаика",
+  graph: "Графика",
   docKino: "Документальное_кино",
   clip: "Клипы",
   showreel: "Шоурилы",

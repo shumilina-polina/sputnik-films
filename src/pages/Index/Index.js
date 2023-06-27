@@ -11,6 +11,7 @@ import Process from "components/Process";
 import cn from "classnames";
 import SocialLink from "components/SocialLink";
 import TypeIt from "typeit-react";
+import { HorizontalTabs } from "components/Tabs/Tabs";
 
 const Index = () => {
   return (
@@ -27,7 +28,7 @@ const Index = () => {
             poster={"showreel-poster.png"}
           />
         </div>
-        {/* TABS */}
+        <HorizontalTabs />
         <section className={s.projects}>
           <header data-aos="fade-left">
             <h2>
