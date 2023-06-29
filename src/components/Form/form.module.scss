@@ -81,16 +81,22 @@
         & > label {
           margin: 0;
           display: block;
-
+          @include laptop {
+            min-width: 20%;
+          }
           & > span {
-            padding: 6px 12px;
+            display: flex;
+            justify-content: center;
+            padding: 6px 9px;
             @include text;
             border: 1px solid $text2;
             border-radius: 51px;
             color: $text2;
+            white-space: nowrap;
             transition: color 0.3s, background-color 0.3s, border-color 0.3s;
             @include laptop {
               padding: 2px;
+              width: 100%;
             }
             &:hover {
               color: #1c1c1c;
