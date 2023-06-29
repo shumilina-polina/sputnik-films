@@ -3,11 +3,26 @@ import "swiper/css";
 import { Autoplay } from "swiper";
 import s from "./backSlider.module.scss";
 import { ImageBox } from "pages/About/About";
+import { useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const BackSlider = () => {
+  const slider = useRef(null);
+  const swiper = useRef(null);
+  const isInView = useInView(slider, {
+    once: true,
+  });
+
+  useEffect(() => {
+    isInView
+      ? swiper.current?.swiper.autoplay.start()
+      : swiper.current?.swiper.autoplay.stop();
+  }, [isInView]);
+
   return (
     <div className={s.wr}>
       <Swiper
+        ref={swiper}
         speed={1000}
         modules={[Autoplay]}
         slidesPerView={"auto"}
@@ -51,7 +66,7 @@ const BackSlider = () => {
               </div>
             </ImageBox>
             <ImageBox>
-              <div>
+              <div ref={slider}>
                 <img
                   src={require("assets/slider/backstage__item03.png")}
                   alt=""

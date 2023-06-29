@@ -14,6 +14,9 @@
 .slide {
   width: 50%;
   height: 462px;
+  @include laptop {
+    height: 40vw;
+  }
   &:nth-child(2) {
     width: 29%;
   }
@@ -41,6 +44,9 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 100%;
+    & img{
+      max-height: 214px;
+    }
     & > div {
       width: 100%;
       height: 100%;

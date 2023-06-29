@@ -32,11 +32,13 @@
       }
     }
     & > .links {
+      margin-bottom: 121px;
       height: 80px;
       border: 1px solid $text1;
       border-top: none;
       @include laptop {
         height: 10vw;
+        margin-bottom: 9vw;
       }
       & > ul {
         transform: translateY(50%);
@@ -69,24 +71,32 @@
       }
     }
     & > .authors {
-      padding: 266px 0 31px;
+      padding: 27px 68px;
       border-left: 1px solid $text1;
       border-right: 1px solid $text1;
-      @include laptop {
-        padding: 20vw 0 4vw;
+      & figure:nth-child(2) {
+        & figcaption {
+          max-width: 168px;
+        }
       }
+
       & > ul {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
         gap: 36px;
         @include laptop {
           gap: 3vw;
+          justify-content: space-around;
         }
         & > figure {
           display: flex;
           align-items: center;
+          height: 100%;
           gap: 24px;
+          & > div {
+            height: 100%;
+          }
           @include laptop {
             gap: 2vw;
           }
@@ -94,6 +104,7 @@
         & figcaption {
           max-width: 219px;
           @include text;
+          @include jb5;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -104,9 +115,10 @@
 
           & > span:first-child {
             margin-bottom: 4px;
+            text-transform: uppercase;
           }
           & > span:last-child {
-            color: $text3;
+            color: $text2;
           }
         }
       }
@@ -115,7 +127,7 @@
   & main {
     margin-bottom: 174px;
     @include laptop {
-      margin-bottom: 20vw;
+      margin-bottom: 15vw;
     }
     & h2 {
       @include text;
@@ -212,8 +224,7 @@
       text-transform: uppercase;
       border-bottom: 1px solid $text1;
       &:disabled {
-        color: $text1;
-        cursor: auto;
+       display: none;
       }
     }
   }

@@ -45,7 +45,7 @@ export const mixins = {
   text: css`
     font-family: "JetBrains Mono", monospace;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 125%;
     letter-spacing: 0.015em;

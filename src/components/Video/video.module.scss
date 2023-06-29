@@ -58,7 +58,7 @@
   & > div {
     margin-right: 11px;
     width: 10px;
-    height: 10px;
+    height: 10px !important;
     background-color: $red;
     filter: blur(2.5px);
     -webkit-filter: blur(2.5px);
@@ -67,7 +67,7 @@
     -ms-filter: blur(2.5px);
     @include laptop {
       width: 5px;
-      height: 5px;
+      height: 5px !important;
       margin-right: 2px;
     }
   }

@@ -236,7 +236,7 @@ const Index = () => {
             />
             <Caption
               tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
-              category={"Графика и постпродакшн"}
+              category={"Графика_и_постпродакшн"}
             >
               5 лет развиваем направление
             </Caption>

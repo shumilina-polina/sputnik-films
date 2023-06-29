@@ -54,7 +54,7 @@ const About = () => {
               <Author src={"author-2.png"} name={"Сергей Клейн"}>
                 Сооснователь и&nbsp;исполнительный продюсер
               </Author>
-              <Author src={"author-3.png"} name={"Сергей Клейн"}>
+              <Author src={"author-3.png"} name={"Ксения Яковлева"}>
                 Аккаунт <br /> менеджер
               </Author>
             </ul>
@@ -149,7 +149,7 @@ export const ImageBox = styled.div`
     aspect-ratio: 1/1;
     position: relative;
     @media ${breakpoints.laptop} {
-      width: 6vw;
+      width: 9vw;
     }
     & > div {
       position: relative;

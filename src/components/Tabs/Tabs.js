@@ -9,10 +9,10 @@ import { useState } from "react";
 const tabs = [
   CATEGORIES.reclama,
   CATEGORIES.docReclama,
-  "Корпоративное видео",
+  "Корпоративное_видео",
   CATEGORIES.FPV,
-  "Документальные фильмы",
-  "Графика и постпродакшн",
+  "Документальные_фильмы",
+  "Графика_и_постпродакшн",
   CATEGORIES.clip,
 ];
 
