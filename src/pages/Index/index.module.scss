@@ -16,7 +16,7 @@
     height: 732px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 15.2/9;
     }
     & div {
       height: 100%;
@@ -63,7 +63,7 @@
     height: 400px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/11;
     }
   }
   & video {
@@ -119,7 +119,7 @@
     height: 535px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/11;
     }
   }
 }
@@ -145,7 +145,7 @@
     height: 535px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/11;
     }
   }
   & > div:first-child {
@@ -203,7 +203,7 @@
     height: 535px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/11;
     }
   }
 
@@ -256,7 +256,7 @@
     height: 403px !important;
     @include laptop {
       height: auto !important;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/11;
     }
   }
   & > div {

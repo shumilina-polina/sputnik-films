@@ -28,6 +28,12 @@
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     z-index: 1;
+    @include laptop {
+      // -webkit-mask-position: left center;
+      // mask-position: left top;
+      // mask-size: contain;
+      // -webkit-mask-size: contain;
+    }
   }
   img {
     position: absolute;
