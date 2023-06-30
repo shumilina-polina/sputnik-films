@@ -4,7 +4,8 @@ import { Autoplay } from "swiper";
 import s from "./backSlider.module.scss";
 import { ImageBox } from "pages/About/About";
 import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Modal from "components/Modal";
 
 const BackSlider = () => {
   const slider = useRef(null);
@@ -34,68 +35,16 @@ const BackSlider = () => {
         }}
       >
         <SwiperSlide className={s.slide}>
-          <ImageBox>
-            <div>
-              <img
-                src={require("assets/slider/backstage__item01.png")}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src={require("assets/slider/backstage__item01.png")}
-                alt=""
-              />
-            </div>
-          </ImageBox>
+          <PhotoSlide i={1} />
         </SwiperSlide>
         <SwiperSlide className={s.slide}>
           <div className={s.slide_flex}>
-            <ImageBox>
-              <div>
-                <img
-                  src={require("assets/slider/backstage__item02.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src={require("assets/slider/backstage__item02.png")}
-                  alt=""
-                />
-              </div>
-            </ImageBox>
-            <ImageBox>
-              <div ref={slider}>
-                <img
-                  src={require("assets/slider/backstage__item03.png")}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src={require("assets/slider/backstage__item03.png")}
-                  alt=""
-                />
-              </div>
-            </ImageBox>
+            <PhotoSlide i={2} />
+            <PhotoSlide i={3} />
           </div>
         </SwiperSlide>
         <SwiperSlide className={s.slide}>
-          <ImageBox>
-            <div>
-              <img
-                src={require("assets/slider/backstage__item04.png")}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src={require("assets/slider/backstage__item04.png")}
-                alt=""
-              />
-            </div>
-          </ImageBox>
+          <PhotoSlide i={4} />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -103,3 +52,31 @@ const BackSlider = () => {
 };
 
 export default BackSlider;
+
+const PhotoSlide = ({ i }) => {
+  const [openModal, setOpenModal] = useState(false);
+  return (
+    <>
+      <ImageBox onClick={() => setOpenModal(true)}>
+        <div>
+          <img
+            src={require(`assets/slider/backstage__item0${i}.png`)}
+            alt="Backstage"
+          />
+        </div>
+        <div>
+          <img
+            src={require(`assets/slider/backstage__item0${i}.png`)}
+            alt="Backstage"
+          />
+        </div>
+      </ImageBox>
+      <Modal open={openModal} setOpen={setOpenModal} className="video_modal">
+        <img
+          src={require(`assets/slider/backstage__item0${i}.png`)}
+          alt="Backstage"
+        />
+      </Modal>
+    </>
+  );
+};

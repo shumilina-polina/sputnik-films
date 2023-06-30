@@ -57,8 +57,8 @@ const Video = ({
           src={videoUrl}
           width="100%"
           height="100%"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         ></iframe>
       </Modal>
     </>
