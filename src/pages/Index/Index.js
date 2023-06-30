@@ -24,6 +24,7 @@ const Index = () => {
           <Video
             fade="up"
             videoSrc={"showreel"}
+            videoUrl={"https://player.vimeo.com/video/687465086?h=100169ac7e"}
             label={"Шоурил 2023"}
             poster={"showreel-poster.png"}
           />
@@ -41,6 +42,7 @@ const Index = () => {
                 <Video
                   fade="right"
                   videoSrc={"moretv"}
+                  videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
                   label={"More.tv"}
                   poster={"moretv-poster.png"}
                 />
@@ -56,6 +58,7 @@ const Index = () => {
               <div>
                 <Video
                   videoSrc={"ulibka"}
+                  videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
                   label={"Улыбка"}
                   poster={"ulibka-poster.png"}
                 />
@@ -69,6 +72,7 @@ const Index = () => {
               <div>
                 <Video
                   videoSrc={"polemica"}
+                  videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
                   label={"polemica"}
                   poster={"polemica-poster.png"}
                 />
@@ -130,6 +134,7 @@ const Index = () => {
             <Video
               fade="right"
               videoSrc={"gayane"}
+              videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
               label={"yandex/gayane"}
               poster={"gayane-poster.png"}
             />
@@ -192,6 +197,7 @@ const Index = () => {
             <Video
               fade="right"
               videoSrc={"dom"}
+              videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
               label={"там, где наш дом"}
               poster={"dom-poster.png"}
             />
@@ -219,6 +225,7 @@ const Index = () => {
             <Video
               fade="right"
               videoSrc={"ctrl"}
+              videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
               label={"Ctrl + A / add"}
               poster={"ctrl-poster.png"}
             />
@@ -231,6 +238,7 @@ const Index = () => {
           <div>
             <Video
               videoSrc={"cg"}
+              videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
               label={"шоурил cg"}
               poster={"cg-poster.png"}
             />
