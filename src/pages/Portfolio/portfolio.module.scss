@@ -1,12 +1,14 @@
 @import "styles/variables.scss";
 
 .wr {
+  margin-bottom: 179px;
   padding-top: 58px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 100px;
   position: relative;
   @include laptop {
+    margin-bottom: 20vw;
     padding-top: 5vw;
     gap: 10vw;
   }
@@ -41,13 +43,13 @@
         @include laptop {
           padding: 0.5em;
         }
-        &:hover {
+        &:hover,
+        &:focus {
           border-color: transparent;
           background-color: $text4;
           color: rgba(28, 28, 28, 1);
         }
-        &:active,
-        &:focus {
+        &:active {
           background-color: $text2;
           color: $text2;
         }
@@ -56,7 +58,7 @@
     & .category_active {
       border-color: transparent;
       background-color: $text4;
-      color: rgba(28, 28, 28, 1);
+      color: rgba(28, 28, 28, 1) !important;
     }
   }
   &_tags {
@@ -78,14 +80,15 @@
           padding: 0.5em;
         }
         &:hover {
-          color: $text4;
+          color: $text3;
+        }
+        &:active {
+          color: $text2;
         }
       }
     }
-    & .category_active {
-      border-color: transparent;
-      background-color: $text4;
-      color: rgba(28, 28, 28, 1);
+    & .tag_active {
+      color: $text4;
     }
   }
   &_button {
@@ -93,12 +96,10 @@
     padding: 26px 0;
     letter-spacing: 0.24px;
     text-transform: uppercase;
+    @include laptop {
+      padding: 2vw 0;
+    }
   }
-}
-
-.video {
-  border: 2px solid red;
-  height: 200vh;
 }
 
 .flex {
@@ -125,5 +126,86 @@
     transform: none;
     top: initial;
     bottom: 0;
+  }
+}
+
+.video {
+  & > h1 {
+    width: 43%;
+    margin-bottom: 72px;
+    @include laptop {
+      margin-bottom: 10vw;
+    }
+  }
+  & > .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 108px 36px;
+    @include laptop {
+      gap: 7vw 2vw;
+    }
+    & > li {
+      & div {
+        height: 100%;
+      }
+      height: 232px;
+      @include laptop {
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+      &:nth-child(3n) {
+        height: 484px;
+        grid-column: span 2;
+        grid-row: span 2;
+        @include laptop {
+          height: auto;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+
+    &_last_big {
+      & > li:last-child {
+        border: 3px solid red;
+        height: 484px;
+        grid-column: span 2;
+        grid-row: span 2;
+        @include laptop {
+          height: auto;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+
+    &_4 {
+      & > li {
+        &:nth-child(3n) {
+          grid-column: initial;
+          grid-row: initial;
+          height: initial;
+        }
+        &:nth-child(1),
+        &:nth-child(4) {
+          grid-column: span 2;
+          grid-row: span 2;
+          height: 484px;
+          @include laptop {
+            height: auto;
+            aspect-ratio: 16/9;
+          }
+        }
+      }
+    }
+    &_2 {
+      & > li {
+        height: 484px;
+        grid-column: span 2;
+        grid-row: span 2;
+        @include laptop {
+          height: auto;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
   }
 }

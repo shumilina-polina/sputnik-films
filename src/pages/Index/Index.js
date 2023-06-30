@@ -20,9 +20,12 @@ const Index = () => {
         <h1>
           <img src={title} alt="творчество" />
         </h1>
-        <div className={s.showreel}>
+        <div
+          className={s.showreel}
+          data-aos={`fade-up`}
+          data-aos-duration="1000"
+        >
           <Video
-            fade="up"
             videoSrc={"showreel"}
             videoUrl={"https://player.vimeo.com/video/687465086?h=100169ac7e"}
             label={"Шоурил 2023"}
@@ -39,15 +42,20 @@ const Index = () => {
           <main>
             <div className={s.videos}>
               <div>
-                <Video
-                  fade="right"
-                  videoSrc={"moretv"}
-                  videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
-                  label={"More.tv"}
-                  poster={"moretv-poster.png"}
-                />
+                <div
+                  data-aos={`fade-right`}
+                  data-aos-duration="1000"
+                  data-aos-offset="500"
+                >
+                  <Video
+                    videoSrc={"moretv"}
+                    videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
+                    label={"More.tv"}
+                    poster={"moretv-poster.png"}
+                  />
+                </div>
                 <Caption
-                  tags={[TAGS.olv, TAGS.digital]}
+                  tags={['olv', TAGS.digital]}
                   category={CATEGORIES.reclama}
                   fade="right"
                 >
@@ -56,12 +64,18 @@ const Index = () => {
                 </Caption>
               </div>
               <div>
-                <Video
-                  videoSrc={"ulibka"}
-                  videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
-                  label={"Улыбка"}
-                  poster={"ulibka-poster.png"}
-                />
+                <div
+                  data-aos={`fade-left`}
+                  data-aos-duration="1000"
+                  data-aos-offset="500"
+                >
+                  <Video
+                    videoSrc={"ulibka"}
+                    videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
+                    label={"Улыбка"}
+                    poster={"ulibka-poster.png"}
+                  />
+                </div>
                 <Caption>
                   Серия из&nbsp;трёх роликов для&nbsp;проведения рекламной
                   кампании.
@@ -70,14 +84,20 @@ const Index = () => {
             </div>
             <div className={cn(s.polemica, s.video_number)}>
               <div>
-                <Video
-                  videoSrc={"polemica"}
-                  videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
-                  label={"polemica"}
-                  poster={"polemica-poster.png"}
-                />
+                <div
+                  data-aos={`fade-left`}
+                  data-aos-duration="1000"
+                  data-aos-offset="500"
+                >
+                  <Video
+                    videoSrc={"polemica"}
+                    videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
+                    label={"polemica"}
+                    poster={"polemica-poster.png"}
+                  />
+                </div>
                 <Caption
-                  tags={[TAGS.olv, TAGS.digital]}
+                  tags={['olv', TAGS.digital]}
                   category={CATEGORIES.reclama}
                 >
                   Помогли запустить широкую промо-компанию с&nbsp;помощью видео.
@@ -131,13 +151,18 @@ const Index = () => {
         </div>
         <div className={cn(s.gayane, s.video_number)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"gayane"}
-              videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
-              label={"yandex/gayane"}
-              poster={"gayane-poster.png"}
-            />
+            <div
+              data-aos={`fade-right`}
+              data-aos-duration="1000"
+              data-aos-offset="500"
+            >
+              <Video
+                videoSrc={"gayane"}
+                videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
+                label={"yandex/gayane"}
+                poster={"gayane-poster.png"}
+              />
+            </div>
             <Caption
               fade="right"
               tags={["branded", "content"]}
@@ -194,13 +219,18 @@ const Index = () => {
         </div>
         <div className={cn(s.dom, s.video_number)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"dom"}
-              videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
-              label={"там, где наш дом"}
-              poster={"dom-poster.png"}
-            />
+            <div
+              data-aos={`fade-right`}
+              data-aos-duration="1000"
+              data-aos-offset="500"
+            >
+              <Video
+                videoSrc={"dom"}
+                videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
+                label={"там, где наш дом"}
+                poster={"dom-poster.png"}
+              />
+            </div>
             <Caption
               fade="right"
               tags={[TAGS.almanah, "кино"]}
@@ -222,28 +252,39 @@ const Index = () => {
         </div>
         <div className={cn(s.videos, s.videos_last)}>
           <div>
-            <Video
-              fade="right"
-              videoSrc={"ctrl"}
-              videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
-              label={"Ctrl + A / add"}
-              poster={"ctrl-poster.png"}
-            />
+            <div
+              data-aos={`fade-right`}
+              data-aos-duration="1000"
+              data-aos-offset="500"
+            >
+              <Video
+                videoSrc={"ctrl"}
+                videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
+                label={"Ctrl + A / add"}
+                poster={"ctrl-poster.png"}
+              />
+            </div>
             <Caption
               fade="right"
-              tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
+              tags={[TAGS.tv, TAGS.olv]}
               category={"Музыкальный клип"}
             ></Caption>
           </div>
           <div>
-            <Video
-              videoSrc={"cg"}
-              videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
-              label={"шоурил cg"}
-              poster={"cg-poster.png"}
-            />
+            <div
+              data-aos={`fade-left`}
+              data-aos-duration="1000"
+              data-aos-offset="500"
+            >
+              <Video
+                videoSrc={"cg"}
+                videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
+                label={"шоурил cg"}
+                poster={"cg-poster.png"}
+              />
+            </div>
             <Caption
-              tags={[TAGS.tv.toUpperCase(), TAGS.olv.toUpperCase()]}
+              tags={[TAGS.tv, TAGS.olv]}
               category={"Графика_и_постпродакшн"}
             >
               5 лет развиваем направление

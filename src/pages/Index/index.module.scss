@@ -59,15 +59,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 36px;
-  & > div > div {
+  & > div > div > div > div {
     height: 400px !important;
     @include laptop {
       height: auto !important;
       aspect-ratio: 16/11;
     }
   }
-  & video {
-  }
+
   @include laptop {
     column-gap: 3vw;
     margin-bottom: 11vw;

@@ -11,9 +11,9 @@ export const CATEGORIES = {
 };
 
 export const TAGS = {
-  tv: "tv",
-  olv: "olv",
-  clv: "clv",
+  tv: "TV",
+  olv: "OLV",
+  clv: "CLV",
   CG: "CG",
   threeD: "3D",
   VFX: "VFX",

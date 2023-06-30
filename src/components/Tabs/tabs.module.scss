@@ -44,11 +44,11 @@
     gap: 96px;
     flex-direction: column;
     & > p {
-      @include jb5;
       font-size: 44px;
       line-height: 125%;
       letter-spacing: -0.44px;
       text-transform: uppercase;
+      color: $text5;
       @include laptop {
         font-size: 2.78vw;
       }

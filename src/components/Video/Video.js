@@ -1,25 +1,21 @@
 import { useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
+import cn from "classnames";
 
 const Video = ({
   videoSrc,
   videoUrl = "",
   poster = "",
   label = "",
-  fade = "left",
+  route = "",
 }) => {
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <>
-      <div
-        className={s.wr}
-        data-aos={`fade-${fade}`}
-        data-aos-duration="1000"
-        data-aos-offset={videoSrc === "showreel" ? 0 : 500}
-      >
+    <div className={s.section}>
+      <div className={cn(route === "port" ? s.wr_port : s.wr)}>
         <div className={s.video_wrapper}>
           <video
             width="100%"
@@ -47,7 +43,7 @@ const Video = ({
             />
             Тег video не поддерживается вашим браузером.
           </video>
-          <img src={require(`assets/video/${poster}`)} alt=" " />
+          <img src={require(`assets/video/${poster}`)} alt="poster" />
         </div>
         <Label>{label}</Label>
       </div>
@@ -61,7 +57,7 @@ const Video = ({
           allowFullScreen
         ></iframe>
       </Modal>
-    </>
+    </div>
   );
 };
 
