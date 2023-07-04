@@ -28,14 +28,21 @@
 }
 
 .content {
-  padding-top: 36px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   min-height: 372px;
-  @include laptop{
+  @include laptop {
     min-height: auto;
   }
+  & button {
+    &:active,
+    &:focus {
+      background-color: $text1;
+    }
+  }
   & > .left {
+    padding-top: 36px;
+
     border-right: 1px solid $text1;
     padding-right: 26px;
     display: flex;
@@ -49,7 +56,9 @@
       letter-spacing: -0.44px;
       text-transform: uppercase;
       color: $text5;
+      min-height: 219px;
       @include laptop {
+        min-height: auto;
         font-size: 2.78vw;
       }
     }
@@ -63,6 +72,8 @@
     }
   }
   & > .right {
+    padding-top: 36px;
+
     padding-left: 36px;
     display: flex;
     justify-content: space-between;
@@ -74,7 +85,7 @@
       max-width: 50%;
       letter-spacing: 0.24px;
     }
-    & ul {
+    & > div {
       align-self: flex-end;
     }
   }

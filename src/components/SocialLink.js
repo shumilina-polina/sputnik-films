@@ -13,6 +13,12 @@ const Button = styled.button`
   backdrop-filter: blur(15px);
   border-radius: 50px;
   transition: background-color 0.3s;
+  & a {
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
   & svg {
     object-fit: contain;
     @media ${breakpoints.laptop} {
@@ -37,9 +43,13 @@ const SocialLink = ({ children, svg }) => {
   return (
     <li>
       <Button>
-        <a href={children} target="_blank" rel="noopener noreferrer">
+        {children ? (
+          <a href={children} target="_blank" rel="noopener noreferrer">
+            <SvgSelector svg={svg} />
+          </a>
+        ) : (
           <SvgSelector svg={svg} />
-        </a>
+        )}
       </Button>
     </li>
   );

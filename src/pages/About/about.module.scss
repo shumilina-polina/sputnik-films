@@ -51,7 +51,7 @@
         @include laptop {
           transform: translateY(150%);
         }
-        & > li {
+        & > div {
           margin-right: 0;
           &:first-child {
             transform: translateX(30%);
@@ -64,7 +64,7 @@
           }
         }
         &:hover {
-          & > li {
+          & > div {
             transform: translateX(0);
           }
         }
@@ -224,7 +224,7 @@
       text-transform: uppercase;
       border-bottom: 1px solid $text1;
       &:disabled {
-       display: none;
+        display: none;
       }
     }
   }

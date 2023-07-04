@@ -32,18 +32,26 @@ const About = () => {
           </p>
           <div className={s.links}>
             <LogoBox>
-              <SocialLink svg={"kinopoisk"}>
-                https://www.kinopoisk.ru/film/5232612/
-              </SocialLink>
-              <SocialLink svg={"okko"}>
-                https://okko.tv/serial/vy-iz-budushchego/season/2
-              </SocialLink>
-              <SocialLink svg={"wink"}>
-                https://wink.ru/movies/tam-gde-nash-dom--year-2022
-              </SocialLink>
-              <SocialLink svg={"tvigle"}>
-                https://www.tvigle.ru/video/tam-gde-nash-dom/
-              </SocialLink>
+              <div>
+                <SocialLink svg={"kinopoisk"}>
+                  https://www.kinopoisk.ru/film/5232612/
+                </SocialLink>
+              </div>
+              <div>
+                <SocialLink svg={"okko"}>
+                  https://okko.tv/serial/vy-iz-budushchego/season/2
+                </SocialLink>
+              </div>
+              <div>
+                <SocialLink svg={"wink"}>
+                  https://wink.ru/movies/tam-gde-nash-dom--year-2022
+                </SocialLink>
+              </div>
+              <div>
+                <SocialLink svg={"tvigle"}>
+                  https://www.tvigle.ru/video/tam-gde-nash-dom/
+                </SocialLink>
+              </div>
             </LogoBox>
           </div>
           <div className={s.authors}>

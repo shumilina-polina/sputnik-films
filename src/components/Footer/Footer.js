@@ -96,18 +96,26 @@ const Footer = () => {
             </div>
             <div className={s.policy}>
               <div data-aos="fade-left" data-aos-duration="700">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={require("assets/documents/ПОЛИТИКА_ОБРАБОТКИ_ПЕРСОНАЛЬНЫХ_ДАННЫХ.pdf")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Политика обработки персональных данных
                 </a>
               </div>
               <div className={s.social}>
                 <LogoBox>
-                  <SocialLink svg={"vimeo"}>
-                    https://vimeo.com/sputnikfilmspro
-                  </SocialLink>
-                  <SocialLink svg={"vk"}>
-                    https://vk.com/sputnikfilms
-                  </SocialLink>
+                  <div>
+                    <SocialLink svg={"vimeo"}>
+                      https://vimeo.com/sputnikfilmspro
+                    </SocialLink>
+                  </div>
+                  <div>
+                    <SocialLink svg={"vk"}>
+                      https://vk.com/sputnikfilms
+                    </SocialLink>
+                  </div>
                 </LogoBox>
               </div>
             </div>

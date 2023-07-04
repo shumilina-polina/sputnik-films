@@ -4,7 +4,9 @@ import classNames from "classnames";
 import { LogoBox } from "components/LogoBox/LogoBox";
 import SocialLink from "components/SocialLink";
 import { CATEGORIES, TAGS } from "constants/filters";
+import { tab1, tab2, tab3, tab4, tab5, tab6 } from "constants/tabText";
 import { useState } from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const tabs = [
   CATEGORIES.reclama,
@@ -67,151 +69,191 @@ export const HorizontalTabs = () => {
 
 const Content = ({ children }) => <div className={s.content}>{children}</div>;
 
-const Tab1 = () => (
-  <>
-    <div className={s.left}>
-      <p>
-        Создадим видеоролик для&nbsp;целей ваших рекламныхи маркетинговых
-        кампаний, Сами разработаем креатив.
-      </p>
-      <ul>
-        {["tv", "olv", "clv", TAGS.digital].map((tag, i) => (
-          <li key={i}>#{tag}</li>
-        ))}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>
-        Работаем с&nbsp;бизнесом напрямую и&nbsp;сотрудничаем
-        с&nbsp;агентствами. Закрываем весь цикл производства
-        и&nbsp;сопутствующие задачи.
-      </p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
-
-const Tab2 = () => (
-  <>
-    <div className={s.left}>
-      <p>РАССКАЗЫВАЕМ НАСТОЯЩИЕ ИСТОРИИ О&nbsp;ЛЮДЯХ И&nbsp;БРЕНДАХ.</p>
-      <ul>
-        {['tv', 'olv', 'clv', TAGS.digital].map((tag, i) => (
-          <li key={i}>#{tag}</li>
-        ))}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>
-        Работаем в&nbsp;короткой форме и&nbsp;снимаем полнометражные фильмы.
-      </p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
-const Tab3 = () => (
-  <>
-    <div className={s.left}>
-      <p>ПРЕЗЕНТАЦИЯ КОМПАНИИ, УСЛУГИ И&nbsp;ПРОДУКТА НА&nbsp;ЯЗЫКЕ ФАКТОВ. </p>
-      <ul>
-        {["фильмы", "презентации", "визитки", "hr-ролики", "эксплейнеры"].map(
-          (tag, i) => (
+const Tab1 = () => {
+  const [text, setText] = useState(tab1.init);
+  return (
+    <>
+      <div className={s.left}>
+        <p>
+          Создадим видеоролик для&nbsp;целей ваших рекламных
+          и&nbsp;маркетинговых кампаний, Сами разработаем креатив.
+        </p>
+        <ul>
+          {["tv", "olv", "clv", TAGS.digital].map((tag, i) => (
             <li key={i}>#{tag}</li>
-          )
-        )}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>
-        Умеем структурировать и&nbsp;компактно преподносить большие объемы
-        информации.
-      </p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
+          ))}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab1.init)}>
+          <LogoBox>
+            {["more", "sushi", "tingz", "polemica", "skuratov", "sber"].map(
+              (svg, i) => (
+                <div key={i} onMouseOver={() => setText(tab1[`text_${i + 1}`])}>
+                  <SocialLink svg={svg} />
+                </div>
+              )
+            )}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
 
-const Tab4 = () => (
-  <>
-    <div className={s.left}>
-      <p>
-        ЛЕТАЕМ НА&nbsp;СПОРТИВНЫХ ДРОНАХ. ДЕЛАЕМ FULL-FPV РОЛИКИ И&nbsp;ВНЕДРЯЕМ
-        ИХ&nbsp;В&nbsp;ПРОЕКТЫ.
-      </p>
-      <ul>
-        {[TAGS.aero, TAGS.extrim].map((tag, i) => (
-          <li key={i}>#{tag}</li>
-        ))}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>
-        Снимаем экстремальные ролики. Летаем в&nbsp;ограниченных пространствах.
-      </p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
+const Tab2 = () => {
+  const [text, setText] = useState(tab2.init);
 
-const Tab5 = () => (
-  <>
-    <div className={s.left}>
-      <p>
-        СОЗДАЕМ ФИЛЬМЫ И&nbsp;СЕРИАЛЫ, КОТОРЫЕ ВЫХОДЯТ В&nbsp;ПРОКАТ
-        И&nbsp;НА&nbsp;ОНЛАЙН-ПЛАТФОРМАХ.
-      </p>
-      <ul>
-        {[TAGS.film, TAGS.web, TAGS.almanah, TAGS.show].map((tag, i) => (
-          <li key={i}>#{tag}</li>
-        ))}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>
-        Делаем независимые проекты и&nbsp;создаем эксклюзивные проекты
-        для&nbsp;платформ.
-      </p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
-const Tab6 = () => (
-  <>
-    <div className={s.left}>
-      <p>
-        ДЕЛАЕМ 2D И&nbsp;3D-ГРАФИКУ, МУЛЬТИПЛИКАЦИИЮ И&nbsp;VFX. МОНТАЖ,
-        ЦЕТОКОРРЕКЦИЯ И&nbsp;САУНД-ДИЗАЙН.
-      </p>
-      <ul>
-        {[TAGS.CG, TAGS.threeD, TAGS.VFX, TAGS.NFT].map((tag, i) => (
-          <li key={i}>#{tag}</li>
-        ))}
-      </ul>
-    </div>
-    <div className={s.right}>
-      <p>CG, 2D, 3D, инфографика, монтаж, цветокоррекция</p>
-      <LogoBox>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-        <SocialLink svg={"yandex"}>https:/</SocialLink>
-      </LogoBox>
-    </div>
-  </>
-);
+  return (
+    <>
+      <div className={s.left}>
+        <p>РАССКАЗЫВАЕМ НАСТОЯЩИЕ ИСТОРИИ О&nbsp;ЛЮДЯХ И&nbsp;БРЕНДАХ.</p>
+        <ul>
+          {["tv", "olv", "clv", TAGS.digital].map((tag, i) => (
+            <li key={i}>#{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab2.init)}>
+          <LogoBox>
+            {["yandex", "mega"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab2[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
+const Tab3 = () => {
+  const [text, setText] = useState(tab3.init);
+  return (
+    <>
+      <div className={s.left}>
+        <p>
+          ПРЕЗЕНТАЦИЯ КОМПАНИИ, УСЛУГИ И&nbsp;ПРОДУКТА НА&nbsp;ЯЗЫКЕ ФАКТОВ.
+        </p>
+        <ul>
+          {["фильмы", "презентации", "визитки", "hr-ролики", "эксплейнеры"].map(
+            (tag, i) => (
+              <li key={i}>#{tag}</li>
+            )
+          )}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab3.init)}>
+          <LogoBox>
+            {["sl", "em", "pt"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab3[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const Tab4 = () => {
+  const [text, setText] = useState(tab4.init);
+  return (
+    <>
+      <div className={s.left}>
+        <p>
+          ЛЕТАЕМ НА&nbsp;СПОРТИВНЫХ ДРОНАХ. ДЕЛАЕМ FULL-FPV РОЛИКИ
+          И&nbsp;ВНЕДРЯЕМ ИХ&nbsp;В&nbsp;ПРОЕКТЫ.
+        </p>
+        <ul>
+          {[TAGS.aero, TAGS.extrim].map((tag, i) => (
+            <li key={i}>#{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab4.init)}>
+          <LogoBox>
+            {["ciay", "asber", "vokzal"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab4[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const Tab5 = () => {
+  const [text, setText] = useState(tab5.init);
+  return (
+    <>
+      <div className={s.left}>
+        <p>
+          СОЗДАЕМ ФИЛЬМЫ И&nbsp;СЕРИАЛЫ, КОТОРЫЕ ВЫХОДЯТ В&nbsp;ПРОКАТ
+          И&nbsp;НА&nbsp;ОНЛАЙН-ПЛАТФОРМАХ.
+        </p>
+        <ul>
+          {[TAGS.film, TAGS.web, TAGS.almanah, TAGS.show].map((tag, i) => (
+            <li key={i}>#{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab5.init)}>
+          <LogoBox>
+            {["kinopoisk", "okko", "wink", "tvigle"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab5[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
+const Tab6 = () => {
+  const [text, setText] = useState(tab6.init);
+
+  return (
+    <>
+      <div className={s.left}>
+        <p>
+          ДЕЛАЕМ 2D И&nbsp;3D-ГРАФИКУ, МУЛЬТИПЛИКАЦИЮ И&nbsp;VFX. МОНТАЖ,
+          ЦЕТОКОРРЕКЦИЯ И&nbsp;САУНД-ДИЗАЙН.
+        </p>
+        <ul>
+          {[TAGS.CG, TAGS.threeD, TAGS.VFX, TAGS.NFT].map((tag, i) => (
+            <li key={i}>#{tag}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={s.right}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <div onMouseLeave={() => setText(tab6.init)}>
+          <LogoBox>
+            {["vtb", "rizolin", "urgant", "mega", "them"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab6[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
+          </LogoBox>
+        </div>
+      </div>
+    </>
+  );
+};
 const Tab7 = () => (
   <>
     <div className={s.left}>

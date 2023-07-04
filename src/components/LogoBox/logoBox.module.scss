@@ -2,16 +2,16 @@
 
 .box {
   display: flex;
-  & > li {
-    margin-right: -10%;
+  & > div {
+    margin-right: -14px;
     transition: transform 0.3s;
     &:last-child {
-      margin: 0;
+      margin-right: 0;
     }
   }
   &:hover {
     @for $i from 1 to 10 {
-      & > li:nth-last-child(#{$i}) {
+      & > div:nth-last-child(#{$i}) {
         transform: translateX(calc((-25%) * #{$i}));
       }
     }
