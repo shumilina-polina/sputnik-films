@@ -4,12 +4,12 @@ import { CATEGORIES, TAGS } from "constants/filters";
 import cn from "classnames";
 import useSticky from "components/useSticky";
 import raboty from "assets/raboty.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { videoList } from "constants/videoList";
 import Video from "components/Video/Video";
 
 const Portfolio = () => {
-  const { sticky, stickyBottom, stickyRef } = useSticky();
+  const { sticky, stickyBottom, stickyRef, container } = useSticky();
   const [list, setList] = useState(videoList);
   const [tags, setTags] = useState([]);
   const [category, setCategory] = useState(CATEGORIES.all);
@@ -38,13 +38,6 @@ const Portfolio = () => {
       );
     }
   }, [tags, category]);
-
-  const checkLength = () => {
-    if (list.length < 3) return 2;
-    else if (list.length === 4) return 4;
-    else if (list.length % 3 === 1) return "last_big";
-    else return "";
-  };
 
   return (
     <Wrapper>
@@ -118,23 +111,38 @@ const Portfolio = () => {
           <h1>
             <img src={raboty} alt="творчество" />
           </h1>
-          {list.length === 0 && <p>Не найдено</p>}
-          <ul className={cn(s.list, s[`list_${checkLength()}`])}>
-            {list.map((video, i) => (
-              <li data-aos="fade-up" key={i}>
-                <Video
-                  route="port"
-                  videoSrc={video.localUrl}
-                  videoUrl={video.vimeoUrl}
-                  label={video.label}
-                  poster={video.poster}
-                />
-              </li>
-            ))}
-          </ul>
+          <VideoGrid list={list} />
         </div>
       </section>
     </Wrapper>
+  );
+};
+
+const VideoGrid = ({ list }) => {
+  const checkLength = () => {
+    if (list.length < 3) return 2;
+    else if (list.length === 4) return 4;
+    else if (list.length % 3 === 1) return "last_big";
+    else return "";
+  };
+
+  return (
+    <>
+      {list.length === 0 && <p>Не найдено</p>}
+      <ul className={cn(s.list, s[`list_${checkLength()}`])}>
+        {list.map((video, i) => (
+          <li key={i}>
+            <Video
+              route="port"
+              videoSrc={video.localUrl}
+              videoUrl={video.vimeoUrl}
+              label={video.label}
+              poster={video.poster}
+            />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
