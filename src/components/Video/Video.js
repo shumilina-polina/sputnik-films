@@ -37,10 +37,10 @@ const Video = ({
               src={require(`assets/video/${videoSrc}.mp4`)}
               type="video/mp4"
             />
-            <source
+            {/* <source
               src={require(`assets/video/${videoSrc}.webm`)}
               type="video/webm"
-            />
+            /> */}
             Тег video не поддерживается вашим браузером.
           </video>
           <img src={require(`assets/video/${poster}`)} alt="poster" />

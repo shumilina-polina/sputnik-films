@@ -57,6 +57,7 @@
       text-transform: uppercase;
       color: $text5;
       min-height: 219px;
+      max-width: 93%;
       @include laptop {
         min-height: auto;
         font-size: 2.78vw;

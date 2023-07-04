@@ -20,11 +20,23 @@ const Portfolio = () => {
       : setTags([...tags, TAGS[item]]);
   };
 
-  const containsTags = (videoTags = []) => {};
-
   useEffect(() => {
-    setList(list.filter((video) => containsTags(video.tags)));
-    containsTags();
+    window.scrollTo(0, 0);
+    if (category === CATEGORIES.all)
+      setList(
+        videoList.filter((video) =>
+          tags.every((item) => video.tags.includes(item))
+        )
+      );
+    else {
+      setList(
+        videoList.filter(
+          (video) =>
+            video.category === category &&
+            tags.every((item) => video.tags.includes(item))
+        )
+      );
+    }
   }, [tags, category]);
 
   const checkLength = () => {
