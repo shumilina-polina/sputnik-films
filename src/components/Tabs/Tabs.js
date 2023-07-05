@@ -1,5 +1,5 @@
 import s from "./tabs.module.scss";
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs, useMediaQuery } from "@mui/material";
 import classNames from "classnames";
 import { LogoBox } from "components/LogoBox/LogoBox";
 import SocialLink from "components/SocialLink";
@@ -7,6 +7,7 @@ import { CATEGORIES, TAGS } from "constants/filters";
 import { tab1, tab2, tab3, tab4, tab5, tab6 } from "constants/tabText";
 import { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { breakpoints } from "styles/variables";
 
 const tabs = [
   CATEGORIES.reclama,
@@ -38,6 +39,8 @@ const a11yProps = (index) => {
 };
 
 export const HorizontalTabs = () => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   const [value, setValue] = useState(0);
 
   const handleChange = (_, newValue) => {
@@ -47,6 +50,7 @@ export const HorizontalTabs = () => {
   return (
     <Box className={s.tab_box}>
       <Tabs
+        variant={isMobile ? "scrollable" : ""}
         className={classNames(s.tabs, "tabs")}
         orientation={"horizontal"}
         value={value}
@@ -172,7 +176,7 @@ const Tab4 = () => {
           И&nbsp;ВНЕДРЯЕМ ИХ&nbsp;В&nbsp;ПРОЕКТЫ.
         </p>
         <ul>
-          {[TAGS.aero, TAGS.extrim].map((tag, i) => (
+          {[TAGS.aero, "экстрим"].map((tag, i) => (
             <li key={i}>#{tag}</li>
           ))}
         </ul>
@@ -203,7 +207,7 @@ const Tab5 = () => {
           И&nbsp;НА&nbsp;ОНЛАЙН-ПЛАТФОРМАХ.
         </p>
         <ul>
-          {[TAGS.film, TAGS.web, TAGS.almanah, TAGS.show].map((tag, i) => (
+          {["фильмы", "веб-сериалы", "альманахи", "шоу"].map((tag, i) => (
             <li key={i}>#{tag}</li>
           ))}
         </ul>
@@ -234,7 +238,7 @@ const Tab6 = () => {
           ЦЕТОКОРРЕКЦИЯ И&nbsp;САУНД-ДИЗАЙН.
         </p>
         <ul>
-          {[TAGS.CG, TAGS.threeD, TAGS.VFX, TAGS.NFT].map((tag, i) => (
+          {[TAGS.CG, TAGS.threeD, "VFX", "NFT"].map((tag, i) => (
             <li key={i}>#{tag}</li>
           ))}
         </ul>
