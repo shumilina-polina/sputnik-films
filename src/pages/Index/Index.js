@@ -178,7 +178,7 @@ const Index = () => {
             </Caption>
           </div>
           <div>
-            <SocialLink svg={"yandex"}>https://</SocialLink>
+            <SocialLink svg={"yandex"}/>
             <p>
               Ролик для&nbsp;повышения уровня лояльности пользователей Яндекс.GO
               и&nbsp;проведения HR-компании.

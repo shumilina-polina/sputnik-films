@@ -211,7 +211,7 @@
         width: 90%;
       }
       & > div > div:last-child {
-        width: 100px;
+        width: 115px;
       }
     }
   }
@@ -281,6 +281,12 @@
     }
     & > li {
       height: 100%;
+      & > button {
+        &:hover, &:active, &:focus {
+          background-color: rgba(255, 255, 255, 0.03);
+          cursor: auto;
+        }
+      }
     }
     & p {
       width: 75%;
@@ -394,6 +400,7 @@
     & img {
       @include mobile {
         height: 35px;
+        width: 66px;
         object-fit: contain;
       }
     }

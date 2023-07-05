@@ -74,6 +74,9 @@
       padding: 27px 68px;
       border-left: 1px solid $text1;
       border-right: 1px solid $text1;
+      @include laptop {
+        padding: 5vw;
+      }
       & figure:nth-child(2) {
         & figcaption {
           max-width: 168px;
@@ -87,7 +90,8 @@
         gap: 36px;
         @include laptop {
           gap: 3vw;
-          justify-content: space-around;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
         }
         & > figure {
           display: flex;
@@ -96,6 +100,7 @@
           gap: 24px;
           & > div {
             height: 100%;
+            flex-shrink: 0;
           }
           @include laptop {
             gap: 2vw;

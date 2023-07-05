@@ -9,6 +9,9 @@ const Styled = styled.div`
   @media ${breakpoints.laptop} {
     max-width: 95%;
   }
+  @media ${breakpoints.mobile} {
+    max-width: 90%;
+  }
 `;
 
 const Wrapper = ({ children }) => {
