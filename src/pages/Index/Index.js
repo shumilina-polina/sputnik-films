@@ -50,7 +50,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-right`}
                   data-aos-duration="1000"
-                  data-aos-offset="500"
+                  data-aos-offset={isMobile ? "100" : "500"}
                 >
                   <Video
                     videoSrc={"moretv"}
@@ -72,7 +72,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-left`}
                   data-aos-duration="1000"
-                  data-aos-offset="500"
+                  data-aos-offset={isMobile ? "100" : "500"}
                 >
                   <Video
                     videoSrc={"ulibka"}
@@ -92,7 +92,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-left`}
                   data-aos-duration="1000"
-                  data-aos-offset="500"
+                  data-aos-offset={isMobile ? "100" : "500"}
                 >
                   <Video
                     videoSrc={"polemica"}
@@ -159,7 +159,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset="500"
+              data-aos-offset={isMobile ? "100" : "500"}
             >
               <Video
                 videoSrc={"gayane"}
@@ -227,7 +227,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset="500"
+              data-aos-offset={isMobile ? "100" : "500"}
             >
               <Video
                 videoSrc={"dom"}
@@ -260,7 +260,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset="500"
+              data-aos-offset={isMobile ? "100" : "500"}
             >
               <Video
                 videoSrc={"ctrl"}
@@ -279,7 +279,7 @@ const Index = () => {
             <div
               data-aos={`fade-left`}
               data-aos-duration="1000"
-              data-aos-offset="500"
+              data-aos-offset={isMobile ? "100" : "500"}
             >
               <Video
                 videoSrc={"cg"}
