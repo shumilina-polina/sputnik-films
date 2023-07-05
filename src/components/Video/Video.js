@@ -23,7 +23,8 @@ const Video = ({
   }, [videoSrc]);
 
   useEffect(() => {
-    isMobile && inView && loaded ? video.current.play() : video.current.pause();
+    isMobile && inView ? video.current.play() : video.current.pause();
+    // isMobile && inView && loaded ? video.current.play() : video.current.pause();
   }, [inView]);
 
   return (
