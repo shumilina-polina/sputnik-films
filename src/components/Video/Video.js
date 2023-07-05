@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
 import cn from "classnames";
+import { useInView } from "react-spring";
+import { breakpoints } from "styles/variables";
+import { useMediaQuery } from "@mui/material";
 
 const Video = ({
   videoSrc,
@@ -12,16 +15,23 @@ const Video = ({
 }) => {
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [video, inView] = useInView();
+  const isMobile = useMediaQuery(breakpoints.mobile);
 
   useEffect(() => {
     setLoaded(false);
   }, [videoSrc]);
+
+  useEffect(() => {
+    isMobile && inView ? video.current.play() : video.current.pause();
+  }, [inView]);
 
   return (
     <div className={s.section}>
       <div className={cn(route === "port" ? s.wr_port : s.wr)}>
         <div className={s.video_wrapper}>
           <video
+            ref={video}
             width="100%"
             height="100%"
             loop

@@ -8,10 +8,14 @@ import Index from "./pages/Index/Index";
 import Header from "./components/Header/Header";
 import Portfolio from "pages/Portfolio/Portfolio";
 import About from "pages/About/About";
+import { useMediaQuery } from "@mui/material";
+import { breakpoints } from "styles/variables";
 
 function App() {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   useEffect(() => {
-    Aos.init();
+    Aos.init({ once: isMobile });
   }, []);
   return (
     <>

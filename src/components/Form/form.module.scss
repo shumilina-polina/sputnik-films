@@ -22,6 +22,10 @@
   @include laptop {
     padding: 1.5vw;
   }
+  @include mobile {
+    padding: 17px;
+    margin-bottom: 20px;
+  }
   & > div {
     margin-bottom: 24px;
     width: 100%;
@@ -41,6 +45,10 @@
       @include laptop {
         padding-bottom: 1vw;
         padding-top: 2vw;
+      }
+      @include mobile {
+        padding-bottom: 8px;
+        padding-top: 26px;
       }
       &::before,
       &::after {
@@ -65,6 +73,9 @@
         margin-bottom: 18px;
         @include laptop {
           margin-bottom: 2vw;
+        }
+        @include mobile {
+          margin-bottom: 9px;
         }
       }
       & > div {
@@ -98,6 +109,10 @@
               padding: 2px;
               width: 100%;
             }
+            @include mobile {
+              padding: 4px 8px;
+              width: 100%;
+            }
             &:hover {
               color: #1c1c1c;
               background-color: $text4;
@@ -119,5 +134,9 @@ button[type="submit"] {
   width: 100%;
   @include laptop {
     padding: 5% 0;
+  }
+  @include mobile {
+    padding: 19px 0;
+    margin-bottom: 59px;
   }
 }

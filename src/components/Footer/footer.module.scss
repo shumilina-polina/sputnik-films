@@ -6,6 +6,11 @@
   bottom: 0;
   width: 100%;
   z-index: 100;
+  overflow-x: hidden;
+  @include mobile {
+    // height: 757px;
+    z-index: 10000;
+  }
 }
 
 .wrapper {
@@ -14,6 +19,10 @@
     grid-template-columns: 2fr 2fr 1fr;
     border-top: 1px solid $text1;
     margin-bottom: 5%;
+    @include mobile {
+      grid-template-columns: 2fr 1fr;
+      margin-bottom: 36px;
+    }
     & > div {
       padding-top: 29px;
       display: flex;
@@ -25,9 +34,16 @@
       &:nth-child(2) {
         border-right: 1px solid $text1;
         border-left: 1px solid $text1;
+        @include mobile {
+          border-left: none;
+          justify-content: flex-start;
+        }
       }
       &:first-child {
         justify-content: flex-start;
+        @include mobile {
+          display: none;
+        }
       }
     }
     & h3 {
@@ -91,12 +107,22 @@
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     margin-bottom: 5%;
+    @include mobile {
+      margin-bottom: 0;
+      grid-template-columns: 1fr;
+    }
     & > div {
       display: flex;
       align-items: center;
       justify-content: center;
       &:first-child {
         justify-content: flex-start;
+        @include mobile {
+          display: block;
+          & > div {
+            width: 100%;
+          }
+        }
       }
     }
     & .authors {
@@ -105,6 +131,9 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 10% 5%;
       gap: 10%;
+      @include mobile {
+        display: none;
+      }
       & > article {
         & > div {
           margin-bottom: 24px;
@@ -139,14 +168,21 @@
       flex-direction: column;
       justify-content: space-between;
       padding-top: 75%;
+      @include mobile {
+        padding: 0;
+        flex-direction: row;
+      }
 
-      & a {
+      & > div > a {
         display: block;
         width: 75%;
         @include link-hover;
         @include text;
         text-decoration-line: underline;
         color: $text3;
+        @include mobile {
+          width: 30%;
+        }
       }
       & .social {
         align-self: flex-end;
@@ -157,9 +193,13 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    position: relative;
     & img {
       @include laptop {
         width: 10vw;
+      }
+      @include mobile {
+        width: 112px;
       }
     }
     & > div:first-child {
@@ -173,6 +213,9 @@
     }
     & > div {
       padding: 35px 0;
+      @include mobile {
+        padding: 10px 0;
+      }
       & > span {
         color: $text3;
         @include text;
@@ -187,6 +230,10 @@
       @include laptop {
         background-size: contain;
       }
+      @include mobile {
+        margin-top: 130px;
+        width: 100%;
+      }
       & > a {
         @include text;
         @include link-hover;
@@ -197,6 +244,26 @@
         @include laptop {
           font-size: 0.83vw;
         }
+        @include mobile {
+          font-size: 8px;
+          @include jb5;
+          line-height: 20px;
+          letter-spacing: 0.12px;
+        }
+      }
+    }
+    & > div:first-child,
+    & > div:last-child {
+      @include mobile {
+        position: absolute;
+        bottom: 69px;
+        left: 0;
+      }
+    }
+    & > div:last-child {
+      @include mobile {
+        right: 0;
+        left: initial;
       }
     }
   }

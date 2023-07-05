@@ -9,6 +9,9 @@ const Styled = styled.div`
   @media ${breakpoints.laptop} {
     max-width: 95%;
   }
+  @media ${breakpoints.tablet} {
+    // overflow-x: hidden;
+  }
 `;
 
 const Wrapper = ({ children }) => {

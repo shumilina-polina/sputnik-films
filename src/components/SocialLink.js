@@ -25,10 +25,18 @@ const Button = styled.button`
       width: 3vw;
       height: 3vw;
     }
+    @media ${breakpoints.mobile} {
+      width: 23px;
+      height: 23px;
+    }
   }
   @media ${breakpoints.laptop} {
     width: 5vw;
     height: 5vw;
+  }
+  @media ${breakpoints.mobile} {
+    width: 40px;
+    height: 40px;
   }
   &:hover {
     background-color: ${colors.text1};

@@ -1,6 +1,7 @@
 import Wrapper from "components/Wrapper";
 import s from "./index.module.scss";
 import title from "assets/title.svg";
+import titleMobile from "assets/titleMobile.svg";
 import n72 from "assets/72.svg";
 import n84 from "assets/84.svg";
 import projects from "assets/projects.svg";
@@ -12,13 +13,17 @@ import cn from "classnames";
 import SocialLink from "components/SocialLink";
 import TypeIt from "typeit-react";
 import { HorizontalTabs } from "components/Tabs/Tabs";
+import { useMediaQuery } from "@mui/material";
+import { breakpoints } from "styles/variables";
 
 const Index = () => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   return (
     <section className={s.wr}>
       <Wrapper>
         <h1>
-          <img src={title} alt="творчество" />
+          <img src={isMobile ? titleMobile : title} alt="творчество" />
         </h1>
         <div
           className={s.showreel}
@@ -55,7 +60,7 @@ const Index = () => {
                   />
                 </div>
                 <Caption
-                  tags={['olv', TAGS.digital]}
+                  tags={["olv", TAGS.digital]}
                   category={CATEGORIES.reclama}
                   fade="right"
                 >
@@ -97,7 +102,7 @@ const Index = () => {
                   />
                 </div>
                 <Caption
-                  tags={['olv', TAGS.digital]}
+                  tags={["olv", TAGS.digital]}
                   category={CATEGORIES.reclama}
                 >
                   Помогли запустить широкую промо-компанию с&nbsp;помощью видео.
@@ -180,7 +185,7 @@ const Index = () => {
             </p>
           </div>
         </div>
-        <div className={s.process}>
+        <div className={cn(s.process, s.process_mob)}>
           <Process>
             <span>(контроль)</span>
             <p>
@@ -233,8 +238,8 @@ const Index = () => {
             </div>
             <Caption
               fade="right"
-              tags={[TAGS.almanah, "кино"]}
-              category={CATEGORIES.docKino}
+              tags={["альманах", "кино"]}
+              category={isMobile ? "Док. кино" : CATEGORIES.docKino}
             >
               <p>
                 Дебютный документальный проект, ставший победителем
@@ -266,7 +271,7 @@ const Index = () => {
             </div>
             <Caption
               fade="right"
-              tags={[TAGS.tv, TAGS.olv]}
+              tags={[TAGS.tv, "OLV"]}
               category={"Музыкальный клип"}
             ></Caption>
           </div>
@@ -284,8 +289,8 @@ const Index = () => {
               />
             </div>
             <Caption
-              tags={[TAGS.tv, TAGS.olv]}
-              category={"Графика_и_постпродакшн"}
+              tags={[TAGS.tv, "OLV"]}
+              category={isMobile ? "Графика" : "Графика_и_постпродакшн"}
             >
               5 лет развиваем направление
             </Caption>

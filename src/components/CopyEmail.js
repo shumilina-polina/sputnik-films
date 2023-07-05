@@ -1,8 +1,11 @@
+import { useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { breakpoints } from "styles/variables";
 
 export const CopyEmail = () => {
   const [copied, setCopied] = useState(false);
+  const isMobile = useMediaQuery(breakpoints.mobile);
 
   useEffect(() => {
     setTimeout(() => setCopied(false), 6000);
@@ -15,9 +18,9 @@ export const CopyEmail = () => {
         text={"hello@sputnikfilms.ru"}
       >
         <div>
-          <span>[</span>
+          {isMobile || <span>[</span>}
           {copied ? "скопировано" : "hello@sputnikfilms.ru"}
-          <span>]</span>
+          {isMobile || <span>]</span>}
         </div>
       </CopyToClipboard>
     </button>

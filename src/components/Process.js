@@ -4,6 +4,9 @@ import { breakpoints, colors, mixins } from "styles/variables";
 const Box = styled.div`
   border-top: 1px solid ${colors.text1};
   border-bottom: 1px solid ${colors.text1};
+  @media ${breakpoints.mobile} {
+    border-bottom: none;
+  }
   & > div:last-child,
   & > div:first-child {
     height: 72px;
@@ -11,6 +14,13 @@ const Box = styled.div`
     border-right: 1px solid ${colors.text1};
     @media ${breakpoints.laptop} {
       height: 5vw;
+    }
+  }
+  & > div:last-child {
+    @media ${breakpoints.mobile} {
+      height: 12px;
+      width: 240px;
+      border-left: 1px solid ${colors.text1};
     }
   }
   & > div:nth-child(2) {
@@ -21,6 +31,10 @@ const Box = styled.div`
     @media ${breakpoints.laptop} {
       padding: 5% 12%;
     }
+    @media ${breakpoints.mobile} {
+      padding: 16px 0 68px;
+      border-bottom: 1px solid ${colors.text1};
+    }
     & > span {
       display: block;
       margin-bottom: 36px;
@@ -29,10 +43,13 @@ const Box = styled.div`
       @media ${breakpoints.laptop} {
         margin-bottom: 3vw;
       }
+      @media ${breakpoints.mobile} {
+        margin-bottom: 16px;
+      }
     }
     & > p {
       margin-bottom: 36px;
-      @include jb4;
+      ${mixins.jb4}
       font-size: 44px;
       line-height: 125%;
       text-align: center;
@@ -42,6 +59,12 @@ const Box = styled.div`
       @media ${breakpoints.laptop} {
         font-size: 2.78vw;
         margin-bottom: 3vw;
+      }
+      @media ${breakpoints.mobile} {
+        font-size: 18px;
+        line-height: 125%;
+        margin-bottom: 16px;
+        letter-spacing: -0.36px;
       }
     }
     & figure {
@@ -56,6 +79,10 @@ const Box = styled.div`
         @media ${breakpoints.laptop} {
           width: 5vw;
         }
+        @media ${breakpoints.mobile} {
+          width: 56px;
+          margin-bottom: 8px;
+        }
         & > div {
           position: relative;
           &:first-child {
@@ -65,6 +92,9 @@ const Box = styled.div`
             top: 0;
             bottom: 0;
             right: 0;
+            @media ${breakpoints.mobile} {
+              display: none;
+            }
           }
         }
       }
@@ -76,6 +106,9 @@ const Box = styled.div`
 
         & > span:first-child {
           margin-bottom: 4px;
+          @media ${breakpoints.mobile} {
+            margin-bottom: 0;
+          }
         }
         & > span:last-child {
           color: ${colors.text3};

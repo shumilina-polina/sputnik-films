@@ -7,8 +7,12 @@ import logo from "assets/logo.svg";
 import { Link } from "react-router-dom";
 import { LogoBox } from "components/LogoBox/LogoBox";
 import SvgSelector from "components/SvgSelector";
+import { useMediaQuery } from "@mui/material";
+import { breakpoints } from "styles/variables";
 
 const Footer = () => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   return (
     <footer className={s.footer} id="project">
       <Wrapper>
@@ -132,7 +136,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Задизайнили в артели павлушина
+                {isMobile
+                  ? "Задизайнили в артели"
+                  : "Задизайнили в артели павлушина"}
               </a>
             </div>
             <div>

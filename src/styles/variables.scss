@@ -48,11 +48,16 @@ $red: #e30613;
   @include laptop {
     font-size: 1.11vw;
   }
+  @include mobile {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.18px;
+  }
 }
 // --- BREAKPOINTS ---
 
 $desktop-width: 1260px;
-$mobile-width: 770px;
+$mobile-width: 450px;
 
 @mixin laptop {
   @media (max-width: #{$desktop-width}) {

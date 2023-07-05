@@ -2,11 +2,13 @@ import { css } from "styled-components";
 
 export const sizes = {
   desktopWidth: "1260px",
-  mobileWidth: "770px",
+  laptopWidth: "770px",
+  mobileWidth: "450px",
 };
 
 export const breakpoints = {
   laptop: `(max-width: ${sizes.desktopWidth})`,
+  tablet: `(max-width: ${sizes.laptopWidth})`,
   mobile: `(max-width: ${sizes.mobileWidth})`,
 };
 
@@ -51,6 +53,11 @@ export const mixins = {
     letter-spacing: 0.015em;
     @media ${breakpoints.laptop} {
       font-size: 1.11vw;
+    }
+    @media ${breakpoints.mobile} {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.18px;
     }
   `,
 };
