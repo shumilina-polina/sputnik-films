@@ -2,14 +2,12 @@ import Wrapper from "components/Wrapper";
 import s from "./portfolio.module.scss";
 import { CATEGORIES, TAGS } from "constants/filters";
 import cn from "classnames";
-import useSticky from "components/useSticky";
 import raboty from "assets/raboty.svg";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { videoList } from "constants/videoList";
 import Video from "components/Video/Video";
 
 const Portfolio = () => {
-  const { sticky, stickyBottom, stickyRef, container } = useSticky();
   const [list, setList] = useState(videoList);
   const [tags, setTags] = useState([]);
   const [category, setCategory] = useState(CATEGORIES.all);
@@ -42,15 +40,7 @@ const Portfolio = () => {
   return (
     <Wrapper>
       <section className={s.wr}>
-        <nav
-          ref={stickyRef}
-          className={cn(
-            s.nav,
-            s.flex,
-            sticky ? s.sticky : "",
-            stickyBottom ? s.sticky_bottom : ""
-          )}
-        >
+        <nav className={s.nav}>
           <div className={s.filter}>
             <div className={s.filter_categories}>
               <h2>Категории:</h2>
@@ -99,13 +89,6 @@ const Portfolio = () => {
             </button>
           </div>
         </nav>
-        {sticky && (
-          <div
-            style={{
-              height: `${stickyRef.current?.clientHeight}px`,
-            }}
-          />
-        )}
 
         <div className={s.video}>
           <h1>
@@ -131,7 +114,7 @@ const VideoGrid = ({ list }) => {
       {list.length === 0 && <p>Не найдено</p>}
       <ul className={cn(s.list, s[`list_${checkLength()}`])}>
         {list.map((video, i) => (
-          <li key={i}>
+          <li data-aos="fade-up" key={i}>
             <Video
               route="port"
               videoSrc={video.localUrl}

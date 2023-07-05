@@ -142,7 +142,7 @@
     & > span {
       @include text;
       text-transform: uppercase;
-      white-space: nowrap;
+      // white-space: nowrap;
     }
   }
 }

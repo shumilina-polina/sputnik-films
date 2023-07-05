@@ -162,6 +162,15 @@
         width: 10vw;
       }
     }
+    & > div:first-child {
+      & > a {
+        display: block;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
     & > div {
       padding: 35px 0;
       & > span {

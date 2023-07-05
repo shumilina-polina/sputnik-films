@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
 import cn from "classnames";
-import { useEffect } from "react";
-import { useRef } from "react";
 
 const Video = ({
   videoSrc,
@@ -12,14 +10,12 @@ const Video = ({
   label = "",
   route = "",
 }) => {
-  const video = useRef(null);
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    play ? video.current.play() : video.current.pause();
-  }, [play, video]);
+    setLoaded(false);
+  }, [videoSrc]);
 
   return (
     <div className={s.section}>
@@ -29,7 +25,6 @@ const Video = ({
             width="100%"
             height="100%"
             loop
-            ref={video}
             muted="muted"
             preload="metadata"
             controls={false}
@@ -37,9 +32,11 @@ const Video = ({
             onLoadedData={() => setLoaded(true)}
             poster={poster ? require(`assets/video/${poster}`) : undefined}
             onClick={() => setOpenModal(true)}
-            onMouseOver={() => setPlay(true)}
-            onMouseOut={() => {
-              if (loaded) setPlay(false);
+            onMouseOver={(e) => {
+              if (loaded) e.target.play();
+            }}
+            onMouseOut={(e) => {
+              if (loaded) e.target.pause();
             }}
             src={require(`assets/video/${videoSrc}.mp4`)}
             type="video/mp4"
