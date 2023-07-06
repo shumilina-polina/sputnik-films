@@ -11,8 +11,19 @@ const Button = styled.button`
   background-color: rgba(255, 255, 255, 0.03);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 50px;
   transition: background-color 0.3s;
+  position: relative;
+  &::before {
+    border-radius: 100px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
   & a {
     height: 100%;
     display: flex !important;

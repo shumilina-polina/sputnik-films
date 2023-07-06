@@ -171,11 +171,13 @@
           }
           @include mobile {
             max-width: 100%;
+            gap: 3px;
           }
 
           & > span:first-child {
             margin-bottom: 4px;
             text-transform: uppercase;
+         
           }
           & > span:last-child {
             color: $text2;
