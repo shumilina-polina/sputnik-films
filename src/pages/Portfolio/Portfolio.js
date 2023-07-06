@@ -16,7 +16,7 @@ const Portfolio = () => {
   const [category, setCategory] = useState(CATEGORIES.all);
   const isMobile = useMediaQuery(breakpoints.mobile);
 
-  const [filtersMobileOpen, setFiltersMobileOpen] = useState(true);
+  const [filtersMobileOpen, setFiltersMobileOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
