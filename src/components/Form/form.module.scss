@@ -88,6 +88,10 @@
         @include laptop {
           gap: 1vw;
         }
+        @include mobile {
+          gap: 3px;
+          justify-content: flex-start;
+        }
 
         & > label {
           margin: 0;
@@ -136,7 +140,7 @@ button[type="submit"] {
     padding: 5% 0;
   }
   @include mobile {
-    padding: 19px 0;
+    padding: 25px 0;
     margin-bottom: 59px;
   }
 }

@@ -64,12 +64,13 @@
         background-size: contain;
         bottom: 0;
         width: 100%;
-        padding: 17px 0;
+        padding: 20px 0;
         left: 50%;
         display: flex;
         justify-content: center;
         transform: translateX(-50%);
         z-index: 100;
+        font-size: 14px;
         & span {
           transform: rotate(90deg);
         }

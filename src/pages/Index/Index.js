@@ -120,18 +120,35 @@ const Index = () => {
         <div className={s.process}>
           <Process>
             <span>(процесс)</span>
-            <p>
-              Выстраиваем прозрачный и&nbsp;понятный процесс работы. Придумываем
-              креатив и&nbsp;защищаем идеи, обосновываем траты, собл
-              <TypeIt
-                options={{
-                  speed: 60,
-                  waitUntilVisible: true,
-                }}
-              >
-                юдаем сметы и&nbsp;сроки.
-              </TypeIt>
-            </p>
+            {isMobile ? (
+              <p>
+                Выстраиваем прозрачный и&nbsp;понятный процесс работы.
+                Придумываем креатив и&nbsp;защищаем идеи, обосновываем траты,
+                соблюдаем сметы и&nbsp;сроки
+                <TypeIt
+                  options={{
+                    speed: 60,
+                    waitUntilVisible: false,
+                  }}
+                >
+                  .
+                </TypeIt>
+              </p>
+            ) : (
+              <p>
+                Выстраиваем прозрачный и&nbsp;понятный процесс работы.
+                Придумываем креатив и&nbsp;защищаем идеи, обосновываем траты,
+                собл
+                <TypeIt
+                  options={{
+                    speed: 60,
+                    waitUntilVisible: true,
+                  }}
+                >
+                  юдаем сметы и&nbsp;сроки.
+                </TypeIt>
+              </p>
+            )}
             <figure>
               <div>
                 <div>
@@ -178,7 +195,7 @@ const Index = () => {
             </Caption>
           </div>
           <div>
-            <SocialLink svg={"yandex"}/>
+            <SocialLink svg={"yandex"} />
             <p>
               Ролик для&nbsp;повышения уровня лояльности пользователей Яндекс.GO
               и&nbsp;проведения HR-компании.
@@ -188,18 +205,33 @@ const Index = () => {
         <div className={cn(s.process, s.process_mob)}>
           <Process>
             <span>(контроль)</span>
-            <p>
-              гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
-              утверждаем каждый этап проекта,{" "}
-              <TypeIt
-                options={{
-                  speed: 60,
-                  waitUntilVisible: true,
-                }}
-              >
-                ведём ежедневные отчёты.
-              </TypeIt>
-            </p>
+            {isMobile ? (
+              <p>
+                гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
+                утверждаем каждый этап проекта, ведём ежедневные отчёты
+                <TypeIt
+                  options={{
+                    speed: 60,
+                    waitUntilVisible: false,
+                  }}
+                >
+                  .
+                </TypeIt>
+              </p>
+            ) : (
+              <p>
+                гарантируем удобный сервис и&nbsp;постоянную коммуникацию,
+                утверждаем каждый этап проекта,{" "}
+                <TypeIt
+                  options={{
+                    speed: 60,
+                    waitUntilVisible: true,
+                  }}
+                >
+                  ведём ежедневные отчёты.
+                </TypeIt>
+              </p>
+            )}
             <figure>
               <div>
                 <div>
