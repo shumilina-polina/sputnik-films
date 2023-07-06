@@ -7,10 +7,6 @@
   width: 100%;
   z-index: 100;
   overflow-x: hidden;
-  @include mobile {
-    // height: 757px;
-    z-index: 10000;
-  }
 }
 
 .wrapper {

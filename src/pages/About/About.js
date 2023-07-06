@@ -8,6 +8,10 @@ import { nominations } from "constants/nominations";
 import { useState } from "react";
 import BackSlider from "components/BackSlider/BackSlider";
 import { LogoBox } from "components/LogoBox/LogoBox";
+import { useMediaQuery } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const nagrady = [
   "https://vk.com/unknownfilmfestival?w=wall-133062901_946",
@@ -18,6 +22,8 @@ const nagrady = [
 ];
 
 const About = () => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   const [nomList, setNomList] = useState(nominations.slice(0, 5));
   return (
     <section className={s.wr}>
@@ -27,8 +33,9 @@ const About = () => {
             <img src={comanda} alt="творчество" />
           </h1>
           <p data-aos="fade-up">
-            Победители и&nbsp;участники международных кинофестивалей, Фильмы
-            представлены на&nbsp;крупнейших онлайн-платформах
+            Победители {isMobile && <br />}
+            и&nbsp;участники международных кинофестивалей, Фильмы представлены
+            на&nbsp;крупнейших онлайн-платформах
           </p>
           <div className={s.links}>
             <LogoBox>
@@ -68,8 +75,39 @@ const About = () => {
             </ul>
           </div>
         </header>
-        <main>
+      </Wrapper>
+
+      <main>
+        <Wrapper>
           <h2>публикации и награды:</h2>
+        </Wrapper>
+        {isMobile ? (
+          <ul className={s.nagrady}>
+            <Swiper
+              slidesPerView={"auto"}
+              className={s.slider_nom}
+              spaceBetween={0}
+              slidesPerGroup={1}
+            >
+              {nagrady.map((elem, i) => (
+                <SwiperSlide key={i} className={s.slide}>
+                  <li
+                    key={i}
+                    data-aos="fade-left"
+                    data-aos-delay={(i + 1) * 100}
+                  >
+                    <a href={elem} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={require(`assets/nomination-${i + 1}.png`)}
+                        alt="Номинация"
+                      />
+                    </a>
+                  </li>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </ul>
+        ) : (
           <ul className={s.nagrady}>
             {nagrady.map((elem, i) => (
               <li key={i} data-aos="fade-left" data-aos-delay={(i + 1) * 100}>
@@ -82,6 +120,8 @@ const About = () => {
               </li>
             ))}
           </ul>
+        )}
+        <Wrapper>
           <ul className={s.nominacyy}>
             {nomList.map((elem, i) => (
               <a
@@ -93,7 +133,7 @@ const About = () => {
                 <div data-aos="fade-up" data-aos-delay={i * 50}>
                   <li>
                     <span>{elem.slug}</span>
-                    <p>{elem.text}</p>
+                    <ReactMarkdown>{elem.text}</ReactMarkdown>
                     <ImageBox>
                       <div>
                         <img
@@ -113,6 +153,7 @@ const About = () => {
               </a>
             ))}
           </ul>
+
           <button
             onClick={(e) => {
               setNomList(nominations);
@@ -121,7 +162,9 @@ const About = () => {
           >
             показать еще
           </button>
-        </main>
+        </Wrapper>
+      </main>
+      <Wrapper>
         <footer>
           <h2>Бэкстейдж:</h2>
           <BackSlider />
@@ -164,10 +207,21 @@ export const ImageBox = styled.div`
       &:first-child {
         position: absolute;
         filter: blur(20px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
+        @media ${breakpoints.laptop} {
+          filter: blur(9px);
+          -webkit-filter: blur(9px);
+    -moz-filter: blur(9px);
+    -o-filter: blur(9px);
+    -ms-filter: blur(9px);
+        }
       }
     }
   }

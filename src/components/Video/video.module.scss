@@ -160,6 +160,13 @@
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
     -ms-filter: blur(10px);
+    @include mobile {
+      filter: none;
+      -webkit-filter: none;
+      -moz-filter: none;
+      -o-filter: none;
+      -ms-filter: none;
+    }
   }
 
   & .label {

@@ -28,7 +28,12 @@ const BackSlider = () => {
         modules={[Autoplay]}
         slidesPerView={"auto"}
         className={s.slider}
-        spaceBetween={36}
+        spaceBetween={13}
+        breakpoints={{
+          450: {
+            spaceBetween: 36,
+          },
+        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,

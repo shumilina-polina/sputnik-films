@@ -7,6 +7,11 @@
   & img {
     object-fit: cover;
   }
+  @include mobile {
+    padding: 32px 0;
+    overflow: visible !important;
+    height: 231px;
+  }
 }
 
 .slide {
@@ -15,8 +20,20 @@
   @include laptop {
     height: 40vw;
   }
+  @include mobile {
+    height: 100%;
+  }
+  &:first-child,
+  &:last-child {
+    @include mobile {
+      width: 218px;
+    }
+  }
   &:nth-child(2) {
     width: 29%;
+    @include mobile {
+      width: 126px;
+    }
   }
 
   & > div {
@@ -45,6 +62,12 @@
     height: 100%;
     & img {
       max-height: 214px;
+      @include mobile {
+        max-height: 76px !important;
+      }
+    }
+    @include mobile {
+      gap: 13px;
     }
     & > div {
       width: 100%;

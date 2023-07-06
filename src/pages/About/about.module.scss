@@ -5,16 +5,26 @@
   @include laptop {
     padding-top: 5vw;
   }
+  @include mobile {
+    padding-top: 40px;
+  }
   & header {
     margin-bottom: 155px;
     @include laptop {
       margin-bottom: 10vw;
+    }
+    @include mobile {
+      margin-bottom: 60px;
     }
     & > h1 {
       margin: 0 auto 32px;
       width: 35%;
       @include laptop {
         margin-bottom: 4vw;
+      }
+      @include mobile {
+        width: 70%;
+        margin-bottom: 20px;
       }
     }
     & > p {
@@ -30,6 +40,13 @@
       @include laptop {
         font-size: 2.78vw;
       }
+      @include mobile {
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.27px;
+        width: 100%;
+        margin-bottom: 2px;
+      }
     }
     & > .links {
       margin-bottom: 121px;
@@ -39,6 +56,10 @@
       @include laptop {
         height: 10vw;
         margin-bottom: 9vw;
+      }
+      @include mobile {
+        margin-bottom: 65px;
+        height: 40px;
       }
       & > ul {
         transform: translateY(50%);
@@ -51,16 +72,29 @@
         @include laptop {
           transform: translateY(150%);
         }
+        @include mobile {
+          transform: translateY(50%);
+          width: 65%;
+        }
         & > div {
           margin-right: 0;
           &:first-child {
             transform: translateX(30%);
+            @include mobile {
+              transform: none;
+            }
           }
           &:nth-child(3) {
             transform: translateX(-30%);
+            @include mobile {
+              transform: none;
+            }
           }
           &:last-child {
             transform: translateX(-60%);
+            @include mobile {
+              transform: none;
+            }
           }
         }
         &:hover {
@@ -77,9 +111,16 @@
       @include laptop {
         padding: 5vw;
       }
+      @include mobile {
+        padding: 0;
+        border: none;
+      }
       & figure:nth-child(2) {
         & figcaption {
           max-width: 168px;
+          @include mobile {
+            max-width: auto;
+          }
         }
       }
 
@@ -93,6 +134,10 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
         }
+        @include mobile {
+          grid-template-columns: 1fr;
+          gap: 27px;
+        }
         & > figure {
           display: flex;
           align-items: center;
@@ -101,9 +146,16 @@
           & > div {
             height: 100%;
             flex-shrink: 0;
+            @include mobile {
+              height: 72px;
+              width: 72px;
+            }
           }
           @include laptop {
             gap: 2vw;
+          }
+          @include mobile {
+            gap: 27px;
           }
         }
         & figcaption {
@@ -117,6 +169,9 @@
           @include laptop {
             max-width: 15vw;
           }
+          @include mobile {
+            max-width: 100%;
+          }
 
           & > span:first-child {
             margin-bottom: 4px;
@@ -124,6 +179,12 @@
           }
           & > span:last-child {
             color: $text2;
+            @include mobile {
+              font-size: 10px;
+              line-height: 14px;
+              letter-spacing: 0.15px;
+              max-width: 70%;
+            }
           }
         }
       }
@@ -134,6 +195,9 @@
     @include laptop {
       margin-bottom: 15vw;
     }
+    @include mobile {
+      margin-bottom: 60px;
+    }
     & h2 {
       @include text;
       margin-bottom: 42px;
@@ -143,6 +207,9 @@
       @include laptop {
         margin-bottom: 5vw;
       }
+      @include mobile {
+        margin-bottom: 32px;
+      }
     }
     & .nagrady {
       display: flex;
@@ -150,6 +217,16 @@
       gap: 26px;
       height: 56px;
       margin-bottom: 42px;
+      max-width: 1244px;
+      margin: 0 auto 42px;
+      & > div {
+        @include mobile {
+          height: 56px;
+          & > div > div {
+            width: 82px;
+          }
+        }
+      }
       & a {
         display: block;
         padding: 7.5px;
@@ -162,10 +239,22 @@
         &:focus {
           background-color: $text1;
         }
+        @include mobile {
+          padding: 9px;
+          border-radius: 3px;
+          width: 82px;
+        }
       }
       @include laptop {
         height: 5vw;
         margin-bottom: 5vw;
+        max-width: 95%;
+      }
+      @include mobile {
+        margin-bottom: 24px;
+        height: 61px;
+        gap: 3px;
+        max-width: 100%;
       }
     }
     & .nominacyy {
@@ -193,12 +282,23 @@
         @include laptop {
           padding: 1vw 1px;
         }
+        @include mobile {
+          padding: 20px 0;
+          display: grid;
+          grid-template-columns: 1fr 64px;
+          grid-template-rows: auto minmax(34px, auto);
+          gap: 8px 22px;
+        }
         & > div {
           height: 34px;
           width: auto;
           aspect-ratio: 16/9;
           @include laptop {
             height: 5vw;
+          }
+          @include mobile {
+            grid-row: 2;
+            height: 34px;
           }
           & img {
             object-fit: contain;
@@ -220,6 +320,9 @@
           @include laptop {
             margin-right: 2vw;
           }
+          @include mobile {
+            grid-row: 2;
+          }
         }
       }
     }
@@ -234,6 +337,9 @@
       &:disabled {
         display: none;
       }
+      @include mobile {
+        padding: 32px 0;
+      }
     }
   }
   & footer {
@@ -241,6 +347,13 @@
     border-right: 1px solid $text1;
     padding-left: 23px;
     padding-bottom: 23px;
+
+    @include mobile {
+      border: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
     & > h2 {
       @include text;
       color: $text2;
