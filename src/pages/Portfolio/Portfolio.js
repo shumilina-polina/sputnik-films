@@ -76,7 +76,7 @@ const Portfolio = () => {
               onClick={() => setFiltersMobileOpen(true)}
               className={cn(s.button_mobile, "button")}
             >
-              ПО КАТЕГОРИЯМ
+              {category === CATEGORIES.all ? "ПО КАТЕГОРИЯМ" : category}
             </button>
           )}
           <VideoGrid list={list} />

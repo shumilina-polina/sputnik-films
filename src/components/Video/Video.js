@@ -23,9 +23,7 @@ const Video = ({
   }, [videoSrc]);
 
   useEffect(() => {
-    isMobile && inView
-      ? video.current?.play()
-      : video.current?.pause();
+    isMobile && inView ? video.current?.play() : video.current?.pause();
     // isMobile && inView && loaded ? video.current.play() : video.current.pause();
   }, [inView]);
 
@@ -56,7 +54,8 @@ const Video = ({
                 poster={poster ? require(`assets/video/${poster}`) : undefined}
                 onClick={() => setOpenModal(true)}
                 onMouseOver={(e) => {
-                  if (loaded) e.target.play();
+                  e.target.play();
+                  // if (loaded) e.target.play();
                 }}
                 onMouseOut={(e) => {
                   if (loaded) e.target.pause();

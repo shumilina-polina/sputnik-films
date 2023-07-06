@@ -99,7 +99,10 @@ const Footer = () => {
               </article>
             </div>
             <div className={s.policy}>
-              <div data-aos="fade-left" data-aos-duration="700">
+              <div
+                data-aos={isMobile ? "" : "fade-left"}
+                data-aos-duration="700"
+              >
                 <a
                   href={require("assets/documents/ПОЛИТИКА_ОБРАБОТКИ_ПЕРСОНАЛЬНЫХ_ДАННЫХ.pdf")}
                   target="_blank"
