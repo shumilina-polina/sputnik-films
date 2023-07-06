@@ -14,16 +14,7 @@ const Button = styled.button`
   -webkit-backdrop-filter: blur(15px);
   border-radius: 50px;
   transition: background-color 0.3s;
-  position: relative;
-  &::before {
-    border-radius: 100px;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-  }
+
   & a {
     height: 100%;
     display: flex !important;

@@ -136,7 +136,7 @@
     & > li:last-child {
       display: flex;
       gap: 1px 8px;
-      @include mobile{
+      @include mobile {
         flex-wrap: wrap;
       }
     }
@@ -177,7 +177,7 @@
     position: absolute;
     top: -36px;
     left: 0;
-    @include mobile{
+    @include mobile {
       top: -31px;
     }
 
