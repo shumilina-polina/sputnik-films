@@ -124,6 +124,7 @@
     @include text;
     @include mobile {
       width: 60%;
+      word-break: break-word;
     }
     & > p {
       @include text;
@@ -134,7 +135,10 @@
     color: $text3;
     & > li:last-child {
       display: flex;
-      gap: 8px;
+      gap: 1px 8px;
+      @include mobile{
+        flex-wrap: wrap;
+      }
     }
   }
 }
@@ -173,6 +177,9 @@
     position: absolute;
     top: -36px;
     left: 0;
+    @include mobile{
+      top: -31px;
+    }
 
     & > span {
       @include text;

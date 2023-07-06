@@ -91,6 +91,7 @@
         @include mobile {
           gap: 3px;
           justify-content: flex-start;
+          flex-wrap: wrap;
         }
 
         & > label {

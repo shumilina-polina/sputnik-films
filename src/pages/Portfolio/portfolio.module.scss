@@ -12,6 +12,24 @@
     padding-top: 5vw;
     gap: 10vw;
   }
+  @include mobile {
+    padding-top: 40px;
+    gap: 0;
+    margin-bottom: 80px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav {
+  max-width: 282px;
+  transition: transform 0.6s;
+  @include laptop {
+    width: 22vw;
+  }
+  @include mobile {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .filter {
@@ -23,9 +41,17 @@
     @include jb5;
     color: $text2;
     letter-spacing: 0.24px;
+    text-transform: uppercase;
+    @include mobile {
+      margin-bottom: 8px;
+    }
   }
   &_categories {
     margin-bottom: 36px;
+    @include mobile {
+      margin-bottom: 29px;
+      max-width: 70%;
+    }
     & > ul {
       display: flex;
       flex-wrap: wrap;
@@ -63,6 +89,9 @@
   }
   &_tags {
     margin-bottom: 64px;
+    @include mobile {
+      max-width: 70%;
+    }
     & > ul {
       display: flex;
       flex-wrap: wrap;
@@ -99,33 +128,9 @@
     @include laptop {
       padding: 2vw 0;
     }
-  }
-}
-
-.flex {
-  display: flex;
-}
-.nav {
-  max-width: 282px;
-  transition: transform 0.6s;
-  @include laptop {
-    width: 22vw;
-  }
-}
-
-.sticky {
-  position: fixed;
-  top: 0px;
-  transform: translateY(50px);
-  max-width: 282px;
-  @include laptop {
-    width: 22vw;
-  }
-  &_bottom {
-    position: absolute;
-    transform: none;
-    top: initial;
-    bottom: 0;
+    @include mobile {
+      padding: 19px 0;
+    }
   }
 }
 
@@ -136,6 +141,10 @@
     @include laptop {
       margin-bottom: 10vw;
     }
+    @include mobile {
+      margin: 0 auto 40px;
+      width: 70%;
+    }
   }
   & > .list {
     display: grid;
@@ -143,6 +152,10 @@
     gap: 108px 36px;
     @include laptop {
       gap: 7vw 2vw;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 64px;
     }
     & > li {
       & div {
@@ -152,6 +165,14 @@
       @include laptop {
         height: auto;
         aspect-ratio: 16/9;
+      }
+      @include mobile {
+        height: auto !important;
+        grid-column: initial !important;
+        grid-row: initial !important;
+        & img {
+          border-radius: 16px;
+        }
       }
       &:nth-child(3n) {
         height: 484px;
@@ -206,5 +227,27 @@
         }
       }
     }
+  }
+}
+
+.button_mobile {
+  margin-bottom: 58px;
+  padding: 17px 0;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.filters_mobile {
+  & > div {
+    height: 100%;
+    padding: 28px 16px;
+    background-color: #151515;
+  }
+  & header {
+    padding-top: 10px;
+    border-top: 1px solid $text1;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 28px;
   }
 }

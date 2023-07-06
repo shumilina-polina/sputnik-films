@@ -23,7 +23,9 @@ const Video = ({
   }, [videoSrc]);
 
   useEffect(() => {
-    isMobile && inView ? video.current.play() : video.current.pause();
+    isMobile && inView
+      ? video.current?.play()
+      : video.current?.pause();
     // isMobile && inView && loaded ? video.current.play() : video.current.pause();
   }, [inView]);
 
@@ -31,31 +33,43 @@ const Video = ({
     <div className={s.section}>
       <div className={cn(route === "port" ? s.wr_port : s.wr)}>
         <div className={s.video_wrapper}>
-          <video
-            ref={video}
-            width="100%"
-            height="100%"
-            loop
-            muted="muted"
-            preload="metadata"
-            controls={false}
-            playsInline
-            onLoadedData={() => setLoaded(true)}
-            poster={poster ? require(`assets/video/${poster}`) : undefined}
-            onClick={() => setOpenModal(true)}
-            onMouseOver={(e) => {
-              if (loaded) e.target.play();
-            }}
-            onMouseOut={(e) => {
-              if (loaded) e.target.pause();
-            }}
-            src={require(`assets/video/${videoSrc}.mp4`)}
-            type="video/mp4"
-          >
-            Тег video не поддерживается вашим браузером.
-          </video>
-          {poster && (
-            <img src={require(`assets/video/${poster}`)} alt="poster" />
+          {route === "port" && isMobile ? (
+            poster && (
+              <img
+                onClick={() => setOpenModal(true)}
+                src={require(`assets/video/${poster}`)}
+                alt="poster"
+              />
+            )
+          ) : (
+            <>
+              <video
+                ref={video}
+                width="100%"
+                height="100%"
+                loop
+                muted="muted"
+                preload="metadata"
+                controls={false}
+                playsInline
+                onLoadedData={() => setLoaded(true)}
+                poster={poster ? require(`assets/video/${poster}`) : undefined}
+                onClick={() => setOpenModal(true)}
+                onMouseOver={(e) => {
+                  if (loaded) e.target.play();
+                }}
+                onMouseOut={(e) => {
+                  if (loaded) e.target.pause();
+                }}
+                src={require(`assets/video/${videoSrc}.mp4`)}
+                type="video/mp4"
+              >
+                Тег video не поддерживается вашим браузером.
+              </video>
+              {poster && (
+                <img src={require(`assets/video/${poster}`)} alt="poster" />
+              )}
+            </>
           )}
         </div>
         <Label>{label}</Label>
