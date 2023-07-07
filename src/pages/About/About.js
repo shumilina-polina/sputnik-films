@@ -196,6 +196,7 @@ export const ImageBox = styled.div`
     width: 124px;
     aspect-ratio: 1/1;
     position: relative;
+   
     @media ${breakpoints.laptop} {
       width: 9vw;
     }
