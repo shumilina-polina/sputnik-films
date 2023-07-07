@@ -103,6 +103,9 @@
   @include mobile {
     grid-template-columns: 1fr;
   }
+  & img{
+    height: auto !important;
+  }
   & figure > div {
     width: 25%;
     @include mobile {
