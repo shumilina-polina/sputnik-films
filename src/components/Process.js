@@ -87,7 +87,6 @@ const Box = styled.div`
           position: relative;
           &:first-child {
             position: absolute;
-border: 2px solid red;
             left: 0;
             top: 0;
             bottom: 0;
