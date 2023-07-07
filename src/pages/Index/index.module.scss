@@ -103,6 +103,9 @@
   @include mobile {
     grid-template-columns: 1fr;
   }
+  & img {
+    height: auto !important;
+  }
   & figure > div {
     width: 25%;
     @include mobile {
@@ -199,6 +202,12 @@
 
 .process {
   margin-bottom: 180px;
+  & figure > div > div:last-child {
+    filter: none !important;
+  }
+  & figure > div > div:first-child {
+    filter: none !important;
+  }
   @include laptop {
     margin-bottom: 11vw;
   }
@@ -282,7 +291,9 @@
     & > li {
       height: 100%;
       & > button {
-        &:hover, &:active, &:focus {
+        &:hover,
+        &:active,
+        &:focus {
           background-color: rgba(255, 255, 255, 0.03);
           cursor: auto;
         }

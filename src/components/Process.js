@@ -87,13 +87,12 @@ const Box = styled.div`
           position: relative;
           &:first-child {
             position: absolute;
-            filter: blur(13px);
             left: 0;
             top: 0;
             bottom: 0;
             right: 0;
             @media ${breakpoints.mobile} {
-              display: none;
+              // display: none;
             }
           }
         }

@@ -115,6 +115,9 @@
         padding: 0;
         border: none;
       }
+      & figure > div > div:first-child {
+        display: none;
+      }
       & figure:nth-child(2) {
         & figcaption {
           max-width: 168px;
@@ -177,7 +180,6 @@
           & > span:first-child {
             margin-bottom: 4px;
             text-transform: uppercase;
-         
           }
           & > span:last-child {
             color: $text2;

@@ -34,7 +34,7 @@ const Index = () => {
             videoSrc={"showreel"}
             videoUrl={"https://player.vimeo.com/video/687465086?h=100169ac7e"}
             label={"Шоурил 2023"}
-            poster={"showreel-poster.png"}
+            poster={"showreel-poster.jpg"}
           />
         </div>
         <HorizontalTabs />
@@ -56,7 +56,7 @@ const Index = () => {
                     videoSrc={"moretv"}
                     videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
                     label={"More.tv"}
-                    poster={"moretv-poster.png"}
+                    poster={"moretv-poster.jpg"}
                   />
                 </div>
                 <Caption
@@ -78,7 +78,7 @@ const Index = () => {
                     videoSrc={"ulibka"}
                     videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
                     label={"Улыбка"}
-                    poster={"ulibka-poster.png"}
+                    poster={"ulibka-poster.jpg"}
                   />
                 </div>
                 <Caption>
@@ -98,7 +98,7 @@ const Index = () => {
                     videoSrc={"polemica"}
                     videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
                     label={"polemica"}
-                    poster={"polemica-poster.png"}
+                    poster={"polemica-poster.jpg"}
                   />
                 </div>
                 <Caption
@@ -157,12 +157,7 @@ const Index = () => {
                     alt="Дмитрий Квашнин"
                   />
                 </div>
-                <div>
-                  <img
-                    src={require(`assets/author-1.png`)}
-                    alt="Дмитрий Квашнин"
-                  />
-                </div>
+                <div></div>
               </div>
               <figcaption>
                 <span>Дмитрий Квашнин</span>
@@ -182,7 +177,7 @@ const Index = () => {
                 videoSrc={"gayane"}
                 videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
                 label={"yandex/gayane"}
-                poster={"gayane-poster.png"}
+                poster={"gayane-poster.jpg"}
               />
             </div>
             <Caption
@@ -240,12 +235,7 @@ const Index = () => {
                     alt="Сергей Клейн"
                   />
                 </div>
-                <div>
-                  <img
-                    src={require(`assets/author-2.png`)}
-                    alt="Сергей Клейн"
-                  />
-                </div>
+                <div></div>
               </div>
               <figcaption>
                 <span>Сергей Клейн</span>
@@ -265,7 +255,7 @@ const Index = () => {
                 videoSrc={"dom"}
                 videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
                 label={"там, где наш дом"}
-                poster={"dom-poster.png"}
+                poster={"dom-poster.jpg"}
               />
             </div>
             <Caption
@@ -298,7 +288,7 @@ const Index = () => {
                 videoSrc={"ctrl"}
                 videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
                 label={"Ctrl + A / add"}
-                poster={"ctrl-poster.png"}
+                poster={"ctrl-poster.jpg"}
               />
             </div>
             <Caption
@@ -317,7 +307,7 @@ const Index = () => {
                 videoSrc={"cg"}
                 videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
                 label={"шоурил cg"}
-                poster={"cg-poster.png"}
+                poster={"cg-poster.jpg"}
               />
             </div>
             <Caption
