@@ -87,7 +87,7 @@ const Box = styled.div`
           position: relative;
           &:first-child {
             position: absolute;
-            filter: blur(13px);
+border: 2px solid red;
             left: 0;
             top: 0;
             bottom: 0;

@@ -159,7 +159,7 @@ const Index = () => {
                 </div>
                 <div>
                   <img
-                    src={require(`assets/author-1.png`)}
+                    src={require(`assets/author-blur.png`)}
                     alt="Дмитрий Квашнин"
                   />
                 </div>
@@ -242,7 +242,7 @@ const Index = () => {
                 </div>
                 <div>
                   <img
-                    src={require(`assets/author-2.png`)}
+                    src={require(`assets/author-blur.png`)}
                     alt="Сергей Клейн"
                   />
                 </div>
