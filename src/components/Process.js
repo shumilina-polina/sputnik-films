@@ -72,7 +72,7 @@ const Box = styled.div`
       flex-direction: column;
       align-items: center;
       & > div {
-        width: 72px;
+        width: 80px;
         aspect-ratio: 1/1;
         margin-bottom: 16px;
         position: relative;
