@@ -58,14 +58,19 @@ const Video = ({
                   // if (loaded) e.target.play();
                 }}
                 onMouseOut={(e) => {
-                  if (loaded) e.target.pause();
+                  if (loaded) {
+                    e.target.pause();
+                    e.target.load();
+                  }
                 }}
-                src={
-                  route === "port"
-                    ? require(`assets/video/${videoSrc}.mp4`)
-                    : require(`assets/video/${videoSrc}.webm`)
-                }
-                type={route === "port" ? "video/mp4" : "video/webm"}
+                src={require(`assets/video/${videoSrc}.webm`)}
+                type={"video/webm"}
+                // src={
+                //   route === "port"
+                //     ? require(`assets/video/${videoSrc}.mp4`)
+                //     : require(`assets/video/${videoSrc}.webm`)
+                // }
+                // type={route === "port" ? "video/mp4" : "video/webm"}
               >
                 Тег video не поддерживается вашим браузером.
               </video>
