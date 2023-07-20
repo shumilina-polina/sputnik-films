@@ -183,9 +183,6 @@ const Author = ({ src, name, children }) => {
         <div>
           <img src={require(`assets/${src}`)} alt={name} />
         </div>
-        <div>
-          <img src={require(`assets/${src}`)} alt={name} />
-        </div>
       </ImageBox>
       <figcaption>
         <span>{name}</span>
@@ -199,30 +196,9 @@ export const ImageBox = styled.div`
     width: 124px;
     aspect-ratio: 1/1;
     position: relative;
+   
     @media ${breakpoints.laptop} {
       width: 9vw;
-    }
-    & > div {
-      position: relative;
-      &:first-child {
-        position: absolute;
-        filter: blur(20px);
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
-    -o-filter: blur(20px);
-    -ms-filter: blur(20px);
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        @media ${breakpoints.laptop} {
-          filter: blur(9px);
-          -webkit-filter: blur(9px);
-    -moz-filter: blur(9px);
-    -o-filter: blur(9px);
-    -ms-filter: blur(9px);
-        }
-      }
     }
   }
   

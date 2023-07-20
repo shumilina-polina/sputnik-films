@@ -115,6 +115,7 @@
         padding: 0;
         border: none;
       }
+
       & figure:nth-child(2) {
         & figcaption {
           max-width: 168px;
@@ -177,7 +178,6 @@
           & > span:first-child {
             margin-bottom: 4px;
             text-transform: uppercase;
-         
           }
           & > span:last-child {
             color: $text2;
@@ -301,6 +301,15 @@
           @include mobile {
             grid-row: 2;
             height: 34px;
+          }
+          & > div:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            filter: blur(15px);
+            z-index: -1;
           }
           & img {
             object-fit: contain;

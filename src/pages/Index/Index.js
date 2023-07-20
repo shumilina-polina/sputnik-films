@@ -157,12 +157,7 @@ const Index = () => {
                     alt="Дмитрий Квашнин"
                   />
                 </div>
-                <div>
-                  <img
-                    src={require(`assets/author-1.png`)}
-                    alt="Дмитрий Квашнин"
-                  />
-                </div>
+                <div></div>
               </div>
               <figcaption>
                 <span>Дмитрий Квашнин</span>
@@ -240,12 +235,7 @@ const Index = () => {
                     alt="Сергей Клейн"
                   />
                 </div>
-                <div>
-                  <img
-                    src={require(`assets/author-2.png`)}
-                    alt="Сергей Клейн"
-                  />
-                </div>
+                <div></div>
               </div>
               <figcaption>
                 <span>Сергей Клейн</span>
