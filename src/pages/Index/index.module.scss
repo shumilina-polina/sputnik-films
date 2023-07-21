@@ -7,6 +7,7 @@
   }
   & h1 {
     margin-bottom: 64px;
+    opacity: 0.4;
     @include laptop {
       padding-bottom: 1%;
     }
@@ -34,6 +35,10 @@
     & video {
       -o-object-fit: contain;
       object-fit: contain;
+      @include mobile {
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
     }
     margin-bottom: 108px;
     @include laptop {
@@ -51,6 +56,12 @@
   & > header {
     margin-bottom: 102px;
     width: 33%;
+    & > h2 {
+      opacity: 0.4;
+    }
+    & img {
+      object-fit: contain;
+    }
     @include laptop {
       margin-bottom: 6vw;
     }
@@ -143,12 +154,18 @@
 }
 
 .polemica {
+  & figure {
+    @include mobile{
+      gap: 50px;
+    }
+  }
   & > div:last-child {
     position: relative;
     @include mobile {
       padding-top: 12px;
       padding-left: 14px;
     }
+
     & img {
       @include mobile {
         width: 20vw;
@@ -190,12 +207,23 @@
   }
   & video {
     height: 535px !important;
+    -webkit-mask-position: left center !important;
+    mask-position: left center !important;
+
     @include laptop {
       height: auto !important;
       aspect-ratio: 16/11;
     }
     @include mobile {
       aspect-ratio: 16/10 !important;
+    }
+  }
+  & ul {
+    & > li:last-child {
+      @include mobile {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
     }
   }
 }
@@ -239,9 +267,10 @@
     margin-bottom: 96px;
   }
   & video:first-child {
+    -webkit-mask-position: right center !important;
+    mask-position: right center !important;
     mask-image: url("/assets/masks/mask-gayane.svg");
     -webkit-mask-image: url("/assets/masks/mask-gayane.svg");
-    mask-position: left center;
     height: 535px !important;
     @include laptop {
       height: auto !important;
@@ -249,6 +278,8 @@
     }
   }
   & > div:first-child {
+    max-width: 860px;
+    justify-self: flex-end;
     order: 1;
     & figure {
       justify-content: flex-start;
@@ -337,7 +368,7 @@
   & video:first-child {
     mask-image: url("/assets/masks/mask-gayane.svg");
     -webkit-mask-image: url("/assets/masks/mask-gayane.svg");
-    mask-position: left center;
+
     height: 535px !important;
     @include laptop {
       height: auto !important;
@@ -346,12 +377,16 @@
     @include mobile {
       margin-bottom: 21px;
       aspect-ratio: 16/9;
+      height: 60vw !important;
       mask-image: url("/assets/masks/mask-mobile-2.svg") !important;
       -webkit-mask-image: url("/assets/masks/mask-mobile-2.svg") !important;
     }
   }
 
   & > div:first-child {
+    max-width: 860px;
+    justify-self: flex-end;
+
     order: 1;
     & figure {
       justify-content: flex-start;
@@ -362,7 +397,7 @@
         width: 55%;
         gap: 5%;
         & > p {
-          width: 45%;
+          width: 50%;
         }
       }
     }
@@ -449,9 +484,6 @@
   }
   & > div {
     & > div {
-      @include mobile {
-        margin-bottom: 25px;
-      }
     }
     &:first-child {
       & figure {

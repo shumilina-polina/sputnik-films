@@ -52,6 +52,7 @@ const Portfolio = () => {
               </button>
             </header>
             <NavFilters
+              setFiltersMobileOpen={setFiltersMobileOpen}
               setCategory={setCategory}
               category={category}
               tags={tags}
@@ -86,7 +87,15 @@ const Portfolio = () => {
   );
 };
 
-const NavFilters = ({ setCategory, category, tags, setTags }) => {
+const NavFilters = ({
+  setCategory,
+  category,
+  tags,
+  setTags,
+  setFiltersMobileOpen = () => {},
+}) => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   const handleTag = (item) => {
     tags.includes(TAGS[item])
       ? setTags(tags.filter((tag) => tag !== TAGS[item]))
@@ -130,16 +139,37 @@ const NavFilters = ({ setCategory, category, tags, setTags }) => {
             ))}
           </ul>
         </div>
-        <button
-          onClick={() => {
-            setCategory(CATEGORIES.all);
-            setTags([]);
-          }}
-          disabled={category === CATEGORIES.all && tags.length === 0}
-          className={cn(s.filter_button, "button")}
-        >
-          Сбросить фильтры
-        </button>
+        {isMobile ? (
+          <>
+            <button
+              onClick={() => setFiltersMobileOpen(false)}
+              className={cn(s.filter_button, "button")}
+            >
+              Показать работы
+            </button>
+            <button
+              onClick={() => {
+                setCategory(CATEGORIES.all);
+                setTags([]);
+              }}
+              disabled={category === CATEGORIES.all && tags.length === 0}
+              className={s.reset_button}
+            >
+              сбросить
+            </button>
+          </>
+        ) : (
+          <button
+            onClick={() => {
+              setCategory(CATEGORIES.all);
+              setTags([]);
+            }}
+            disabled={category === CATEGORIES.all && tags.length === 0}
+            className={cn(s.filter_button, "button")}
+          >
+            Сбросить фильтры
+          </button>
+        )}
       </div>
     </nav>
   );

@@ -2,7 +2,7 @@ export const nominations = [
   {
     slug: "calameo.com",
     url: "https://www.calameo.com/read/0067726443ecbfcf6a97c",
-    text: "На&nbsp;электричках от&nbsp;Москвы до&nbsp;Владивостока. Интервью с&nbsp;создателями фильма “Нескорый поезд”",
+    text: "На&nbsp;электричках от&nbsp;Москвы до&nbsp;Владивостока. Интервью с&nbsp;создателями фильма «Нескорый поезд»",
     imageSrc: "news_img01.png",
   },
   {

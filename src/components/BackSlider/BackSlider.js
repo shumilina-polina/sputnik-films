@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper";
+import "swiper/css/scrollbar";
+import { Autoplay, Scrollbar } from "swiper";
 import s from "./backSlider.module.scss";
 import { ImageBox } from "pages/About/About";
 import { useInView } from "framer-motion";
@@ -25,7 +26,10 @@ const BackSlider = () => {
       <Swiper
         ref={swiper}
         speed={1000}
-        modules={[Autoplay]}
+        scrollbar={{
+          hide: false,
+        }}
+        modules={[Scrollbar, Autoplay]}
         slidesPerView={"auto"}
         className={s.slider}
         spaceBetween={13}
@@ -65,20 +69,20 @@ const PhotoSlide = ({ i }) => {
       <ImageBox onClick={() => setOpenModal(true)}>
         <div>
           <img
-            src={require(`assets/slider/backstage__item0${i}.png`)}
+            src={require(`assets/slider/backstage__item0${i}.jpg`)}
             alt="Backstage"
           />
         </div>
         <div>
           <img
-            src={require(`assets/slider/backstage__item0${i}.png`)}
+            src={require(`assets/slider/backstage__item0${i}.jpg`)}
             alt="Backstage"
           />
         </div>
       </ImageBox>
       <Modal open={openModal} setOpen={setOpenModal} className="video_modal">
         <img
-          src={require(`assets/slider/backstage__item0${i}.png`)}
+          src={require(`assets/slider/backstage__item0${i}-good.jpg`)}
           alt="Backstage"
         />
       </Modal>

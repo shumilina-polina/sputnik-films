@@ -357,7 +357,7 @@
     border-left: 1px solid $text1;
     border-right: 1px solid $text1;
     padding-left: 23px;
-    padding-bottom: 23px;
+    // padding-bottom: 23px;
 
     @include mobile {
       border: none;
