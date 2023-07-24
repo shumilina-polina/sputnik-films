@@ -312,7 +312,7 @@ const Index = () => {
             </div>
             <Caption
               tags={[TAGS.tv, "OLV"]}
-              category={isMobile ? "Графика" : "Графика_и_постпродакшн"}
+              category={isMobile ? "Графика" : "Графика и постпродакшн"}
             >
               5 лет развиваем направление
             </Caption>

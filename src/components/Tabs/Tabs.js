@@ -12,10 +12,10 @@ import { breakpoints } from "styles/variables";
 const tabs = [
   CATEGORIES.reclama,
   CATEGORIES.docReclama,
-  "Корпоративное_видео",
+  "Корпоративное видео",
   CATEGORIES.FPV,
-  "Документальные_фильмы",
-  "Графика_и_постпродакшн",
+  "Документальные фильмы",
+  "Графика и постпродакшн",
   CATEGORIES.clip,
 ];
 

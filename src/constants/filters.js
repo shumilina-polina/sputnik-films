@@ -1,11 +1,11 @@
 export const CATEGORIES = {
   all: "Все",
   reclama: "Реклама",
-  docReclama: "Документальная_реклама",
-  korpVideo: "Корпоративное_видео",
+  docReclama: "Документальная реклама",
+  korpVideo: "Корпоративное видео",
   FPV: "FPV-съемка",
   graph: "Графика",
-  docKino: "Документальное_кино",
+  docKino: "Документальное кино",
   clip: "Клипы",
   showreel: "Шоурилы",
 };
