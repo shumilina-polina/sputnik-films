@@ -28,6 +28,7 @@ const BackSlider = () => {
         speed={1000}
         scrollbar={{
           hide: false,
+          draggable: true,
         }}
         modules={[Scrollbar, Autoplay]}
         slidesPerView={"auto"}
