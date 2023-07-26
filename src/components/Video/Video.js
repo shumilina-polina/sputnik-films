@@ -76,7 +76,7 @@ const Video = ({
                 Тег video не поддерживается вашим браузером.
               </video>
               {poster && route !== "port" && (
-                <img src={require(`assets/video/${posterBlur}-blur.png`)} alt="poster" />
+                <img className={s.image_blur} src={require(`assets/video/${posterBlur}-blur.png`)} alt="poster" />
               )}
             </>
           )}

@@ -177,8 +177,10 @@ const About = () => {
 export default About;
 
 const Author = ({ src, name, children }) => {
+  const isMobile = useMediaQuery(breakpoints.mobile);
+
   return (
-    <figure data-aos="fade-up">
+    <figure data-aos={isMobile ? "" : "fade-up"}>
       <ImageBox>
         <div>
           <img src={require(`assets/${src}`)} alt={name} />
