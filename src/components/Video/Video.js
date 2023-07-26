@@ -10,6 +10,7 @@ const Video = ({
   videoSrc,
   videoUrl = "",
   poster = "",
+  posterBlur = "",
   label = "",
   route = "",
 }) => {
@@ -35,7 +36,7 @@ const Video = ({
             poster && (
               <img
                 onClick={() => setOpenModal(true)}
-                src={require(`assets/video/${poster}.jpg`)}
+                src={require(`assets/video/${poster}`)}
                 alt="poster"
               />
             )
@@ -51,7 +52,7 @@ const Video = ({
                 controls={false}
                 playsInline
                 onLoadedData={() => setLoaded(true)}
-                poster={poster ? require(`assets/video/${poster}.jpg`) : undefined}
+                poster={poster ? require(`assets/video/${poster}`) : undefined}
                 onClick={() => setOpenModal(true)}
                 onMouseOver={(e) => {
                   e.target.play();
@@ -75,7 +76,7 @@ const Video = ({
                 Тег video не поддерживается вашим браузером.
               </video>
               {poster && route !== "port" && (
-                <img src={require(`assets/video/${poster}-blur.png`)} alt="poster" />
+                <img src={require(`assets/video/${posterBlur}-blur.png`)} alt="poster" />
               )}
             </>
           )}

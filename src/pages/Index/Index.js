@@ -34,7 +34,8 @@ const Index = () => {
             videoSrc={"showreel"}
             videoUrl={"https://player.vimeo.com/video/687465086?h=100169ac7e"}
             label={"Шоурил 2023"}
-            poster={"showreel-poster"}
+            poster={"showreel-poster.jpg"}
+            posterBlur={"showreel-poster"}
           />
         </div>
         <HorizontalTabs />
@@ -56,7 +57,8 @@ const Index = () => {
                     videoSrc={"moretv"}
                     videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
                     label={"More.tv"}
-                    poster={"moretv-poster"}
+                    poster={"moretv-poster.jpg"}
+                    posterBlur={"moretv-poster"}
                   />
                 </div>
                 <Caption
@@ -78,7 +80,8 @@ const Index = () => {
                     videoSrc={"ulibka"}
                     videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
                     label={"Улыбка"}
-                    poster={"ulibka-poster"}
+                    poster={"ulibka-poster.jpg"}
+                    posterBlur={"ulibka-poster"}
                   />
                 </div>
                 <Caption>
@@ -98,7 +101,8 @@ const Index = () => {
                     videoSrc={"polemica"}
                     videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
                     label={"polemica"}
-                    poster={"polemica-poster"}
+                    poster={"polemica-poster.jpg"}
+                    posterBlur={"polemica-poster"}
                   />
                 </div>
                 <Caption
@@ -177,7 +181,8 @@ const Index = () => {
                 videoSrc={"gayane"}
                 videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
                 label={"yandex/gayane"}
-                poster={"gayane-poster"}
+                poster={"gayane-poster.jpg"}
+                posterBlur={"gayane-poster"}
               />
             </div>
             <Caption
@@ -255,7 +260,8 @@ const Index = () => {
                 videoSrc={"dom"}
                 videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
                 label={"там, где наш дом"}
-                poster={"dom-poster"}
+                poster={"dom-poster.jpg"}
+                posterBlur={"dom-poster"}
               />
             </div>
             <Caption
@@ -288,7 +294,8 @@ const Index = () => {
                 videoSrc={"ctrl"}
                 videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
                 label={"Ctrl + A / add"}
-                poster={"ctrl-poster"}
+                poster={"ctrl-poster.jpg"}
+                posterBlur={"ctrl-poster"}
               />
             </div>
             <Caption
@@ -307,7 +314,8 @@ const Index = () => {
                 videoSrc={"cg"}
                 videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
                 label={"шоурил cg"}
-                poster={"cg-poster"}
+                posterBlur={"cg-poster"}
+                poster={"cg-poster.jpg"}
               />
             </div>
             <Caption
