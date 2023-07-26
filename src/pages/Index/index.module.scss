@@ -11,6 +11,9 @@
     @include laptop {
       padding-bottom: 1%;
     }
+    @include mobile {
+      opacity: 1;
+    }
 
     & > img {
       user-select: none;
@@ -58,6 +61,9 @@
     width: 33%;
     & > h2 {
       opacity: 0.4;
+      @include mobile {
+        opacity: 1;
+      }
     }
     & img {
       object-fit: contain;
@@ -155,7 +161,7 @@
 
 .polemica {
   & figure {
-    @include mobile{
+    @include mobile {
       gap: 50px;
     }
   }

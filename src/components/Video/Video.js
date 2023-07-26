@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
 import cn from "classnames";
@@ -35,7 +35,7 @@ const Video = ({
             poster && (
               <img
                 onClick={() => setOpenModal(true)}
-                src={require(`assets/video/${poster}`)}
+                src={require(`assets/video/${poster}.jpg`)}
                 alt="poster"
               />
             )
@@ -51,7 +51,7 @@ const Video = ({
                 controls={false}
                 playsInline
                 onLoadedData={() => setLoaded(true)}
-                poster={poster ? require(`assets/video/${poster}`) : undefined}
+                poster={poster ? require(`assets/video/${poster}.jpg`) : undefined}
                 onClick={() => setOpenModal(true)}
                 onMouseOver={(e) => {
                   e.target.play();
@@ -74,8 +74,8 @@ const Video = ({
               >
                 Тег video не поддерживается вашим браузером.
               </video>
-              {poster && (
-                <img src={require(`assets/video/${poster}`)} alt="poster" />
+              {poster && route !== "port" && (
+                <img src={require(`assets/video/${poster}-blur.png`)} alt="poster" />
               )}
             </>
           )}

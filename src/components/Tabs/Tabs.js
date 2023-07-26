@@ -83,7 +83,7 @@ const Tab1 = () => {
           и&nbsp;маркетинговых кампаний, Сами разработаем креатив.
         </p>
         <ul>
-          {["tv", "olv", "clv", TAGS.digital].map((tag, i) => (
+          {["tv", "olv", TAGS.digital].map((tag, i) => (
             <li key={i}>#{tag}</li>
           ))}
         </ul>
@@ -114,7 +114,7 @@ const Tab2 = () => {
       <div className={s.left}>
         <p>РАССКАЗЫВАЕМ НАСТОЯЩИЕ ИСТОРИИ О&nbsp;ЛЮДЯХ И&nbsp;БРЕНДАХ.</p>
         <ul>
-          {["tv", "olv", "clv", TAGS.digital].map((tag, i) => (
+          {["tv", "olv", TAGS.digital].map((tag, i) => (
             <li key={i}>#{tag}</li>
           ))}
         </ul>

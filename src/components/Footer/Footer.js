@@ -123,6 +123,11 @@ const Footer = () => {
                       https://vk.com/sputnikfilms
                     </SocialLink>
                   </div>
+                  <div>
+                    <SocialLink svg={"vcru"}>
+                      https://vc.ru/u/1509727-sputnik-films
+                    </SocialLink>
+                  </div>
                 </LogoBox>
               </div>
             </div>
