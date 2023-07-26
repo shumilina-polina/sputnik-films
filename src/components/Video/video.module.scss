@@ -14,8 +14,6 @@
   }
   & img {
     position: absolute;
-    // right: 20px;
-    // bottom: 0px;
     z-index: 0;
     top: -18.5%;
     left: -18.5%;
@@ -24,7 +22,6 @@
     max-width: 137%;
     width: 137%;
     object-fit: contain;
-    // border: 2px solid red;
   }
   & video {
     position: relative;
