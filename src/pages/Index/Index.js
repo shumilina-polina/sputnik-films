@@ -5,6 +5,7 @@ import titleMobile from "assets/titleMobile.svg";
 import n72 from "assets/72.svg";
 import n84 from "assets/84.svg";
 import projects from "assets/projects.svg";
+import projectsMobile from "assets/projectsMobile.svg";
 import Video from "components/Video/Video";
 import Caption from "components/Video/Caption";
 import { CATEGORIES, TAGS } from "constants/filters";
@@ -42,7 +43,7 @@ const Index = () => {
         <section className={s.projects}>
           <header data-aos="fade-left">
             <h2>
-              <img src={projects} alt="Проекты" />
+              <img src={isMobile ? projectsMobile : projects} alt="Проекты" />
             </h2>
           </header>
           <main>

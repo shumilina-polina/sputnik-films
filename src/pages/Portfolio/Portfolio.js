@@ -3,11 +3,12 @@ import s from "./portfolio.module.scss";
 import { CATEGORIES, TAGS } from "constants/filters";
 import cn from "classnames";
 import raboty from "assets/raboty.svg";
+import rabotyMobile from "assets/rabotyMobile.svg";
 import { useEffect, useState } from "react";
 import { videoList } from "constants/videoList";
 import Video from "components/Video/Video";
 import { breakpoints } from "styles/variables";
-import { Box, Drawer, List, ListItem, useMediaQuery } from "@mui/material";
+import { Drawer, useMediaQuery } from "@mui/material";
 import SvgSelector from "components/SvgSelector";
 
 const Portfolio = () => {
@@ -70,7 +71,7 @@ const Portfolio = () => {
 
         <div className={s.video}>
           <h1>
-            <img src={raboty} alt="творчество" />
+            <img src={isMobile ? rabotyMobile : raboty} alt="Работы" />
           </h1>
           {isMobile && (
             <button

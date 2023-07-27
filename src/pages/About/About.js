@@ -1,6 +1,7 @@
 import Wrapper from "components/Wrapper";
 import s from "./about.module.scss";
 import comanda from "assets/comanda.svg";
+import comandaMobile from "assets/comandaMobile.svg";
 import SocialLink from "components/SocialLink";
 import { styled } from "styled-components";
 import { breakpoints } from "styles/variables";
@@ -30,7 +31,7 @@ const About = () => {
       <Wrapper>
         <header>
           <h1>
-            <img src={comanda} alt="творчество" />
+            <img src={isMobile ? comandaMobile : comanda} alt="Команда" />
           </h1>
           <p data-aos="fade-up">
             Победители {isMobile && <br />}
