@@ -3,7 +3,6 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import { Autoplay, Scrollbar } from "swiper";
 import s from "./backSlider.module.scss";
-import { ImageBox } from "pages/About/About";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Modal from "components/Modal";
