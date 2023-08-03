@@ -100,7 +100,7 @@ const Index = () => {
                 >
                   <Video
                     videoSrc={"polemica"}
-                    videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
+                    videoUrl="https://player.vimeo.com/video/739490263?h=09ec3740bb"
                     label={"polemica"}
                     poster={"polemica-poster.jpg"}
                     posterBlur={"polemica-poster"}
@@ -180,7 +180,7 @@ const Index = () => {
             >
               <Video
                 videoSrc={"gayane"}
-                videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
+                videoUrl="https://player.vimeo.com/video/519605332?h=7dbd2602fc"
                 label={"yandex/gayane"}
                 poster={"gayane-poster.jpg"}
                 posterBlur={"gayane-poster"}

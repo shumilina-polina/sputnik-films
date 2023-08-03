@@ -27,20 +27,20 @@ export const videoList = [
   },
   {
     localUrl: "polemica",
-    vimeoUrl: "https://player.vimeo.com/video/787493399?h=677c053041",
+    vimeoUrl: "https://player.vimeo.com/video/739490263?h=09ec3740bb",
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital],
     label: "Polemica / Promo video",
     poster: "polemica-poster.png",
   },
-  {
-    localUrl: "tingz",
-    vimeoUrl: "https://player.vimeo.com/video/787493426?h=36c3c825fd",
-    category: CATEGORIES.reclama,
-    tags: [TAGS.promo, TAGS.digital],
-    label: "Tingz / Promo video",
-    poster: "tingz-poster.png",
-  },
+  // {
+  //   localUrl: "tingz",
+  //   vimeoUrl: "https://player.vimeo.com/video/787493426?h=36c3c825fd",
+  //   category: CATEGORIES.reclama,
+  //   tags: [TAGS.promo, TAGS.digital],
+  //   label: "Tingz / Promo video",
+  //   poster: "tingz-poster.png",
+  // },
   {
     localUrl: "izum",
     vimeoUrl: "https://player.vimeo.com/video/528187039?h=e8e420bfc5",
@@ -156,7 +156,7 @@ export const videoList = [
   },
   {
     localUrl: "gayane",
-    vimeoUrl: "https://player.vimeo.com/video/787493279?h=8689c9f2e4",
+    vimeoUrl: "https://player.vimeo.com/video/519605332?h=7dbd2602fc",
     category: CATEGORIES.docReclama,
     tags: [TAGS.docKino, TAGS.digital, TAGS.korp],
     label: "Yandex Go - Gayane / Doc commercial",
@@ -164,7 +164,7 @@ export const videoList = [
   },
   {
     localUrl: "victor",
-    vimeoUrl: "https://player.vimeo.com/video/787492863?h=aa6bf236a1",
+    vimeoUrl: "https://player.vimeo.com/video/433120966?h=58c9a7cf30",
     category: CATEGORIES.docReclama,
     tags: [TAGS.docKino, TAGS.digital, TAGS.korp],
     label: "Yandex Go - Victor / Doc commercial",
@@ -180,7 +180,7 @@ export const videoList = [
   },
   {
     localUrl: "dose",
-    vimeoUrl: "https://player.vimeo.com/video/787493181?h=4492bb78da",
+    vimeoUrl: "https://player.vimeo.com/video/480792660?h=29aec5929c",
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "Dose - Потеряли / Music video",
@@ -196,7 +196,8 @@ export const videoList = [
   },
   {
     localUrl: "bums",
-    vimeoUrl: "https://player.vimeo.com/video/787492995?h=ce79719d2a",
+    vimeoUrl:
+      "https://player.vimeo.com/video/452720835?h=e8f2ecddf6&color=dc9a00",
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "STILL BUMS / Music video",

@@ -6,6 +6,7 @@ import s from "./backSlider.module.scss";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Modal from "components/Modal";
+import classNames from "classnames";
 
 const BackSlider = () => {
   const slider = useRef(null);
@@ -46,53 +47,53 @@ const BackSlider = () => {
         }}
       >
         <SwiperSlide className={s.slide_big}>
-          <PhotoSlide i={1} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={2} />
-          <PhotoSlide i={3} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_small}>
-          <PhotoSlide i={4} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={5} />
-          <PhotoSlide i={6} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_big}>
-          <PhotoSlide i={7} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={8} />
-          <PhotoSlide i={9} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_small}>
-          <PhotoSlide i={10} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={11} />
-          <PhotoSlide i={12} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_big}>
-          <PhotoSlide i={13} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={14} />
-          <PhotoSlide i={15} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_small}>
-          <PhotoSlide i={16} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_flex}>
-          <PhotoSlide i={17} />
-          <PhotoSlide i={18} />
-        </SwiperSlide>
-        <SwiperSlide className={s.slide_big}>
-          <PhotoSlide i={19} />
+          <PhotoSlide i={21} />
         </SwiperSlide>
         <SwiperSlide className={s.slide_flex}>
           <PhotoSlide i={20} />
-          <PhotoSlide i={21} />
+          <PhotoSlide i={19} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_small}>
+          <PhotoSlide i={18} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={17} />
+          <PhotoSlide i={16} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_big}>
+          <PhotoSlide i={15} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={14} />
+          <PhotoSlide i={13} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_small}>
+          <PhotoSlide i={12} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={11} />
+          <PhotoSlide i={10} />
+        </SwiperSlide>
+        <SwiperSlide className={classNames(s.slide_big, s.m)}>
+          <PhotoSlide i={9} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={8} />
+          <PhotoSlide i={7} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_small}>
+          <PhotoSlide i={6} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={5} />
+          <PhotoSlide i={4} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_big}>
+          <PhotoSlide i={3} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={2} />
+          <PhotoSlide i={1} />
         </SwiperSlide>
       </Swiper>
     </div>

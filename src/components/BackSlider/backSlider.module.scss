@@ -5,7 +5,7 @@
   max-height: 562px;
   padding: 50px 0 63px;
   padding-left: 23px;
-  @include mobile{
+  @include mobile {
     padding-left: 0;
   }
   & img {
@@ -41,6 +41,9 @@
     height: 167px;
   }
 }
+.m {
+  height: auto;
+}
 
 .slide_flex {
   gap: 34px;
@@ -54,6 +57,9 @@
   }
   & > div {
     max-height: 214px;
+    @include laptop {
+      max-height: 16.5vw;
+    }
     @include mobile {
       max-height: 76px !important;
     }
