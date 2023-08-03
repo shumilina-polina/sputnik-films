@@ -12,13 +12,16 @@
       height: auto;
     }
   }
-  & img {
+  & .image_blur {
     position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
     z-index: 0;
+    top: -18.5%;
+    left: -18.5%;
+    max-height: 137%;
+    height: 137% !important;
+    max-width: 137%;
+    width: 137%;
+    object-fit: contain;
   }
   & video {
     position: relative;
@@ -40,18 +43,18 @@
     }
   }
   & img {
-    filter: blur(75px);
-    -webkit-filter: blur(75px);
-    -moz-filter: blur(75px);
-    -o-filter: blur(75px);
-    -ms-filter: blur(75px);
-    @include mobile {
-      filter: blur(50px);
-      -webkit-filter: blur(50px);
-      -moz-filter: blur(50px);
-      -o-filter: blur(50px);
-      -ms-filter: blur(50px);
-    }
+    // filter: blur(75px);
+    // -webkit-filter: blur(75px);
+    // -moz-filter: blur(75px);
+    // -o-filter: blur(75px);
+    // -ms-filter: blur(75px);
+    // @include mobile {
+    //   filter: blur(50px);
+    //   -webkit-filter: blur(50px);
+    //   -moz-filter: blur(50px);
+    //   -o-filter: blur(50px);
+    //   -ms-filter: blur(50px);
+    // }
   }
 
   & video {

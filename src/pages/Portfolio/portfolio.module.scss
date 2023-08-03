@@ -145,6 +145,7 @@
       margin-bottom: 10vw;
     }
     @include mobile {
+      max-height: 35px;
       margin: 0 auto 40px;
       width: 70%;
     }

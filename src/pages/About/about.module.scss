@@ -356,7 +356,7 @@
   & footer {
     border-left: 1px solid $text1;
     border-right: 1px solid $text1;
-    padding-left: 23px;
+    // padding-left: 23px;
     // padding-bottom: 23px;
 
     @include mobile {
@@ -368,7 +368,12 @@
     & > h2 {
       @include text;
       color: $text2;
+      padding-left: 23px;
+
       text-transform: uppercase;
+      @include mobile {
+        padding: 0;
+      }
     }
   }
 }

@@ -35,6 +35,20 @@ input:-webkit-autofill:active {
   }
 }
 
+.image_modal {
+  .MuiBackdrop-root {
+    background-color: rgba($color: $bg, $alpha: 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .MuiPaper-root {
+    margin: 0;
+    max-width: 70%;
+    width: auto;
+    background-color: $bg;
+  }
+}
+
 .video_modal {
   .MuiBackdrop-root {
     background-color: rgba($color: $bg, $alpha: 0.7);
@@ -58,6 +72,14 @@ input:-webkit-autofill:active {
   background-color: transparent;
   width: 708px !important;
   border: 0.55px solid rgba($color: #2e2e2e, $alpha: 0.8);
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    .swiper-scrollbar-drag {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
   @include laptop {
     height: 1.9vw !important;
     left: 21.9vw !important;
@@ -69,7 +91,9 @@ input:-webkit-autofill:active {
   &-drag {
     max-width: 100%;
     border: 4px solid $bg;
+    border-left: none;
     border-radius: 8px;
-    background-color: rgba($color: #212121, $alpha: 0.9);
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: background-color 0.3s;
   }
 }

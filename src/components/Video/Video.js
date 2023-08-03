@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
 import cn from "classnames";
@@ -10,6 +10,7 @@ const Video = ({
   videoSrc,
   videoUrl = "",
   poster = "",
+  posterBlur = "",
   label = "",
   route = "",
 }) => {
@@ -74,8 +75,8 @@ const Video = ({
               >
                 Тег video не поддерживается вашим браузером.
               </video>
-              {poster && (
-                <img src={require(`assets/video/${poster}`)} alt="poster" />
+              {poster && route !== "port" && (
+                <img className={s.image_blur} src={require(`assets/video/${posterBlur}-blur.png`)} alt="poster" />
               )}
             </>
           )}

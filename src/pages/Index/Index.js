@@ -5,6 +5,7 @@ import titleMobile from "assets/titleMobile.svg";
 import n72 from "assets/72.svg";
 import n84 from "assets/84.svg";
 import projects from "assets/projects.svg";
+import projectsMobile from "assets/projectsMobile.svg";
 import Video from "components/Video/Video";
 import Caption from "components/Video/Caption";
 import { CATEGORIES, TAGS } from "constants/filters";
@@ -35,13 +36,14 @@ const Index = () => {
             videoUrl={"https://player.vimeo.com/video/687465086?h=100169ac7e"}
             label={"Шоурил 2023"}
             poster={"showreel-poster.jpg"}
+            posterBlur={"showreel-poster"}
           />
         </div>
         <HorizontalTabs />
         <section className={s.projects}>
           <header data-aos="fade-left">
             <h2>
-              <img src={projects} alt="Проекты" />
+              <img src={isMobile ? projectsMobile : projects} alt="Проекты" />
             </h2>
           </header>
           <main>
@@ -57,6 +59,7 @@ const Index = () => {
                     videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
                     label={"More.tv"}
                     poster={"moretv-poster.jpg"}
+                    posterBlur={"moretv-poster"}
                   />
                 </div>
                 <Caption
@@ -79,6 +82,7 @@ const Index = () => {
                     videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
                     label={"Улыбка"}
                     poster={"ulibka-poster.jpg"}
+                    posterBlur={"ulibka-poster"}
                   />
                 </div>
                 <Caption>
@@ -99,6 +103,7 @@ const Index = () => {
                     videoUrl="https://player.vimeo.com/video/787493399?h=677c053041"
                     label={"polemica"}
                     poster={"polemica-poster.jpg"}
+                    posterBlur={"polemica-poster"}
                   />
                 </div>
                 <Caption
@@ -178,6 +183,7 @@ const Index = () => {
                 videoUrl="https://player.vimeo.com/video/787493279?h=8689c9f2e4"
                 label={"yandex/gayane"}
                 poster={"gayane-poster.jpg"}
+                posterBlur={"gayane-poster"}
               />
             </div>
             <Caption
@@ -256,6 +262,7 @@ const Index = () => {
                 videoUrl="https://player.vimeo.com/video/759499744?h=55e5aefc8d"
                 label={"там, где наш дом"}
                 poster={"dom-poster.jpg"}
+                posterBlur={"dom-poster"}
               />
             </div>
             <Caption
@@ -289,6 +296,7 @@ const Index = () => {
                 videoUrl="https://player.vimeo.com/video/788917724?h=8cb68bdf9b"
                 label={"Ctrl + A / add"}
                 poster={"ctrl-poster.jpg"}
+                posterBlur={"ctrl-poster"}
               />
             </div>
             <Caption
@@ -307,6 +315,7 @@ const Index = () => {
                 videoSrc={"cg"}
                 videoUrl="https://player.vimeo.com/video/788918951?h=7d993bb16e"
                 label={"шоурил cg"}
+                posterBlur={"cg-poster"}
                 poster={"cg-poster.jpg"}
               />
             </div>
