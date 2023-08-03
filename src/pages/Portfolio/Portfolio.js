@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { videoList } from "constants/videoList";
 import Video from "components/Video/Video";
 import { breakpoints } from "styles/variables";
-import { Box, Drawer, List, ListItem, useMediaQuery } from "@mui/material";
+import { Drawer, useMediaQuery } from "@mui/material";
 import SvgSelector from "components/SvgSelector";
 
 const Portfolio = () => {
@@ -188,7 +188,7 @@ const VideoGrid = ({ list }) => {
       {list.length === 0 && <p>Не найдено</p>}
       <ul className={cn(s.list, s[`list_${checkLength()}`])}>
         {list.map((video, i) => (
-          <li data-aos="fade-up" key={i}>
+          <li data-aos="fade-up" data-aos-offset="0" key={i}>
             <Video
               route="port"
               videoSrc={video.localUrl}

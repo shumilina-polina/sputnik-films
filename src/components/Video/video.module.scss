@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    @include mobile{
+    @include mobile {
       height: auto;
     }
   }
@@ -184,8 +184,14 @@
     position: absolute;
     top: -36px;
     left: 0;
+    width: 360px;
+    background: #151515;
+    @include laptop {
+      width: 28vw;
+    }
     @include mobile {
       top: -31px;
+      width: 100%;
     }
 
     & > span {
