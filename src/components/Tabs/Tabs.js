@@ -53,6 +53,7 @@ export const HorizontalTabs = () => {
         variant={isMobile ? "scrollable" : ""}
         className={classNames(s.tabs, "tabs")}
         orientation={"horizontal"}
+        allowScrollButtonsMobile
         value={value}
         onChange={handleChange}
       >
@@ -92,13 +93,11 @@ const Tab1 = () => {
         <ReactMarkdown>{text}</ReactMarkdown>
         <div onMouseLeave={() => setText(tab1.init)}>
           <LogoBox>
-            {["more", "sushi", "polemica", "skuratov", "sber"].map(
-              (svg, i) => (
-                <div key={i} onMouseOver={() => setText(tab1[`text_${i + 1}`])}>
-                  <SocialLink svg={svg} />
-                </div>
-              )
-            )}
+            {["more", "sushi", "polemica", "skuratov", "sber"].map((svg, i) => (
+              <div key={i} onMouseOver={() => setText(tab1[`text_${i + 1}`])}>
+                <SocialLink svg={svg} />
+              </div>
+            ))}
           </LogoBox>
         </div>
       </div>
