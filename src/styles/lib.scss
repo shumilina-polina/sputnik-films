@@ -81,7 +81,14 @@ input:-webkit-autofill:active {
     margin: 0;
     max-width: 70%;
     width: auto;
-    background-color: $bg;
+    background-color: transparent;
+    box-shadow: none;
+    & img {
+      border-radius: 24px;
+      @include mobile {
+        border-radius: 7px;
+      }
+    }
   }
 }
 
