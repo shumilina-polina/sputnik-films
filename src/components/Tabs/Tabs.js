@@ -43,13 +43,14 @@ export const HorizontalTabs = () => {
 
   const [value, setValue] = useState(0);
 
-  const handleChange = (_, newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
     <Box className={s.tab_box}>
       <Tabs
+        selectionFollowsFocus
         variant={isMobile ? "scrollable" : ""}
         className={classNames(s.tabs, "tabs")}
         orientation={"horizontal"}

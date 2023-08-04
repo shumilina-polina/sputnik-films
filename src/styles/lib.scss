@@ -19,6 +19,7 @@ input:-webkit-autofill:active {
 
 .tabs {
   position: relative;
+
   & .Mui-selected {
     color: $text6 !important;
   }
@@ -40,7 +41,7 @@ input:-webkit-autofill:active {
     height: 20px;
     z-index: 10;
     opacity: 1;
-    transition: opacity 0.3s;
+    transition: opacity 0.15s;
     &:first-of-type {
       transform: translateX(-1px) translateY(-5%);
       background: linear-gradient(
@@ -66,9 +67,6 @@ input:-webkit-autofill:active {
       fill: #494949;
       width: auto;
       transform: scale(1.15, 1.3);
-    }
-    & .Mui-disabled {
-      opacity: 0.3;
     }
   }
 }

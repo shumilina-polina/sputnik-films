@@ -377,7 +377,7 @@ export const videoList = [
     vimeoUrl: "https://player.vimeo.com/video/533567798?h=1d0b860b90",
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.threeD],
-    label: "Living Skog (Display Storage) / Marketplace video",
+    label: "Living Skog (Display Storage)",
     poster: "living-display-poster.png",
   },
   {
@@ -385,7 +385,7 @@ export const videoList = [
     vimeoUrl: "https://player.vimeo.com/video/533564479?h=7be9544353",
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.threeD],
-    label: "Living Skog (Cabinet) / Marketplace video",
+    label: "Living Skog (Cabinet)",
     poster: "living-cabinet-poster.png",
   },
   {
