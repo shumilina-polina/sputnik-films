@@ -29,6 +29,7 @@ const Index = () => {
         <div
           className={s.showreel}
           data-aos={`fade-up`}
+          data-aos-offset="0"
           data-aos-duration="1000"
         >
           <Video
@@ -41,7 +42,7 @@ const Index = () => {
         </div>
         <HorizontalTabs />
         <section className={s.projects}>
-          <header data-aos="fade-left">
+          <header data-aos="fade-left" data-aos-offset="0">
             <h2>
               <img src={isMobile ? projectsMobile : projects} alt="Проекты" />
             </h2>
@@ -52,7 +53,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-right`}
                   data-aos-duration="1000"
-                  data-aos-offset={isMobile ? "100" : "500"}
+                  data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
                     videoSrc={"moretv"}
@@ -75,7 +76,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-left`}
                   data-aos-duration="1000"
-                  data-aos-offset={isMobile ? "100" : "500"}
+                  data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
                     videoSrc={"ulibka"}
@@ -96,7 +97,7 @@ const Index = () => {
                 <div
                   data-aos={`fade-left`}
                   data-aos-duration="1000"
-                  data-aos-offset={isMobile ? "100" : "500"}
+                  data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
                     videoSrc={"polemica"}
@@ -113,7 +114,11 @@ const Index = () => {
                   Помогли запустить широкую промо-компанию с&nbsp;помощью видео.
                 </Caption>
               </div>
-              <div data-aos="fade-up" data-aos-duration="1000">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-offset="0"
+              >
                 <div>
                   <img src={n72} alt="72" />
                 </div>
@@ -176,7 +181,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset={isMobile ? "100" : "500"}
+              data-aos-offset={isMobile ? "100" : "0"}
             >
               <Video
                 videoSrc={"gayane"}
@@ -255,7 +260,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset={isMobile ? "100" : "500"}
+              data-aos-offset={isMobile ? "100" : "0"}
             >
               <Video
                 videoSrc={"dom"}
@@ -277,7 +282,7 @@ const Index = () => {
               <p>Кинотеатральный прокат в&nbsp;54 городах СНГ.</p>
             </Caption>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-offset="0">
             <div>
               <img src={n84} alt="8.4" />
             </div>
@@ -289,7 +294,7 @@ const Index = () => {
             <div
               data-aos={`fade-right`}
               data-aos-duration="1000"
-              data-aos-offset={isMobile ? "100" : "500"}
+              data-aos-offset={isMobile ? "100" : "0"}
             >
               <Video
                 videoSrc={"ctrl"}
@@ -309,7 +314,7 @@ const Index = () => {
             <div
               data-aos={`fade-left`}
               data-aos-duration="1000"
-              data-aos-offset={isMobile ? "100" : "500"}
+              data-aos-offset={isMobile ? "100" : "0"}
             >
               <Video
                 videoSrc={"cg"}

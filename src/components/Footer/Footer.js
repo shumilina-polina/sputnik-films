@@ -40,6 +40,7 @@ const Footer = () => {
           <div className={s.content}>
             <div
               data-aos="fade-right"
+              data-aos-offset="0"
               data-aos-anchor-placement="center-bottom"
               data-aos-duration="1000"
             >

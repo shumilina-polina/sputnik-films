@@ -4,6 +4,7 @@ const Caption = ({ children, tags = [], category = "", fade = "left" }) => {
   return (
     <figure
       className={s.caption}
+      data-aos-offset="0"
       data-aos={`fade-${fade}`}
       data-aos-duration="500"
     >
