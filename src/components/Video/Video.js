@@ -66,6 +66,9 @@ const Video = ({
                 onMouseOut={(e) => {
                   if (loaded && (videoSrc !== "showreel" || route === "port")) {
                     e.target.pause();
+                    if (videoSrc === "showreel" && route === "") {
+                      e.target.autoplay = false;
+                    }
                     e.target.load();
                   }
                 }}
