@@ -66,12 +66,17 @@ const About = () => {
             <ul>
               <Author src={"author-1.png"} name={"Дмитрий Квашнин"}>
                 Основатель продакшна, режиссёр, продюсер
+                <br />
+                <br />
               </Author>
               <Author src={"author-2.png"} name={"Сергей Клейн"}>
                 Сооснователь и&nbsp;исполнительный продюсер
               </Author>
               <Author src={"author-3.png"} name={"Ксения Яковлева"}>
                 Аккаунт-менеджер
+                <br />
+                <br />
+                <br />
               </Author>
             </ul>
           </div>
@@ -196,13 +201,11 @@ const Author = ({ src, name, children }) => {
 };
 
 export const ImageBox = styled.div`
-    width: 124px;
-    aspect-ratio: 1/1;
-    position: relative;
-   
-    @media ${breakpoints.laptop} {
-      width: 9vw;
-    }
+  width: 124px;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  @media ${breakpoints.laptop} {
+    width: 9vw;
   }
-  
 `;

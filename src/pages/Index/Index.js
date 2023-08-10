@@ -86,7 +86,10 @@ const Index = () => {
                     posterBlur={"ulibka-poster"}
                   />
                 </div>
-                <Caption>
+                <Caption
+                  tags={["TV", TAGS.digital]}
+                  category={CATEGORIES.reclama}
+                >
                   Серия из&nbsp;трёх роликов для&nbsp;проведения рекламной
                   кампании.
                 </Caption>
