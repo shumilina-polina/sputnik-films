@@ -24,7 +24,9 @@ const Video = ({
   }, [videoSrc]);
 
   useEffect(() => {
-    isMobile && inView ? video.current?.play() : video.current?.pause();
+    if (isMobile) {
+      inView ? video.current?.play() : video.current?.pause();
+    }
     // isMobile && inView && loaded ? video.current.play() : video.current.pause();
   }, [inView]);
 
@@ -51,6 +53,9 @@ const Video = ({
                 preload="metadata"
                 controls={false}
                 playsInline
+                autoPlay={
+                  videoSrc === "showreel" && route === "" ? true : false
+                }
                 onLoadedData={() => setLoaded(true)}
                 poster={poster ? require(`assets/video/${poster}`) : undefined}
                 onClick={() => setOpenModal(true)}
@@ -61,6 +66,9 @@ const Video = ({
                 onMouseOut={(e) => {
                   if (loaded) {
                     e.target.pause();
+                    if (videoSrc === "showreel" && route === "") {
+                      e.target.autoplay = false;
+                    }
                     e.target.load();
                   }
                 }}
@@ -76,7 +84,11 @@ const Video = ({
                 Тег video не поддерживается вашим браузером.
               </video>
               {poster && route !== "port" && (
-                <img className={s.image_blur} src={require(`assets/video/${posterBlur}-blur.png`)} alt="poster" />
+                <img
+                  className={s.image_blur}
+                  src={require(`assets/video/${posterBlur}-blur.png`)}
+                  alt="poster"
+                />
               )}
             </>
           )}
