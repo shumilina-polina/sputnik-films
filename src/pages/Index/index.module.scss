@@ -279,6 +279,7 @@
     -webkit-mask-image: url("/assets/masks/mask-gayane.svg");
     height: 535px !important;
     width: 860px;
+    
     @include laptop {
       height: auto !important;
       width: auto;
