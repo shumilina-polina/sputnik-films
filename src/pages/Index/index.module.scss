@@ -282,7 +282,7 @@
     
     @include laptop {
       height: auto !important;
-      width: auto;
+      width: 100%;
       aspect-ratio: 16/11;
     }
   }
