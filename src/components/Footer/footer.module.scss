@@ -128,8 +128,11 @@
       align-items: flex-start;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding: 10% 5%;
+      padding: 50px 5%;
       gap: 10%;
+      @include laptop {
+        padding: 10% 5%;
+      }
       @include mobile {
         display: none;
       }
@@ -166,7 +169,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding-top: 75%;
+      padding-top: 154px;
+      @include laptop {
+        padding-top: 60%;
+      }
       @include mobile {
         padding: 0;
         flex-direction: row;
@@ -179,7 +185,9 @@
         @include text;
         text-decoration-line: underline;
         color: $text3;
+        margin-left: 17%;
         @include mobile {
+          margin-left: 0;
           width: 30%;
         }
       }

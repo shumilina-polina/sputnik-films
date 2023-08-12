@@ -264,7 +264,7 @@ export const videoList = [
     vimeoUrl: "https://player.vimeo.com/video/788917875?h=74e9fd37e9",
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital],
-    label: "MEGA / Graphics",
+    label: "МЕГА / Graphics",
     poster: "mega-poster.png",
   },
   {
