@@ -1,0 +1,65 @@
+@import "styles/variables.scss";
+
+.section {
+  @include mobile {
+    height: auto !important;
+  }
+}
+.video_wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include mobile {
+    height: auto;
+  }
+}
+
+.wr_port {
+  position: relative;
+  & video {
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  & img {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    @include mobile {
+      filter: none;
+      -webkit-filter: none;
+      -moz-filter: none;
+      -o-filter: none;
+      -ms-filter: none;
+    }
+  }
+
+  & .label {
+    position: absolute;
+    top: -36px;
+    left: 0;
+    width: 390px;
+    background: #151515;
+    @include laptop {
+      width: 28vw;
+    }
+    @include mobile {
+      top: -31px;
+      width: 100%;
+    }
+
+    & > span {
+      @include text;
+      text-transform: uppercase;
+      // white-space: nowrap;
+    }
+  }
+}
