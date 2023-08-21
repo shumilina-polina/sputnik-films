@@ -11,6 +11,7 @@ import { Drawer, useMediaQuery } from "@mui/material";
 import SvgSelector from "components/SvgSelector";
 import VideoPortfolio from "components/VideoPortfolio/VideoPortfolio";
 import { NavFilters } from "./NavFilters";
+import LazyLoad from "react-lazyload";
 
 const Portfolio = () => {
   const isMobile = useMediaQuery(breakpoints.mobile);
@@ -83,14 +84,16 @@ const VideoGrid = ({ list }) => {
       {list.length === 0 && <p>Не найдено</p>}
       <ul className={cn(s.list, s[`list_${checkLength()}`])}>
         {list.map((video, i) => (
-          <li data-aos="fade-up" data-aos-offset="0" key={i}>
-            <VideoPortfolio
-              videoSrc={video.localUrl}
-              videoUrl={video.vimeoUrl}
-              label={video.label}
-              poster={video.poster}
-            />
-          </li>
+          <LazyLoad>
+            <li data-aos="fade-up" data-aos-offset="0" key={i}>
+              <VideoPortfolio
+                videoSrc={video.localUrl}
+                videoUrl={video.vimeoUrl}
+                label={video.label}
+                poster={video.poster}
+              />
+            </li>
+          </LazyLoad>
         ))}
       </ul>
     </>
