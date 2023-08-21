@@ -51,7 +51,7 @@ export const HorizontalTabs = () => {
     <Box className={s.tab_box}>
       <Tabs
         selectionFollowsFocus
-        variant={isMobile ? "scrollable" : ""}
+        variant={isMobile ? "scrollable" : "standard"}
         className={classNames(s.tabs, "tabs")}
         orientation={"horizontal"}
         allowScrollButtonsMobile

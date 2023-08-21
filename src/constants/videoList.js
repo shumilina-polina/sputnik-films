@@ -7,7 +7,7 @@ export const videoList = [
     category: CATEGORIES.showreel,
     tags: [TAGS.showreel],
     label: "SHOWREEL 2021",
-    poster: "showreel-port-poster.png",
+    poster: "showreel-port-poster.jpg",
   },
   {
     localUrl: "cg",
@@ -15,7 +15,7 @@ export const videoList = [
     category: CATEGORIES.showreel,
     tags: [TAGS.showreel],
     label: "GRAPHICS SHOWREEL 2022",
-    poster: "cg-poster.png",
+    poster: "cg-poster.jpg",
   },
   {
     localUrl: "fpv-showreel",
@@ -31,7 +31,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital],
     label: "Polemica / Promo video",
-    poster: "polemica-poster.png",
+    poster: "polemica-poster.jpg",
   },
   // {
   //   localUrl: "tingz",
@@ -39,7 +39,7 @@ export const videoList = [
   //   category: CATEGORIES.reclama,
   //   tags: [TAGS.promo, TAGS.digital],
   //   label: "Tingz / Promo video",
-  //   poster: "tingz-poster.png",
+  //   poster: "tingz-poster.jpg",
   // },
   {
     localUrl: "izum",
@@ -47,7 +47,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.tv],
     label: "Izum / TV Promo",
-    poster: "izum-poster.png",
+    poster: "izum-poster.jpg",
   },
   {
     localUrl: "ulibka",
@@ -55,7 +55,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.tv],
     label: "Ulybka / TV Ad",
-    poster: "ulibka-poster.png",
+    poster: "ulibka-poster.jpg",
   },
   {
     localUrl: "sushi",
@@ -63,7 +63,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.food],
     label: "Sushi-Market / Food video",
-    poster: "sushi-poster.png",
+    poster: "sushi-poster.jpg",
   },
   {
     localUrl: "moretv",
@@ -71,7 +71,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital],
     label: "More.tv / Teaser",
-    poster: "moretv-poster.png",
+    poster: "moretv-poster.jpg",
   },
 
   {
@@ -80,7 +80,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital],
     label: "Linkin.Park / Promo",
-    poster: "linkin-poster.png",
+    poster: "linkin-poster.jpg",
   },
   {
     localUrl: "eurasia",
@@ -88,7 +88,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.tv, TAGS.food],
     label: "Eurasia Bar / Food",
-    poster: "eurasia-poster.png",
+    poster: "eurasia-poster.jpg",
   },
   {
     localUrl: "rusich",
@@ -96,7 +96,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital],
     label: "Rusich / New Collection",
-    poster: "rusich-poster.png",
+    poster: "rusich-poster.jpg",
   },
   {
     localUrl: "lavash",
@@ -104,7 +104,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.threeD, TAGS.CG],
     label: "Lavash / Promo",
-    poster: "lavash-poster.png",
+    poster: "lavash-poster.jpg",
   },
   {
     localUrl: "almaz",
@@ -112,7 +112,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.tv],
     label: "Almazny Zal / TV Promo",
-    poster: "almaz-poster.png",
+    poster: "almaz-poster.jpg",
   },
   {
     localUrl: "dom",
@@ -120,7 +120,7 @@ export const videoList = [
     category: CATEGORIES.docKino,
     tags: [TAGS.docKino, TAGS.aero, TAGS.FPV],
     label: "Там, где наш дом / Трейлер",
-    poster: "dom-poster.png",
+    poster: "dom-poster.jpg",
   },
   {
     localUrl: "olymp",
@@ -136,7 +136,7 @@ export const videoList = [
     category: CATEGORIES.docKino,
     tags: [TAGS.docKino, TAGS.aero, TAGS.FPV],
     label: "Нескорый поезд / Трейлер",
-    poster: "poezd-poster.png",
+    poster: "poezd-poster.jpg",
   },
   {
     localUrl: "nauka",
@@ -144,7 +144,7 @@ export const videoList = [
     category: CATEGORIES.docKino,
     tags: [TAGS.docKino, TAGS.threeD, TAGS.CG],
     label: "Займемся наукой. Биоинженерия / Трейлер",
-    poster: "nauka-poster.png",
+    poster: "nauka-poster.jpg",
   },
   {
     localUrl: "nezav",
@@ -152,7 +152,7 @@ export const videoList = [
     category: CATEGORIES.docKino,
     tags: [TAGS.docKino, TAGS.aero, TAGS.FPV, TAGS.threeD, TAGS.CG],
     label: "Игровая независимость / Трейлер",
-    poster: "nezav-poster.png",
+    poster: "nezav-poster.jpg",
   },
   {
     localUrl: "gayane",
@@ -160,7 +160,7 @@ export const videoList = [
     category: CATEGORIES.docReclama,
     tags: [TAGS.docKino, TAGS.digital, TAGS.korp],
     label: "Yandex Go - Gayane / Doc commercial",
-    poster: "gayane-poster.png",
+    poster: "gayane-poster.jpg",
   },
   {
     localUrl: "victor",
@@ -168,7 +168,7 @@ export const videoList = [
     category: CATEGORIES.docReclama,
     tags: [TAGS.docKino, TAGS.digital, TAGS.korp],
     label: "Yandex Go - Victor / Doc commercial",
-    poster: "victor-poster.png",
+    poster: "victor-poster.jpg",
   },
   {
     localUrl: "ctrl-cometa",
@@ -176,7 +176,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "Ctrl+A / Music video",
-    poster: "ctrl-cometa-poster.png",
+    poster: "ctrl-cometa-poster.jpg",
   },
   {
     localUrl: "dose",
@@ -184,7 +184,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "Dose - Потеряли / Music video",
-    poster: "dose-poster.png",
+    poster: "dose-poster.jpg",
   },
   {
     localUrl: "ctrl",
@@ -192,7 +192,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "CTRL+A - Add / Music video",
-    poster: "ctrl-poster.png",
+    poster: "ctrl-poster.jpg",
   },
   {
     localUrl: "bums",
@@ -201,7 +201,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "STILL BUMS / Music video",
-    poster: "bums-poster.png",
+    poster: "bums-poster.jpg",
   },
   {
     localUrl: "love",
@@ -209,7 +209,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "Random Love / Music video",
-    poster: "love-poster.png",
+    poster: "love-poster.jpg",
   },
   {
     localUrl: "myqeed",
@@ -217,7 +217,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "MYQEED / Snippet",
-    poster: "myqeed-poster.png",
+    poster: "myqeed-poster.jpg",
   },
   {
     localUrl: "narcissus",
@@ -225,7 +225,7 @@ export const videoList = [
     category: CATEGORIES.clip,
     tags: [TAGS.clip],
     label: "The Story of Narcissus / Dance shot",
-    poster: "narcissus-poster.png",
+    poster: "narcissus-poster.jpg",
   },
   {
     localUrl: "oemz",
@@ -233,7 +233,7 @@ export const videoList = [
     category: CATEGORIES.korpVideo,
     tags: [TAGS.korp],
     label: "OEMZ / Corporate video",
-    poster: "oemz-poster.png",
+    poster: "oemz-poster.jpg",
   },
   {
     localUrl: "rt",
@@ -241,7 +241,7 @@ export const videoList = [
     category: CATEGORIES.korpVideo,
     tags: [TAGS.korp, TAGS.aero, TAGS.FPV],
     label: "RT / Corporate video",
-    poster: "rt-poster.png",
+    poster: "rt-poster.jpg",
   },
   {
     localUrl: "softline",
@@ -249,7 +249,7 @@ export const videoList = [
     category: CATEGORIES.korpVideo,
     tags: [TAGS.korp, TAGS.aero],
     label: "Softline / Corporate video",
-    poster: "softline-poster.png",
+    poster: "softline-poster.jpg",
   },
   {
     localUrl: "tool",
@@ -257,7 +257,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital, TAGS.korp],
     label: "Silbertool / 3D",
-    poster: "tool-poster.png",
+    poster: "tool-poster.jpg",
   },
   {
     localUrl: "mega",
@@ -265,7 +265,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital],
     label: "МЕГА / Graphics",
-    poster: "mega-poster.png",
+    poster: "mega-poster.jpg",
   },
   {
     localUrl: "them",
@@ -273,7 +273,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital],
     label: "THEM / 3D product",
-    poster: "them-poster.png",
+    poster: "them-poster.jpg",
   },
   {
     localUrl: "zemlya",
@@ -281,7 +281,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.opening],
     label: "Zemlya 2030 / 3D oppening",
-    poster: "zemlya-poster.png",
+    poster: "zemlya-poster.jpg",
   },
   {
     localUrl: "borodina",
@@ -289,7 +289,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.opening],
     label: "Borodina / 3D oppening",
-    poster: "borodina-poster.png",
+    poster: "borodina-poster.jpg",
   },
   {
     localUrl: "vzyatki",
@@ -297,7 +297,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.opening],
     label: "Vzyatki / 3D oppening",
-    poster: "vzyatki-poster.png",
+    poster: "vzyatki-poster.jpg",
   },
   {
     localUrl: "nft",
@@ -305,7 +305,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital],
     label: "NFT Collection / 3D",
-    poster: "nft-poster.png",
+    poster: "nft-poster.jpg",
   },
   {
     localUrl: "rizolin-city",
@@ -313,7 +313,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital, TAGS.korp],
     label: "Rizolin (city) / 3D",
-    poster: "rizolin-city-poster.png",
+    poster: "rizolin-city-poster.jpg",
   },
   {
     localUrl: "rizolin",
@@ -321,7 +321,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.digital, TAGS.korp],
     label: "Rizolin / 3D",
-    poster: "rizolin-poster.png",
+    poster: "rizolin-poster.jpg",
   },
   {
     localUrl: "cyber",
@@ -329,7 +329,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.threeD, TAGS.opening],
     label: "Cyber ethics / 3D oppening",
-    poster: "cyber-poster.png",
+    poster: "cyber-poster.jpg",
   },
   {
     localUrl: "hand",
@@ -337,7 +337,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.CG, TAGS.threeD],
     label: "Cyber hand / 3D",
-    poster: "hand-poster.png",
+    poster: "hand-poster.jpg",
   },
 
   {
@@ -346,7 +346,7 @@ export const videoList = [
     category: CATEGORIES.graph,
     tags: [TAGS.korp],
     label: "Multispace / Infographics",
-    poster: "multispace-poster.png",
+    poster: "multispace-poster.jpg",
   },
   {
     localUrl: "vokzal",
@@ -354,7 +354,7 @@ export const videoList = [
     category: CATEGORIES.FPV,
     tags: [TAGS.promo, TAGS.aero, TAGS.FPV, TAGS.CG],
     label: "VOKZAL 1853 / FPV",
-    poster: "vokzal-poster.png",
+    poster: "vokzal-poster.jpg",
   },
   {
     localUrl: "ciay",
@@ -362,7 +362,7 @@ export const videoList = [
     category: CATEGORIES.FPV,
     tags: [TAGS.promo, TAGS.aero, TAGS.FPV],
     label: "CIAY MOTOCROSS / Strokov David",
-    poster: "ciay-poster.png",
+    poster: "ciay-poster.jpg",
   },
   {
     localUrl: "asber",
@@ -370,7 +370,7 @@ export const videoList = [
     category: CATEGORIES.FPV,
     tags: [TAGS.promo, TAGS.aero, TAGS.FPV, TAGS.CG],
     label: "Asber / FPV",
-    poster: "asber-poster.png",
+    poster: "asber-poster.jpg",
   },
   {
     localUrl: "living-display",
@@ -378,7 +378,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.threeD],
     label: "Living Skog (Display Storage)",
-    poster: "living-display-poster.png",
+    poster: "living-display-poster.jpg",
   },
   {
     localUrl: "living-cabinet",
@@ -386,7 +386,7 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [TAGS.promo, TAGS.digital, TAGS.threeD],
     label: "Living Skog (Cabinet)",
-    poster: "living-cabinet-poster.png",
+    poster: "living-cabinet-poster.jpg",
   },
   {
     localUrl: "baggins",
@@ -394,6 +394,6 @@ export const videoList = [
     category: CATEGORIES.reclama,
     tags: [],
     label: "BAGGINS COFFEE / Promo",
-    poster: "baggins-poster.png",
+    poster: "baggins-poster.jpg",
   },
 ];

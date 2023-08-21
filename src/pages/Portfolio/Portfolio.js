@@ -4,9 +4,8 @@ import { CATEGORIES, TAGS } from "constants/filters";
 import cn from "classnames";
 import raboty from "assets/raboty.svg";
 import rabotyMobile from "assets/rabotyMobile.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { videoList } from "constants/videoList";
-import Video from "components/Video/Video";
 import { breakpoints } from "styles/variables";
 import { Drawer, useMediaQuery } from "@mui/material";
 import SvgSelector from "components/SvgSelector";
@@ -22,7 +21,7 @@ const Portfolio = () => {
   const [filtersMobileOpen, setFiltersMobileOpen] = useState(false);
 
   const getNewCategory = (newCategory) => {
-    setMobileCategory(newCategory)
+    setMobileCategory(newCategory);
   };
 
   return (

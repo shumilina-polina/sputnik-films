@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
 import s from "./video.module.scss";
 import Modal from "components/Modal";
-import cn from "classnames";
 import { useInView } from "react-spring";
 import { breakpoints } from "styles/variables";
 import { useMediaQuery } from "@mui/material";
 
-const Video = ({
-  videoSrc,
-  videoUrl = "",
-  poster = "",
-  posterBlur = "",
-  label = "",
-  route = "",
-}) => {
+const Video = ({ videoSrc, videoUrl, poster, posterBlur, label }) => {
   const [openModal, setOpenModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [video, inView] = useInView();
@@ -27,71 +19,50 @@ const Video = ({
     if (isMobile) {
       inView ? video.current?.play() : video.current?.pause();
     }
-    // isMobile && inView && loaded ? video.current.play() : video.current.pause();
   }, [inView]);
 
   return (
     <div className={s.section}>
-      <div className={cn(route === "port" ? s.wr_port : s.wr)}>
+      <div className={s.wr}>
         <div className={s.video_wrapper}>
-          {route === "port" && isMobile ? (
-            poster && (
-              <img
-                onClick={() => setOpenModal(true)}
-                src={require(`assets/video/${poster}`)}
-                alt="poster"
+          <>
+            <video
+              ref={video}
+              width="100%"
+              height="100%"
+              loop
+              muted="muted"
+              preload="metadata"
+              controls={false}
+              playsInline
+              autoPlay={videoSrc === "showreel" ? true : false}
+              onLoadedData={() => setLoaded(true)}
+              poster={require(`assets/video/${poster}`)}
+              onClick={() => setOpenModal(true)}
+              onMouseOver={(e) => e.target.play()}
+              onMouseOut={(e) => {
+                if (loaded && videoSrc !== "showreel") {
+                  e.target.pause();
+                  e.target.load();
+                }
+              }}
+            >
+              <source
+                src={require(`assets/video/${videoSrc}.webm`)}
+                type="video/webm"
               />
-            )
-          ) : (
-            <>
-              <video
-                ref={video}
-                width="100%"
-                height="100%"
-                loop
-                muted="muted"
-                preload="metadata"
-                controls={false}
-                playsInline
-                autoPlay={
-                  videoSrc === "showreel" && route === "" ? true : false
-                }
-                onLoadedData={() => setLoaded(true)}
-                poster={poster ? require(`assets/video/${poster}`) : undefined}
-                onClick={() => setOpenModal(true)}
-                onMouseOver={(e) => {
-                  e.target.play();
-                  // if (loaded) e.target.play();
-                }}
-                onMouseOut={(e) => {
-                  if (loaded && (videoSrc !== "showreel" || route === "port")) {
-                    e.target.pause();
-                    if (videoSrc === "showreel" && route === "") {
-                      e.target.autoplay = false;
-                    }
-                    e.target.load();
-                  }
-                }}
-                // src={require(`assets/video/${videoSrc}.webm`)}
-                // type={"video/webm"}
-                src={
-                  isMobile
-                    ? require(`assets/video/${videoSrc}.mp4`)
-                    : require(`assets/video/${videoSrc}.webm`)
-                }
-                type={isMobile ? "video/mp4" : "video/webm"}
-              >
-                Тег video не поддерживается вашим браузером.
-              </video>
-              {poster && route !== "port" && (
-                <img
-                  className={s.image_blur}
-                  src={require(`assets/video/${posterBlur}-blur.png`)}
-                  alt="poster"
-                />
-              )}
-            </>
-          )}
+              <source
+                src={require(`assets/video/${videoSrc}.mp4`)}
+                type="video/mp4"
+              />
+              Тег video не поддерживается вашим браузером.
+            </video>
+            <img
+              className={s.image_blur}
+              src={require(`assets/video/${posterBlur}-blur.png`)}
+              alt="poster-blur"
+            />
+          </>
         </div>
         <Label>{label}</Label>
       </div>
