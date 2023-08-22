@@ -84,16 +84,16 @@ const VideoGrid = ({ list }) => {
       {list.length === 0 && <p>Не найдено</p>}
       <ul className={cn(s.list, s[`list_${checkLength()}`])}>
         {list.map((video, i) => (
-          <LazyLoad>
-            <li data-aos="fade-up" data-aos-offset="0" key={i}>
+          <li data-aos="fade-up" data-aos-offset="0" key={i}>
+            <LazyLoad>
               <VideoPortfolio
                 videoSrc={video.localUrl}
                 videoUrl={video.vimeoUrl}
                 label={video.label}
                 poster={video.poster}
               />
-            </li>
-          </LazyLoad>
+            </LazyLoad>
+          </li>
         ))}
       </ul>
     </>
