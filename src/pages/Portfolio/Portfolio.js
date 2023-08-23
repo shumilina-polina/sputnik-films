@@ -1,6 +1,6 @@
 import Wrapper from "components/Wrapper";
 import s from "./portfolio.module.scss";
-import { CATEGORIES, TAGS } from "constants/filters";
+import { CATEGORIES } from "constants/filters";
 import cn from "classnames";
 import raboty from "assets/raboty.svg";
 import rabotyMobile from "assets/rabotyMobile.svg";

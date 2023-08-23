@@ -8,17 +8,29 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
+import { useRef, useState } from "react";
 
 const Form = () => {
+  const radio = useRef(null);
+  const budget = useRef(null);
+  const [sended, setSended] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
+    Array.from(radio.current.children).map((elem) => {
+      if (elem.children[0].classList.contains("Mui-checked"))
+        budget.current.value = elem.children[1].innerText;
+    });
+    setSended(true);
+    setTimeout(() => setSended(false), 7000);
+
     emailjs
       .sendForm(
-        "service_g5bbd95",
-        "template_b1izhed",
+        "service_oehg3o9",
+        "template_9g36tcc",
         e.target,
-        "b9BCqPQmwMN7r8f4z"
+        "FYs-0bvxU_HGakpQL"
       )
       .then(
         (result) => {
@@ -33,11 +45,7 @@ const Form = () => {
 
   return (
     <div className={s.wr}>
-      <form
-        className={s.form}
-        id="contactForm"
-        // onSubmit={sendEmail}
-      >
+      <form className={s.form} id="contactForm" onSubmit={sendEmail}>
         <FormControl className={s.form_control}>
           <InputLabel htmlFor="fio-input">Ваше имя</InputLabel>
           <Input
@@ -68,7 +76,7 @@ const Form = () => {
           </InputLabel>
           <Input
             inputProps={{
-              maxLength: 20,
+              maxLength: 60,
               name: "phone",
               required: true,
               type: "tel",
@@ -93,7 +101,7 @@ const Form = () => {
 
         <FormControl>
           <label>Бюджет</label>
-          <RadioGroup defaultValue={0}>
+          <RadioGroup defaultValue={0} ref={radio}>
             {["<1 млн", "1-3 млн", "3-5 млн", ">5 млн"].map((elem, index) => (
               <FormControlLabel
                 key={index}
@@ -103,10 +111,17 @@ const Form = () => {
             ))}
           </RadioGroup>
         </FormControl>
+        <input
+          style={{ display: "none" }}
+          ref={budget}
+          type="text"
+          name="budget"
+        />
       </form>
       <button className="button" form="contactForm" type="submit">
         Отправить
       </button>
+      {sended && <div className={s.sended}>отправлено</div>}
     </div>
   );
 };

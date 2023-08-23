@@ -1,6 +1,7 @@
 @import "styles/variables.scss";
 
 .wr {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,4 +145,14 @@ button[type="submit"] {
     padding: 25px 0;
     margin-bottom: 59px;
   }
+}
+
+.sended {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: pink;
+  color: #000;
 }
