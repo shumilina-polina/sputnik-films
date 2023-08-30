@@ -46,82 +46,99 @@ const Form = () => {
   return (
     <div className={s.wr}>
       <form className={s.form} id="contactForm" onSubmit={sendEmail}>
-        <FormControl className={s.form_control}>
-          <InputLabel htmlFor="fio-input">Ваше имя</InputLabel>
-          <Input
-            inputProps={{
-              maxLength: 40,
-              name: "name",
-              required: true,
-              type: "text",
-            }}
-            id="fio-input"
+        <div>
+          <FormControl
+            className={s.form_control}
+            style={{ opacity: sended && "0" }}
+          >
+            <InputLabel htmlFor="fio-input">Ваше имя</InputLabel>
+            <Input
+              inputProps={{
+                maxLength: 40,
+                name: "name",
+                required: true,
+                type: "text",
+              }}
+              id="fio-input"
+            />
+          </FormControl>
+          <FormControl>
+            <InputLabel htmlFor="company-input">компания</InputLabel>
+            <Input
+              inputProps={{
+                maxLength: 60,
+                name: "company",
+                required: true,
+                type: "text",
+              }}
+              id="company-input"
+            />
+          </FormControl>
+          <FormControl>
+            <InputLabel htmlFor="phone-input">
+              Telegram или номер телефона
+            </InputLabel>
+            <Input
+              inputProps={{
+                maxLength: 60,
+                name: "phone",
+                required: true,
+                type: "tel",
+              }}
+              id="phone-input"
+            />
+          </FormControl>
+          <FormControl>
+            <InputLabel htmlFor="issue-input">
+              Расскажите кратко о задаче
+            </InputLabel>
+            <Input
+              inputProps={{
+                maxLength: 100,
+                name: "issue",
+                required: true,
+                type: "text",
+              }}
+              id="issue-input"
+            />
+          </FormControl>
+          <FormControl>
+            <label>Бюджет</label>
+            <RadioGroup defaultValue={0} ref={radio}>
+              {["<1 млн", "1-3 млн", "3-5 млн", ">5 млн"].map((elem, index) => (
+                <FormControlLabel
+                  key={index}
+                  control={<Radio value={index} />}
+                  label={elem}
+                />
+              ))}
+            </RadioGroup>
+          </FormControl>
+          <input
+            style={{ display: "none" }}
+            ref={budget}
+            type="text"
+            name="budget"
           />
-        </FormControl>
-        <FormControl>
-          <InputLabel htmlFor="company-input">компания</InputLabel>
-          <Input
-            inputProps={{
-              maxLength: 60,
-              name: "company",
-              required: true,
-              type: "text",
-            }}
-            id="company-input"
-          />
-        </FormControl>
-        <FormControl>
-          <InputLabel htmlFor="phone-input">
-            Telegram или номер телефона
-          </InputLabel>
-          <Input
-            inputProps={{
-              maxLength: 60,
-              name: "phone",
-              required: true,
-              type: "tel",
-            }}
-            id="phone-input"
-          />
-        </FormControl>
-        <FormControl>
-          <InputLabel htmlFor="issue-input">
-            Расскажите кратко о задаче
-          </InputLabel>
-          <Input
-            inputProps={{
-              maxLength: 100,
-              name: "issue",
-              required: true,
-              type: "text",
-            }}
-            id="issue-input"
-          />
-        </FormControl>
-
-        <FormControl>
-          <label>Бюджет</label>
-          <RadioGroup defaultValue={0} ref={radio}>
-            {["<1 млн", "1-3 млн", "3-5 млн", ">5 млн"].map((elem, index) => (
-              <FormControlLabel
-                key={index}
-                control={<Radio value={index} />}
-                label={elem}
-              />
-            ))}
-          </RadioGroup>
-        </FormControl>
-        <input
-          style={{ display: "none" }}
-          ref={budget}
-          type="text"
-          name="budget"
-        />
+          {sended && (
+            <section className={s.sended}>
+              <h3>Спасибо!</h3>
+              <p>
+                Ваша заявка уже летит к нам. <br /> Ответим в течение часа.
+              </p>
+            </section>
+          )}
+        </div>
       </form>
-      <button className="button" form="contactForm" type="submit">
+
+      <button
+        disabled={sended}
+        className="button"
+        form="contactForm"
+        type="submit"
+      >
         Отправить
       </button>
-      {sended && <div className={s.sended}>отправлено</div>}
     </div>
   );
 };
