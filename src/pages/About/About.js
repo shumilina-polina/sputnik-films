@@ -63,22 +63,61 @@ const About = () => {
             </LogoBox>
           </div>
           <div className={s.authors}>
-            <ul>
-              <Author src={"author-1.png"} name={"Дмитрий Квашнин"}>
-                Основатель продакшна, режиссёр, продюсер
-                <br />
-                <br />
-              </Author>
-              <Author src={"author-2.png"} name={"Сергей Клейн"}>
-                Сооснователь и&nbsp;исполнительный продюсер
-              </Author>
-              <Author src={"author-3.png"} name={"Ксения Яковлева"}>
-                Аккаунт-менеджер
-                <br />
-                <br />
-                <br />
-              </Author>
-            </ul>
+            {!isMobile ? (
+              <Swiper spaceBetween={36} slidesPerView={"auto"}>
+                <SwiperSlide>
+                  <Author src={"author-1.png"} name={"Дмитрий Квашнин"}>
+                    Основатель продакшна, режиссёр, продюсер
+                    <br />
+                    <br />
+                  </Author>
+                </SwiperSlide>
+                <SwiperSlide className={s.au2}>
+                  <Author src={"author-2.png"} name={"Сергей Клейн"}>
+                    Сооснователь и&nbsp;исполнительный продюсер
+                  </Author>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Author src={"author-3.png"} name={"Ксения Яковлева"}>
+                    Аккаунт-менеджер
+                    <br />
+                    <br />
+                    <br />
+                  </Author>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Author src={"author-4.png"} name={"Егор Жук"}>
+                    VFX generalist
+                    <br />
+                    <br />
+                    <br />
+                  </Author>
+                </SwiperSlide>
+              </Swiper>
+            ) : (
+              <ul>
+                <Author src={"author-1.png"} name={"Дмитрий Квашнин"}>
+                  Основатель продакшна, режиссёр, продюсер
+                  <br />
+                  <br />
+                </Author>
+                <Author src={"author-2.png"} name={"Сергей Клейн"}>
+                  Сооснователь и&nbsp;исполнительный продюсер
+                </Author>
+                <Author src={"author-3.png"} name={"Ксения Яковлева"}>
+                  Аккаунт-менеджер
+                  <br />
+                  <br />
+                  <br />
+                </Author>
+                <Author src={"author-4.png"} name={"Егор Жук"}>
+                  VFX&nbsp;generalist
+                  <br />
+                  <br />
+                  <br />
+                </Author>
+              </ul>
+            )}
           </div>
         </header>
       </Wrapper>
