@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
             <div>
               <a
-                href="https://t.me/cosmovisioner"
+                href="https://t.me/dmitriy_kvashnin"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -66,7 +66,7 @@ const Footer = () => {
                   решение.
                 </p>
                 <a
-                  href="https://t.me/cosmovisioner"
+                  href="https://t.me/dmitriy_kvashnin"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -151,7 +151,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <span>© Sputnik Films 2023</span>
+              <span>© Sputnik Films {new Date().getFullYear()}</span>
             </div>
           </nav>
         </div>

@@ -11,9 +11,9 @@ import { breakpoints } from "styles/variables";
 
 const tabs = [
   CATEGORIES.reclama,
-  CATEGORIES.docReclama,
+  // CATEGORIES.docReclama,
   "Корпоративное видео",
-  CATEGORIES.FPV,
+  "Регулярный контент",
   "Документальные фильмы",
   "Графика и постпродакшн",
   CATEGORIES.clip,
@@ -62,7 +62,7 @@ export const HorizontalTabs = () => {
           <Tab key={i} className={s.tab} label={label} {...a11yProps(i - 1)} />
         ))}
       </Tabs>
-      {[Tab1, Tab2, Tab3, Tab4, Tab5, Tab6, Tab7].map((TabComponent, i) => (
+      {[Tab1, Tab3, Tab4, Tab5, Tab6, Tab7].map((TabComponent, i) => (
         <TabPanel value={value} key={i} index={i}>
           <Content>
             <TabComponent />
@@ -171,10 +171,7 @@ const Tab4 = () => {
   return (
     <>
       <div className={s.left}>
-        <p>
-          ЛЕТАЕМ НА&nbsp;СПОРТИВНЫХ ДРОНАХ. ДЕЛАЕМ FULL-FPV РОЛИКИ
-          И&nbsp;ВНЕДРЯЕМ ИХ&nbsp;В&nbsp;ПРОЕКТЫ.
-        </p>
+        <p>Создаем видео и фото “под ключ” для ваших социальных сетей.</p>
         <ul>
           {[TAGS.aero, "экстрим"].map((tag, i) => (
             <li key={i}>#{tag}</li>
