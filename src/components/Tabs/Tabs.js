@@ -14,7 +14,7 @@ const tabs = [
   // CATEGORIES.docReclama,
   "Корпоративное видео",
   "Регулярный контент",
-  "Документальные фильмы",
+  "Документальное кино",
   "Графика и постпродакшн",
   CATEGORIES.clip,
 ];
@@ -182,7 +182,7 @@ const Tab4 = () => {
         <ReactMarkdown>{text}</ReactMarkdown>
         <div onMouseLeave={() => setText(tab4.init)}>
           <LogoBox>
-            {["ciay", "asber", "vokzal"].map((svg, i) => (
+            {["mega", "tretyak", "waygroup"].map((svg, i) => (
               <div key={i} onMouseOver={() => setText(tab4[`text_${i + 1}`])}>
                 <SocialLink svg={svg} />
               </div>

@@ -1,5 +1,17 @@
 export const nominations = [
   {
+    slug: "makersofsiberia.com",
+    url: "https://makersofsiberia.com/rabotyi/documental-omsk.html",
+    text: "Документальное кино — наша отдушина: Дмитрий Квашнин о документалистике в Омске",
+    imageSrc: "news_img0-1.png",
+  },
+  {
+    slug: "makersofsiberia.com",
+    url: "https://makersofsiberia.com/sreda/mosff-23-republics.html",
+    text: "Кино в национальных республиках Сибири. Безвременье, бездорожье и обращение к духам",
+    imageSrc: "news_img00.png",
+  },
+  {
     slug: "calameo.com",
     url: "https://www.calameo.com/read/0067726443ecbfcf6a97c",
     text: "На&nbsp;электричках от&nbsp;Москвы до&nbsp;Владивостока. Интервью с&nbsp;создателями фильма «Нескорый поезд»",
