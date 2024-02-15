@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { Autoplay, Scrollbar } from "swiper";
+import { Autoplay, FreeMode, Mousewheel, Scrollbar } from "swiper";
 import s from "./backSlider.module.scss";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -22,17 +22,20 @@ const BackSlider = () => {
   }, [isInView]);
 
   return (
-    <div className={s.wr}>
+    <div>
       <Swiper
         ref={swiper}
-        mousewheel={true}
+        mousewheel={{
+          forceToAxis: true,
+        }}
         allowTouchMove={true}
         speed={1000}
         scrollbar={{
           hide: false,
           draggable: true,
         }}
-        modules={[Scrollbar, Autoplay]}
+        freeMode={{ sticky: true }}
+        modules={[Scrollbar, Autoplay, Mousewheel, FreeMode]}
         slidesPerView={"auto"}
         className={s.slider}
         spaceBetween={13}
@@ -46,6 +49,34 @@ const BackSlider = () => {
           disableOnInteraction: false,
         }}
       >
+        <SwiperSlide className={s.slide_big}>
+          <PhotoSlide i={33} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={32} />
+          <PhotoSlide i={31} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_small}>
+          <PhotoSlide i={30} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={29} />
+          <PhotoSlide i={28} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_big}>
+          <PhotoSlide i={27} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={26} />
+          <PhotoSlide i={25} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_small}>
+          <PhotoSlide i={24} />
+        </SwiperSlide>
+        <SwiperSlide className={s.slide_flex}>
+          <PhotoSlide i={23} />
+          <PhotoSlide i={22} />
+        </SwiperSlide>
         <SwiperSlide className={s.slide_big}>
           <PhotoSlide i={21} />
         </SwiperSlide>

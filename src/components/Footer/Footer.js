@@ -141,7 +141,7 @@ const Footer = () => {
             </div>
             <div className={s.designed}>
               <a
-                href="https://www.behance.net/pavlushin"
+                href="https://www.behance.net/artpavlushin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
