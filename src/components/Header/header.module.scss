@@ -25,16 +25,48 @@
       align-items: center;
       padding: 1% 0;
     }
-    & > div:first-child {
+    & .social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       min-width: 240px;
+
       @include laptop {
         min-width: 30%;
+        gap: 0.635vw;
       }
-      @include mobile {
-        display: none;
+      & > span {
+        margin-right: 4px;
+        @include laptop {
+          margin-right: 0.317vw;
+        }
+      }
+      & > a {
+        display: block;
+        border-radius: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.03);
+        width: 42px;
+        height: 32px;
+        transition: background-color 0.3s;
+        @include laptop {
+          width: 3.333vw;
+          height: 2.54vw;
+        }
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        &:active {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        & > svg {
+          width: 36%;
+        }
       }
     }
-    & > div:nth-child(2) {
+    & .logo {
       & > a {
         display: block;
         transition: opacity 0.3s;
@@ -50,7 +82,7 @@
         }
       }
     }
-    & > div:last-child {
+    & .talk {
       min-width: 240px;
       @include laptop {
         min-width: 30%;
