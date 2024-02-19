@@ -13,6 +13,7 @@ import { useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { Podcast } from "components/Podcast/Podcast";
 
 const nagrady = [
   "https://vk.com/unknownfilmfestival?w=wall-133062901_946",
@@ -94,11 +95,7 @@ const About = () => {
         </Wrapper>
         {isMobile ? (
           <ul className={s.nagrady}>
-            <Swiper
-              slidesPerView={"auto"}
-              spaceBetween={0}
-              slidesPerGroup={1}
-            >
+            <Swiper slidesPerView={"auto"} spaceBetween={0} slidesPerGroup={1}>
               {nagrady.map((elem, i) => (
                 <SwiperSlide key={i}>
                   <li
@@ -132,6 +129,7 @@ const About = () => {
           </ul>
         )}
         <Wrapper>
+          <Podcast />
           <ul className={s.nominacyy}>
             {nomList.map((elem, i) => (
               <a
@@ -165,6 +163,7 @@ const About = () => {
           </ul>
 
           <button
+            className={s.more}
             onClick={(e) => {
               setNomList(nominations);
               e.target.disabled = true;

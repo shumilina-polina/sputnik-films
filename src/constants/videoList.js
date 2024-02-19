@@ -2,6 +2,48 @@ import { CATEGORIES, TAGS } from "./filters";
 
 export const videoList = [
   {
+    localUrl: "funkytoys",
+    vimeoUrl: "",
+    category: CATEGORIES.reclama,
+    tags: [TAGS.promo, TAGS.tv, TAGS.digital],
+    label: "Funky Toys",
+    poster: "funkytoys-poster.jpg",
+  },
+  {
+    localUrl: "akbars",
+    vimeoUrl: "",
+    category: CATEGORIES.graph,
+    tags: [TAGS.threeD, TAGS.digital],
+    label: "Ак Барс",
+    poster: "akbars-poster.jpg",
+  },
+  {
+    localUrl: "vkid",
+    vimeoUrl: "",
+    category: CATEGORIES.reclama,
+    tags: [TAGS.promo, TAGS.digital],
+    label: "VK ID",
+    poster: "vkid-poster.jpg",
+  },
+  // {
+  //   localUrl: "veren",
+  //   vimeoUrl: "",
+  //   category: CATEGORIES.reclama,
+  //   tags: [TAGS.promo, TAGS.digital],
+  //   label: "Veren",
+  //   poster: "veren-poster.jpg",
+  // },
+  {
+    localUrl: "softlineeducation",
+    vimeoUrl: "",
+    category: CATEGORIES.korpVideo,
+    tags: [TAGS.korp],
+    label: "Softline Образование",
+    poster: "softlineeducation-poster.jpg",
+  },
+
+  //old
+  {
     localUrl: "showreel",
     vimeoUrl: "https://player.vimeo.com/video/687465086?h=100169ac7e",
     category: CATEGORIES.showreel,
@@ -395,5 +437,32 @@ export const videoList = [
     tags: [],
     label: "BAGGINS COFFEE / Promo",
     poster: "baggins-poster.jpg",
+  },
+  //regular
+  {
+    localUrl: "bogolubov",
+    vimeoUrl: "https://www.youtube.com/embed/cSu1xnhVac0?si=F5dH0lvi6wee7TTS",
+    category: CATEGORIES.regular,
+    tags: [TAGS.regular],
+    label:
+      "Дискуссия о выставке / «Алексей Боголюбов. К 200-летию со дня рождения»",
+    poster: "bogolubov-poster.jpg",
+  },
+  {
+    localUrl: "vecgraph",
+    vimeoUrl: "https://www.youtube.com/embed/A9mrhOirjUU?si=SKwAUi3lpW02Zr8M",
+    category: CATEGORIES.regular,
+    tags: [TAGS.regular],
+    label:
+      "Дискуссия о выставке / «Век графики. От Казимира Малевича до Олега Кудряшова. Из новых поступлений»",
+    poster: "vecgraph-poster.jpg",
+  },
+  {
+    localUrl: "inmemoriam",
+    vimeoUrl: "https://www.youtube.com/embed/pk3eiMJvyXg?si=i7J_G2ac87goVNYX",
+    category: CATEGORIES.regular,
+    tags: [TAGS.regular],
+    label: "Дискуссия о выставке / «In Memoriam»",
+    poster: "inmemoriam-poster.jpg",
   },
 ];

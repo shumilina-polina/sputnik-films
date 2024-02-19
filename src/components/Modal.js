@@ -1,12 +1,7 @@
 import { Dialog, DialogContent, Zoom } from "@mui/material";
-import { useEffect } from "react";
+
 
 const Modal = ({ open, setOpen, children, className = "" }) => {
-  // useEffect(() => {
-  //   window.document
-  //     .getElementsByTagName("html")[0]
-  //     .setAttribute("style", open ? "overflow: hidden" : "");
-  // }, [open]);
   return (
     <Dialog
       TransitionComponent={Zoom}

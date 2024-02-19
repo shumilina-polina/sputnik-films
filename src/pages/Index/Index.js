@@ -2,7 +2,7 @@ import Wrapper from "components/Wrapper";
 import s from "./index.module.scss";
 import title from "assets/title.svg";
 import titleMobile from "assets/titleMobile.svg";
-import n72 from "assets/72.svg";
+import n3 from "assets/3.svg";
 import n84 from "assets/84.svg";
 import projects from "assets/projects.svg";
 import projectsMobile from "assets/projectsMobile.svg";
@@ -56,11 +56,16 @@ const Index = () => {
                   data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
-                    videoSrc={"moretv"}
-                    videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
-                    label={"More.tv"}
-                    poster={"moretv-poster.jpg"}
-                    posterBlur={"moretv-poster"}
+                    videoSrc={"polemica"}
+                    videoUrl="https://player.vimeo.com/video/739490263?h=09ec3740bb"
+                    label={"polemica"}
+                    poster={"polemica-poster.jpg"}
+                    posterBlur={"polemica-poster"}
+                    // videoSrc={"moretv"}
+                    // videoUrl="https://player.vimeo.com/video/794151930?h=d6d0e713f5"
+                    // label={"More.tv"}
+                    // poster={"moretv-poster.jpg"}
+                    // posterBlur={"moretv-poster"}
                   />
                 </div>
                 <Caption
@@ -68,8 +73,7 @@ const Index = () => {
                   category={CATEGORIES.reclama}
                   fade="right"
                 >
-                  Ролик для&nbsp;промо-компании к&nbsp;выходу сериала «Регби»
-                  на&nbsp;онлайн-платформе.
+                  Помогли запустить широкую промо‑компанию с помощью видео.
                 </Caption>
               </div>
               <div>
@@ -79,19 +83,18 @@ const Index = () => {
                   data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
-                    videoSrc={"ulibka"}
+                    videoSrc={"funkytoys"}
                     videoUrl="https://player.vimeo.com/video/788918319?h=ce8a5dc86e"
-                    label={"Улыбка"}
-                    poster={"ulibka-poster.jpg"}
-                    posterBlur={"ulibka-poster"}
+                    label={"Funky Toys"}
+                    poster={"funkytoys-poster.jpg"}
+                    posterBlur={"funkytoys-poster"}
                   />
                 </div>
                 <Caption
                   tags={["TV", TAGS.digital]}
                   category={CATEGORIES.reclama}
                 >
-                  Серия из&nbsp;трёх роликов для&nbsp;проведения рекламной
-                  кампании.
+                  серия ТВ-роликов для проведения рекламной кампании.
                 </Caption>
               </div>
             </div>
@@ -103,18 +106,18 @@ const Index = () => {
                   data-aos-offset={isMobile ? "100" : "0"}
                 >
                   <Video
-                    videoSrc={"polemica"}
+                    videoSrc={"vkid"}
                     videoUrl="https://player.vimeo.com/video/739490263?h=09ec3740bb"
-                    label={"polemica"}
-                    poster={"polemica-poster.jpg"}
-                    posterBlur={"polemica-poster"}
+                    label={"VK ID"}
+                    poster={"vkid-poster.jpg"}
+                    posterBlur={"vkid-poster"}
                   />
                 </div>
                 <Caption
                   tags={["olv", TAGS.digital]}
                   category={CATEGORIES.reclama}
                 >
-                  Помогли запустить широкую промо-компанию с&nbsp;помощью видео.
+                  Сделали 9 роликов для сервиса безопасности VK ID.
                 </Caption>
               </div>
               <div
@@ -123,9 +126,11 @@ const Index = () => {
                 data-aos-offset="0"
               >
                 <div>
-                  <img src={n72} alt="72" />
+                  <img src={n3} alt="3" />
                 </div>
-                <span>Часа от&nbsp;брифа до&nbsp;результата</span>
+                <span>
+                  недели <br /> от брифа до результата
+                </span>
               </div>
             </div>
           </main>
@@ -174,7 +179,7 @@ const Index = () => {
               </div>
               <figcaption>
                 <span>Дмитрий Квашнин</span>
-                <span>Основатель продакшна</span>
+                <span>Основатель, генеральный продюсер</span>
               </figcaption>
             </figure>
           </Process>
@@ -253,7 +258,7 @@ const Index = () => {
               </div>
               <figcaption>
                 <span>Сергей Клейн</span>
-                <span>Исполнительный продюсер</span>
+                <span>Сооснователь, head of production</span>
               </figcaption>
             </figure>
           </Process>

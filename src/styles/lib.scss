@@ -105,6 +105,9 @@ input:-webkit-autofill:active {
     aspect-ratio: 16/9;
     background-color: $bg;
   }
+  .MuiDialogContent-root {
+    overflow-y: hidden;
+  }
 }
 
 .swiper-scrollbar {

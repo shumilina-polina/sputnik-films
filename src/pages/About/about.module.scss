@@ -226,7 +226,6 @@
       align-items: center;
       gap: 26px;
       height: 56px;
-      margin-bottom: 42px;
       max-width: 1244px;
       margin: 0 auto 42px;
       & > div {
@@ -345,7 +344,7 @@
         }
       }
     }
-    & button {
+    & .more {
       padding: 20px 0;
       width: 100%;
       @include text;

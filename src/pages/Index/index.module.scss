@@ -99,6 +99,9 @@
     margin-bottom: 68px;
     row-gap: 96px;
   }
+  & figure > div {
+    width: 37%;
+  }
   & > div > div > div > div {
     height: 400px !important;
     @include laptop {
@@ -158,6 +161,9 @@
         display: block;
         width: min-content;
       }
+    }
+    & > div {
+      overflow: visible;
     }
   }
 }

@@ -8,6 +8,7 @@ export const CATEGORIES = {
   docKino: "Документальное кино",
   clip: "Клипы",
   showreel: "Шоурилы",
+  regular: "Регулярный контент",
 };
 
 export const TAGS = {
@@ -38,5 +39,6 @@ export const TAGS = {
   // visit: "визитки",
   // live: "лайвы",
   promo: "promo",
+  regular: "регулярный",
   // explay: "эксплейнеры",
 };
